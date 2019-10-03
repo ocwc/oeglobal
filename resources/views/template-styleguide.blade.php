@@ -22,7 +22,9 @@
   'title' => 'Site Navigation',
   'cmd' => ''
 ])
-    @component('components.global-navigation', [])@endcomponent
+    @component('components.global-navigation', [
+    'navigation' => $navigation
+    ])@endcomponent
   @endcomponent
 
 @component('components.style-pre', [

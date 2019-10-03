@@ -21,7 +21,7 @@
     @endforeach
 
     <li class="menu-item">
-      @svg('images.icons.magnify')
+      @svg('icons/magnify')
     </li>
   </ul>
 @endif

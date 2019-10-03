@@ -3,12 +3,19 @@
 namespace App\Controllers;
 
 use Sober\Controller\Controller;
+use Log1x\Navi\Navi;
+
 
 class App extends Controller
 {
     public function siteName()
     {
         return get_bloginfo('name');
+    }
+
+    public function navigation() {
+        $navigation = (new Navi())->build('primary_navigation')->toArray();
+        return $navigation;
     }
 
     public static function title()
