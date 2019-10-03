@@ -1,0 +1,10 @@
+.latam-hero {
+  min-height: 294px;
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  background-size: cover;
+
+  @screen md {
+    background-size: contain;
+  }
+}

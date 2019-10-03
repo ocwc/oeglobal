@@ -1,0 +1,149 @@
+.nav-logo {
+  height: 46px;
+  width: auto;
+
+  @screen md {
+    height: 41px;
+  }
+}
+
+.menu-item {
+  @apply mr-4 pl-2 pr-3 relative flex items-center text-sm;
+
+  position: relative;
+  height: 34px;
+}
+
+.menu-item.has-children {
+  @apply pr-6;
+
+  &::after {
+    content: "+";
+    position: absolute;
+    right: 4px;
+    top: 4px;
+  }
+}
+
+.menu-item.active {
+  border-bottom: 2px solid $brand-primary;
+}
+
+.menu-item.has-children.is-open {
+  &::after {
+    content: "-";
+  }
+}
+
+.menu-item.is-open .sub-menu {
+  @apply absolute flex left-0 w-48 bg-white flex-col justify-center leading-loose z-20;
+
+  top: 34px;
+}
+
+.menu-item-child {
+  @apply h-6 pl-4 pr-8 text-2xs;
+
+  &:hover {
+    @apply text-latam-orange text-stroke;
+  }
+}
+
+/*
+.banner {
+  @apply shadow bg-white relative;
+}
+
+.banner .nav {
+  @apply flex flex-wrap;
+}
+
+.banner .nav a {
+  @apply inline-block px-4 py-2 border-none text-gray-300 no-underline font-sans text-sm;
+}
+
+.banner .nav > .menu-item {
+  @apply relative flex items-center h-24 cursor-pointer;
+}
+
+.banner .nav > .menu-item.is-active,
+.banner .nav > .menu-item:hover {
+  @apply bg-main;
+}
+
+.banner .nav > .menu-item > a {
+  @apply uppercase;
+}
+
+.banner .nav > .menu-item.is-active > a,
+.banner .nav > .menu-item:hover > a {
+  @apply text-white;
+}
+
+.banner .nav .sub-menu {
+  box-shadow: 0 1px 4px 0 #8f8f8f;
+  top: 96px;
+
+  @apply hidden absolute left-0 w-48 bg-white flex-col justify-center leading-loose z-20;
+}
+
+.banner .nav :last-child .sub-menu {
+  top: 97px;
+  left: auto;
+  right: 0;
+}
+
+.banner .nav > .menu-item.is-active .sub-menu {
+  @apply flex;
+}
+
+.banner .nav .sub-menu a {
+  @apply text-sm;
+}
+
+.banner .nav .sub-menu .menu-item:hover,
+.banner .nav .sub-menu .menu-item:hover a {
+  @apply bg-main text-white;
+}
+
+.menu-open .toggle-menu svg {
+  #background {
+    fill: $latam-orange;
+  }
+
+  #menu---material {
+    fill: $white;
+  }
+}
+
+.menu-open .nav-primary {
+  top: 64px;
+  left: 0;
+  right: 0;
+  box-shadow: 0 1px 4px 0 #8f8f8f;
+  z-index: 10;
+
+  @apply block absolute bg-white px-0 ;
+
+  .menu-item {
+    @apply w-full h-auto flex-col items-start;
+  }
+
+  .menu-item > a {
+    line-height: 30px;
+
+    @apply h-10;
+  }
+
+  .menu-item.is-active .sub-menu {
+    top: auto;
+    position: unset;
+
+    @apply flex w-full pl-4 shadow-none;
+  }
+
+  .menu-item.is-active .sub-menu .menu-item {
+    @apply w-full border-b;
+  }
+}
+*/

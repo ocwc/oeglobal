@@ -89,3 +89,14 @@ add_filter('comments_template', function ($comments_template) {
 
     return $comments_template;
 }, 100);
+
+add_filter('bladesvg', function () {
+    return [
+        'svg_path' => 'resources/assets/images',
+//        'spritesheet_path' => 'resources/svg/spritesheet.svg',
+//        'spritesheet_url' => '',
+//        'sprite_prefix' => '',
+//        'inline' => true,
+//        'class' => ''
+    ];
+});

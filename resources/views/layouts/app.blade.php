@@ -1,23 +1,29 @@
 <!doctype html>
 <html {!! get_language_attributes() !!}>
   @include('partials.head')
-  <body @php body_class() @endphp>
-    @php do_action('get_header') @endphp
+
+  <body @php(body_class())>
+    @php(wp_body_open())
+    @php(do_action('get_header'))
     @include('partials.header')
-    <div class="wrap container" role="document">
-      <div class="content">
+
+    <div class="wrap container">
+      <div class="content mb-6 p-6">
         <main class="main">
           @yield('content')
         </main>
-        @if (App\display_sidebar())
+
+        @hasSection('sidebar')
           <aside class="sidebar">
-            @include('partials.sidebar')
+            @yield('sidebar')
           </aside>
         @endif
       </div>
     </div>
-    @php do_action('get_footer') @endphp
+
+    @php(do_action('get_footer'))
     @include('partials.footer')
-    @php wp_footer() @endphp
+
+    @php(wp_footer())
   </body>
 </html>
