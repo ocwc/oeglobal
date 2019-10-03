@@ -18,7 +18,9 @@
     }
   ],
   "browserslist": [
-    "extends @wordpress/browserslist-config"
+    "last 2 versions",
+    "android 4",
+    "opera 12"
   ],
   "scripts": {
     "build": "webpack --progress --config resources/assets/build/webpack.config.js",
@@ -74,7 +76,11 @@
     "webpack-dev-middleware": "~2.0.4",
     "webpack-hot-middleware": "~2.22.3",
     "webpack-merge": "~4.1.4",
-    "yargs": "~11.0.0"
+    "yargs": "~11.0.0",
+    "glob-all": "^3.1.0",
+    "purgecss": "^1.1.0",
+    "purgecss-webpack-plugin": "^1.4.0",
+    "purgecss-whitelister": "^2.3.1"
   },
   "dependencies": {
     "jquery": "^3.4",
