@@ -38,11 +38,13 @@
     "roots/sage-lib": "~9.0.9",
     "soberwp/controller": "~2.1.0",
     "log1x/blade-svg-sage": "^2.0",
-    "mwdelaney/sage-acf-gutenberg-blocks": "dev-master"
+    "mwdelaney/sage-acf-gutenberg-blocks": "dev-master",
+    "log1x/navi": "^1.0"
   },
   "require-dev": {
     "squizlabs/php_codesniffer": "^2.8.0",
-    "roots/sage-installer": "~1.6"
+    "roots/sage-installer": "~1.6",
+    "composer/composer": "^1.9"
   },
   "scripts": {
     "test": ["phpcs"],
