@@ -33,22 +33,20 @@
 }
 
 @mixin anchor($size: 4px, $offset: 2px) {
-  background-image:
-    linear-gradient(
-      to bottom,
-      transparent calc(100% - #{$size}),
-      rgba($int-turq, 0.5) $size
-    );
+  background-image: linear-gradient(
+    to bottom,
+    transparent calc(100% - #{$size}),
+    rgba($int-turq, 0.5) $size
+  );
   background-position: right 50% bottom #{$offset};
   transition: background-position 200ms;
 
   &:hover {
-    background-image:
-      linear-gradient(
-        to bottom,
-        transparent calc(100% - #{$size}),
-        $int-turq $size
-      );
+    background-image: linear-gradient(
+      to bottom,
+      transparent calc(100% - #{$size}),
+      $int-turq $size
+    );
     background-position: right 50% bottom 0;
   }
 }
