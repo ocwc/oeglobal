@@ -4,6 +4,7 @@ namespace App\Controllers;
 
 use Sober\Controller\Controller;
 use Log1x\Navi\Navi;
+use function App\sage;
 
 
 class App extends Controller

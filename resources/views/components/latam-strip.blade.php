@@ -1,3 +1,21 @@
-<div class="latam-strip bg-main">
-
+<div class="latam-strip bg-main-darker flex flex-col justify-end">
+  <div class="latam-strip__feature flex justify-around
+              flex-wrap">
+    @foreach($items as $item)
+      <div class="latam-strip__feature__item
+                  bg-white border border-gray3
+                  mx-10 p-4
+                  w-full md:w-1/3 lg:w-1/3 xl:w-1/4
+                  flex flex-col items-center justify-center">
+        <img src="@asset($item->icon);" alt="" aria-hidden="true" class="mb-4">
+        <h3 class="mb-4">{{ $item->title }}</h3>
+        <p class="mb-4">{{ $item->description }}</p>
+        <a href="{{ $item->button_url }}" class="btn btn-latam-orange">{{ $item->button_title }}</a>
+      </div>
+    @endforeach
+  </div>
+  <div class="latam-strip__tagline flex flex-col items-center justify-end">
+    <h2 class="flex flex-initial italic text-center text-white text-2xl text-gray4">Lo que sucede en América
+      Latina…</h2>
+  </div>
 </div>

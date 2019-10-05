@@ -1,13 +1,9 @@
 {{--
   Template Name: Style Guide
 --}}
-  <!doctype html>
-<html {!! get_language_attributes() !!}>
-@include('partials.head')
+@extends('layouts.skeleton')
 
-<body @php(body_class())>
-@php(wp_body_open())
-
+@section('content')
 <div class="container my-4">
   <h1 class="h1">Style Guide</h1>
 
@@ -38,7 +34,24 @@
   'title' => 'LATAM Home Strip',
   'cmd' => ''
 ])
-    @component('components.latam-strip', [])@endcomponent
+    @component('components.latam-strip', [
+      'items' => array(
+        (object) [
+          'icon' => 'images/icons/latam-world.svg',
+          'title' => 'Estado del arte',
+          'description' => 'Información general, lo que se está haciendo en la región, infografías e imágenes para compartir.',
+          'button_title' => 'Ver más…',
+          'button_url' => '#'
+        ],
+        (object) [
+          'icon' => 'images/icons/latam-phone.svg',
+          'title' => 'Formación docente',
+          'description' => 'Descripción del bloque en dos o tres líneas.',
+          'button_title' => 'Ver más…',
+          'button_url' => '#'
+        ]
+      )
+    ])@endcomponent
 @endcomponent
 
   @component('components.style-pre', [
@@ -70,7 +83,4 @@
 </article>
   @endcomponent
 </div>
-
-@php(wp_footer())
-</body>
-</html>
+@endsection

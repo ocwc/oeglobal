@@ -6,6 +6,7 @@ module.exports = {
     'value-list-comma-newline-after': null,
     'no-empty-source': null,
     'no-descending-specificity': null,
+    'declaration-empty-line-before': null,
     'at-rule-no-unknown': [
       true,
       {
