@@ -34,6 +34,13 @@
   @component('components.latam-hero', [])@endcomponent
 @endcomponent
 
+@component('components.style-pre', [
+  'title' => 'LATAM Home Strip',
+  'cmd' => ''
+])
+    @component('components.latam-strip', [])@endcomponent
+@endcomponent
+
   @component('components.style-pre', [
     'title' => 'Typography'
   ])
