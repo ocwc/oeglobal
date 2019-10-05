@@ -1,6 +1,6 @@
 'use strict'; // eslint-disable-line
 
-const {default: ImageminPlugin} = require('imagemin-webpack-plugin');
+const { default: ImageminPlugin } = require('imagemin-webpack-plugin');
 const imageminMozjpeg = require('imagemin-mozjpeg');
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 const glob = require('glob-all');
@@ -18,18 +18,18 @@ class TailwindExtractor {
 module.exports = {
   plugins: [
     new ImageminPlugin({
-      optipng: {optimizationLevel: 7},
-      gifsicle: {optimizationLevel: 3},
-      pngquant: {quality: '65-90', speed: 4},
+      optipng: { optimizationLevel: 7 },
+      gifsicle: { optimizationLevel: 3 },
+      pngquant: { quality: '65-90', speed: 4 },
       svgo: {
         plugins: [
-          {removeUnknownsAndDefaults: false},
-          {cleanupIDs: false},
-          {removeViewBox: false},
+          { removeUnknownsAndDefaults: false },
+          { cleanupIDs: false },
+          { removeViewBox: false },
         ],
       },
-      plugins: [imageminMozjpeg({quality: 75})],
-      disable: (config.enabled.watcher),
+      plugins: [imageminMozjpeg({ quality: 75 })],
+      disable: config.enabled.watcher,
     }),
     new UglifyJsPlugin({
       uglifyOptions: {

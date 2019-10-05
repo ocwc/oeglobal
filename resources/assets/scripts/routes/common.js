@@ -3,29 +3,33 @@ import hoverintent from 'hoverintent/dist/hoverintent.min';
 export default {
   init() {
     window.WebFontConfig = {
-      google: {families: ['Montserrat:400,600,700&amp;subset=latin-ext']},
+      google: { families: ['Montserrat:400,600,700&amp;subset=latin-ext'] },
     };
 
-    (function (d) {
-      let wf = d.createElement('script'), s = d.scripts[0];
-      wf.src = 'https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js';
+    (function(d) {
+      let wf = d.createElement('script'),
+        s = d.scripts[0];
+      wf.src =
+        'https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js';
       wf.async = true;
       s.parentNode.insertBefore(wf, s);
     })(document);
 
-    $('.menu-item.has-children').each(function () {
-      hoverintent(this,
+    $('.menu-item.has-children').each(function() {
+      hoverintent(
+        this,
         () => {
           $(this).addClass('is-open');
         },
         () => {
           $(this).removeClass('is-open');
-        }).options({
+        }
+      ).options({
         timeout: 500,
         handleFocus: true,
       });
 
-      $(this).on('click', function (event) {
+      $(this).on('click', function(event) {
         $(this).toggleClass('is-open');
         event.stopPropagation();
       });

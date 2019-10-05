@@ -1,32 +1,32 @@
-const {wordpressUtilities} = require('tailwindcss-wordpress');
+const { wordpressUtilities } = require('tailwindcss-wordpress');
 
 module.exports = {
   theme: {
     extend: {
       colors: {
-        'main': '#0D59F2',
+        main: '#0D59F2',
         'main-dark': '#195BB3',
         'main-darker': '#1F467A',
         'main-light': '#3D7AF5',
         'main-lighter': '#6E9CF7',
         'main-lightest': '#9EBDFA',
-        'int': {
-          'turq': '#26D7B2',
-          'yellow': '#FFE525',
-          'red': '#FF5547',
-          'fuchsia': '#DB43D8',
+        int: {
+          turq: '#26D7B2',
+          yellow: '#FFE525',
+          red: '#FF5547',
+          fuchsia: '#DB43D8',
         },
-        'latam': {
-          'orange': '#FF922D',
+        latam: {
+          orange: '#FF922D',
           'orange-cream': '#FFC794',
         },
-        'black': '#3333333',
-        'black2': '#4D4D4D',
-        'dark': '#4A4A4A',
-        'gray1': '#666666',
-        'gray2': '#999999',
-        'gray3': '#CCCCCC',
-        'gray4': '#E6E6E6',
+        black: '#3333333',
+        black2: '#4D4D4D',
+        dark: '#4A4A4A',
+        gray1: '#666666',
+        gray2: '#999999',
+        gray3: '#CCCCCC',
+        gray4: '#E6E6E6',
       },
       lineHeight: {
         tight: 1.2,
@@ -63,7 +63,5 @@ module.exports = {
   variants: {
     textStrokeWidth: ['responsive', 'hover'],
   },
-  plugins: [
-    wordpressUtilities,
-  ],
+  plugins: [wordpressUtilities],
 };
