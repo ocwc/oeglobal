@@ -6,5 +6,7 @@
 
   @screen md {
     background-size: contain;
+    background-position: center bottom;
+    min-height: 414px;
   }
 }
