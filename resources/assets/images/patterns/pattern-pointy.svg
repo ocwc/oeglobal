@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 58 (84663) - https://sketch.com -->
+    <title>pointy-pattern</title>
+    <desc>Created with Sketch.</desc>
+    <g id="pointy-pattern" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="square" stroke-linejoin="round">
+        <polyline id="Path" stroke="#9EBDFA" fill-rule="nonzero" transform="translate(12.000000, 10.727922) rotate(45.000000) translate(-12.000000, -10.727922) " points="3 19.7279221 4.72142673 3.44934879 21 1.72792206"></polyline>
+        <polyline id="Path" stroke="#FF9533" stroke-width="4" fill-rule="nonzero" transform="translate(12.000000, 21.727922) rotate(45.000000) translate(-12.000000, -21.727922) " points="3 30.7279221 4.22182541 13.9497475 21 12.7279221"></polyline>
+    </g>
+</svg>

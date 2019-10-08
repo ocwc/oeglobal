@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="159px" height="76px" viewBox="0 0 159 76" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 58 (84663) - https://sketch.com -->
+    <title>arrows-pattern</title>
+    <desc>Created with Sketch.</desc>
+    <g id="arrows-pattern" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" opacity="0.499930246">
+        <g id="pattern-2" transform="translate(0.000000, 1.000000)" fill-rule="nonzero">
+            <polygon id="Path" fill="#9EBDFA" points="10.7142151 51.9160723 20.999 60.3830723 20.999 74.6330723 10.6160709 66.0839277 0 74.5800723 0 60.4910723"></polygon>
+            <polygon id="Path" stroke="#1F467A" points="90.7142151 0 100.999 8.467 100.999 22.717 90.6160709 14.1678555 80 22.664 80 8.575"></polygon>
+        </g>
+    </g>
+</svg>

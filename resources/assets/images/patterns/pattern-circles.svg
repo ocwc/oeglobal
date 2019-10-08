@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="159px" height="43px" viewBox="0 0 159 43" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 58 (84663) - https://sketch.com -->
+    <title>circles-pattern</title>
+    <desc>Created with Sketch.</desc>
+    <g id="circles-pattern" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <circle id="Oval" stroke="#9EBDFA" stroke-linecap="square" stroke-linejoin="round" fill-rule="nonzero" cx="5.5" cy="37.5" r="4.5"></circle>
+        <circle id="Oval" fill="#9EBDFA" fill-rule="nonzero" cx="89.5" cy="5.5" r="4.5"></circle>
+    </g>
+</svg>
