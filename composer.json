@@ -45,7 +45,7 @@
     },
     "require-dev": {
         "squizlabs/php_codesniffer": "^2.8.0",
-        "roots/sage-installer": "~1.6",
+        "roots/sage-installer": "~1.6.3",
         "composer/composer": "^1.9"
     },
     "scripts": {
