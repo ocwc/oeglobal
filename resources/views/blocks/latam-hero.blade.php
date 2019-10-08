@@ -1,7 +1,7 @@
 {{--
   Title: LATAM Home Hero
   Description: Adds Top Block
-  Category: common
+  Category: oeg-custom
   Icon: media-default
   Keywords: home hero latam
 --}}

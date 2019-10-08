@@ -1,4 +1,4 @@
-<div class="image-grid block mb-32 md:flex md:flex-wrap">
+<div class="image-grid block mb-16 md:flex md:flex-wrap">
     @foreach ($items as $image)
         <div class="image-grid__item
                     w-2/3 md:w-1/3 inline-block">
