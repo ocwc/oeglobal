@@ -1,14 +1,10 @@
-<div class="bg-main
+<div class="global-header
+            bg-main
             md:h-5
-            w-full uppercase text-3xs font-sans text-right
-            flex flex-row items-center justify-end">
+            w-full uppercase text-2xs leading-loose font-sans text-right
+            flex flex-row items-center align-center justify-end">
   <div class="container">
-    <a class="text-white flex-initial mr-8 hover:text-stroke" href="#">OE Global</a>
-    <a class="text-white flex-initial mr-8 hover:text-stroke text-stroke" href="#">OE LATAM</a>
-    <a class="text-white flex-initial mr-8 hover:text-stroke" href="#">CCCOER</a>
-    <a class="text-white flex-initial mr-8 hover:text-stroke" href="#">OE Global Conference</a>
-    <a class="text-white flex-initial mr-8 hover:text-stroke" href="#">OE Week</a>
-    <a class="text-white flex-initial mr-8 hover:text-stroke" href="#">OE Awards</a>
+    <a class="global-header__item" href="#">OE Global</a><a class="global-header__item active" href="#">OE LATAM</a><a class="global-header__item" href="#">CCCOER</a><a class="global-header__item" href="#">OE Global Conference</a><a class="global-header__item" href="#">OE Week</a><a class="global-header__item" href="#">OE Awards</a>
   </div>
 </div>
 

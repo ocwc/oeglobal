@@ -1,0 +1,12 @@
+.global-header__item {
+  @apply inline-flex text-white flex-initial px-4 h-5;
+
+  &:hover,
+  &:active {
+    @apply bg-main-lighter;
+  }
+}
+
+.global-header__item.active {
+  @apply bg-main-lighter;
+}
