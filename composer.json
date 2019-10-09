@@ -41,11 +41,12 @@
         "soberwp/controller": "~2.1.0",
         "log1x/blade-svg-sage": "^2.0",
         "mwdelaney/sage-acf-gutenberg-blocks": "dev-master",
-        "log1x/navi": "^1.0"
+        "log1x/navi": "^1.0",
+        "stoutlogic/acf-builder": "^1.8",
+        "log1x/sage-directives": "^1.1.3"
     },
     "require-dev": {
         "squizlabs/php_codesniffer": "^2.8.0",
-        "roots/sage-installer": "~1.6.3",
         "composer/composer": "^1.9"
     },
     "scripts": {

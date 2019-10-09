@@ -6,6 +6,9 @@
     ],
     "customizer": [
       "./scripts/customizer.js"
+    ],
+    "gutenberg": [
+      "./styles/gutenberg.scss"
     ]
   },
   "publicPath": "/wp-content/themes/oeglobal",
