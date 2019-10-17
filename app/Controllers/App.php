@@ -21,6 +21,11 @@ class App extends Controller
         return $navigation;
     }
 
+    public function navigationFooter() {
+        $navigation = (new Navi())->build('footer_navigation')->toArray();
+        return $navigation;
+    }
+
     public static function title()
     {
         if (is_home()) {

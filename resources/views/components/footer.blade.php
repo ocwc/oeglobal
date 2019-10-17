@@ -1,7 +1,16 @@
 <footer class="bg-main-darker text-light">
   <div class="container">
+    <div class="flex pb-6">
+      <div class="w-1/4 bg-white p-4">
+        @svg('logos/oelatam', 'h-30 mb-4')
+        <p class="text-gray-600 text-sm">OE LATAM es un nodo regional latinoamericano del consorcio de educación abierta OE GLOBAL.</p>
+      </div>
+      <div class="md:w-1/12"></div>
+
+      @include('partials.navigation-footer')
+    </div>
     <div class="flex items-center justify-center flex-col text-xs">
-      <a href="https://www.oeconsortium.org">@svg('logos/oec-inverted', 'h-30')</a>
+      <a href="https://www.oeconsortium.org">@svg('logos/oec-inverted', 'h-24')</a>
       <a class="mt-3 mb-4" href="https://www.oeconsortium.org">www.oeconsortium.org</a>
     </div>
     <div class="flex border-t border-white pt-8 text-xs leading-loose">
