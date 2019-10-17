@@ -6,11 +6,15 @@
 }
 
 .latam-strip__tagline {
-  margin: 0 70px 105px;
+  margin: 0 10px 105px;
   height: 100px;
   background-image: url("../images/patterns/pattern-circles.svg");
   background-repeat: repeat-x;
   background-position: left top;
+
+  @screen md {
+    margin: 0 70px 105px;
+  }
 }
 
 .latam-strip__feature__item {
