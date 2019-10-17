@@ -63,6 +63,7 @@ module.exports = {
   },
   variants: {
     textStrokeWidth: ['responsive', 'hover'],
+    padding: ['responsive', 'last'],
   },
   plugins: [wordpressUtilities],
 };

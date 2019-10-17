@@ -1,7 +1,7 @@
 <header class="banner">
   <div class="container flex items-center justify-between
               sm-only:pr-0
-              h-16 md:h-24">
+              h-20 md:h-24">
     <a class="brand flex" href="{{ home_url('/') }}" alt="Home">
       @svg('logos/oelatam', 'nav-logo')
     </a>
