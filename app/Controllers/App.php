@@ -35,7 +35,7 @@ class App extends Controller {
 
     public function featuredImageLarge() {
         global $post;
-        return get_the_post_thumbnail($post, 'large');
+        return get_the_post_thumbnail_url($post, 'large');
     }
 
     public function title() {
