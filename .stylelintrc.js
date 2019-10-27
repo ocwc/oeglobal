@@ -7,6 +7,7 @@ module.exports = {
     'no-empty-source': null,
     'no-descending-specificity': null,
     'declaration-empty-line-before': null,
+    'indentation': null,
     'at-rule-no-unknown': [
       true,
       {

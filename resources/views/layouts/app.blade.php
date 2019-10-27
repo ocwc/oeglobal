@@ -7,7 +7,8 @@
     @php(do_action('get_header'))
     @include('partials.header')
 
-    <div class="wrap container">
+    @section('container')
+    <div class="container">
       <div class="content mb-6 p-6">
         <main class="main">
           @yield('content')
@@ -20,6 +21,7 @@
         @endif
       </div>
     </div>
+    @show
 
     @php(do_action('get_footer'))
     @include('components.footer')

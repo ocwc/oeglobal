@@ -111,11 +111,6 @@ add_filter( 'comments_template', function ( $comments_template ) {
 add_filter( 'bladesvg', function () {
     return [
         'svg_path' => 'resources/assets/images',
-//        'spritesheet_path' => 'resources/svg/spritesheet.svg',
-//        'spritesheet_url' => '',
-//        'sprite_prefix' => '',
-//        'inline' => true,
-//        'class' => ''
     ];
 } );
 
@@ -135,3 +130,26 @@ add_filter( 'block_categories', function ( $categories, $post ) {
         )
     );
 }, 10, 2 );
+
+//add_filter( 'register_post_type_args', function ( $args, $post_type ) {
+//    if ( $post_type == "page" ) {
+//        $args['template'] = array(
+//            array( 'core/paragraph', array(
+//                'placeholder' => 'Add a root-level paragraph',
+//            ) ),
+//            array( 'core/columns', array(), array(
+//                array( 'core/column', array(), array(
+//                    array( 'core/image', array() ),
+//                ) ),
+//                array( 'core/column', array(), array(
+//                    array( 'core/paragraph', array(
+//                        'placeholder' => 'Add a inner paragraph'
+//                    ) ),
+//                ) ),
+//            ) )
+//        );
+//    }
+//
+//    return $args;
+//
+//}, 20, 2 );
