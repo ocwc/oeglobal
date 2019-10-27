@@ -8,7 +8,7 @@
 }
 
 .menu-item {
-  @apply mr-4 pl-2 pr-3 relative flex items-center text-sm;
+  @apply mr-4 pl-2 pr-3 relative flex items-center;
 
   position: relative;
   height: 34px;
@@ -37,12 +37,14 @@
 
 .menu-item.is-open .sub-menu {
   @apply absolute flex left-0 w-48 bg-white flex-col justify-center leading-loose z-20;
+  @apply shadow-md border border-light;
 
   top: 34px;
 }
 
 .menu-item-child {
-  @apply h-6 pl-4 pr-8 text-2xs;
+  @apply h-12 pl-4 pr-8;
+  line-height: 3em;
 
   &:hover {
     @apply text-latam-orange text-stroke;
