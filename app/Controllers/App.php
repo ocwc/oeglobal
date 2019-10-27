@@ -33,6 +33,11 @@ class App extends Controller {
         }
     }
 
+    public function featuredImageLarge() {
+        global $post;
+        return get_the_post_thumbnail($post, 'large');
+    }
+
     public function title() {
         if ( is_home() ) {
             if ( $home = get_option( 'page_for_posts', true ) ) {

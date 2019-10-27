@@ -163,4 +163,36 @@
       </article>
     @endcomponent
   </div>
+
+  @component('components.style-pre', [
+    'title' => 'Page headers'
+  ])
+    <div class="my-6">
+    @component('components.content-header', [
+    'title' => 'Guatemala',
+    'excerpt' => 'Mundo Posible, como capítulo de World Possible para Guatemala, lleva la biblioteca digital RACHEL por medio de servidores de bajo costo a comunidades y escuelas donde no hay acceso a internet o donde es muy limitado.',
+    ])@endcomponent
+    </div>
+
+    <div class="my-6">
+    @component('components.content-header', [
+    'title' => 'Guatemala',
+    ])@endcomponent
+    </div>
+
+    <div class="my-6">
+    @component('components.content-header', [
+    'title' => 'Guatemala',
+    'background_image' => 'https://www.oelatam.org/wp-content/uploads/2019/10/machu-picchu-1569324.jpg',
+    ])@endcomponent
+    </div>
+
+    <div class="my-6">
+    @component('components.content-header', [
+    'title' => 'Guatemala',
+    'excerpt' => 'Mundo Posible, como capítulo de World Possible para Guatemala, lleva la biblioteca digital RACHEL por medio de servidores de bajo costo a comunidades y escuelas donde no hay acceso a internet o donde es muy limitado.',
+    'background_image' => 'https://www.oelatam.org/wp-content/uploads/2019/10/machu-picchu-1569324.jpg'
+    ])@endcomponent
+    </div>
+  @endcomponent
 @endsection

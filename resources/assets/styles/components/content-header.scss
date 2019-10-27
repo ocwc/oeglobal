@@ -1,0 +1,32 @@
+.contentheader-strip {
+  display: flex;
+  position: relative;
+  min-height: 336px;
+  background-color: $main-darker;
+  background-size: cover;
+  background-position: center center;
+}
+
+.contentheader-strip::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 10;
+
+  background-image: url("../images/patterns/pattern-pointy.svg"),
+    url("../images/patterns/pattern-circles.svg");
+  background-position: center top 12px, left bottom 20px;
+  background-repeat: repeat-x;
+}
+
+.contentheader-strip__content {
+  display: inline-block;
+  background-color: rgba(31, 70, 122, 0.5);
+}
+
+.contentheader-strip__h1 {
+  @apply h1 mb-0;
+}

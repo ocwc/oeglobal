@@ -55,6 +55,9 @@ module.exports = {
         '2xs': '0.625rem',
       },
       textStrokeWidth: theme => theme('borderWidth'),
+      margin: {
+        '1/12': '8.333333333%',
+      },
     },
     container: {
       center: true,
