@@ -29,10 +29,10 @@ add_action('after_setup_theme', function () {
      * @link https://roots.io/plugins/soil/
      */
     add_theme_support('soil-clean-up');
-    add_theme_support('soil-jquery-cdn');
     add_theme_support('soil-nav-walker');
     add_theme_support('soil-nice-search');
     add_theme_support('soil-relative-urls');
+    add_theme_support('soil-google-analytics', 'UA-4248822-14');
 
     /**
      * Enable plugins to manage the document title
