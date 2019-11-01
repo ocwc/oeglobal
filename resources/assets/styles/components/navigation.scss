@@ -36,15 +36,15 @@
 }
 
 .menu-item.is-open .sub-menu {
-  @apply absolute flex left-0 w-48 bg-white flex-col justify-center leading-loose z-20;
+  @apply absolute flex left-0 w-56 bg-white flex-col justify-center leading-loose z-20;
   @apply shadow-md border border-light;
 
   top: 34px;
 }
 
 .menu-item-child {
-  @apply h-12 pl-4 pr-8;
-  line-height: 3em;
+  @apply pl-4 pr-8 flex items-center leading-relaxed;
+  min-height: 3em;
 
   &:hover {
     @apply text-latam-orange text-stroke;
