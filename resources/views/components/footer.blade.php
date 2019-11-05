@@ -5,8 +5,9 @@
                   w-full lg:w-1/4
                   p-4
                   mx-4 md:mx-0">
-        @svg('logos/oelatam', 'w-auto h-30 mb-4')
-        <p class="text-gray-600 text-sm">OE LATAM es un nodo regional latinoamericano del consorcio de educación abierta OE GLOBAL.</p>
+        @svg('logos/oelatam', 'w-full h-auto max-h-16 mb-4')
+        <p class="text-gray-600 text-sm">OE LATAM es un nodo regional latinoamericano del consorcio de educación abierta
+          OE GLOBAL.</p>
       </div>
       <div class="w-full lg:w-1/12 pb-4"></div>
 
@@ -27,7 +28,8 @@
       </div>
       <div class="flex lg:justify-end lg:items-end
                   w-full lg:w-1/3 lg:pl-10">
-        <a class="underline" href="#">Terms of Use and Privacy Policies.</a>
+        <a class="underline" href="https://www.oeconsortium.org/terms-of-use-and-privacy-policies/" target="_blank"
+           rel="noopener">Terms of Use and Privacy Policies.</a>
       </div>
     </div>
   </div>

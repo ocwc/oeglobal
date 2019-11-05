@@ -1,5 +1,5 @@
 <!doctype html>
-<html {!! get_language_attributes() !!} class="font-sans">
+<html {!! get_language_attributes() !!} class="font-sans antialiased">
 @include('partials.head')
 
 <body @php(body_class())>

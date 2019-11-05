@@ -33,6 +33,9 @@ module.exports = {
         tight: 1.2,
         relaxed: 1.6,
       },
+      maxHeight: {
+        '16': '4rem',
+      },
       fontFamily: {
         sans: [
           'Montserrat',
