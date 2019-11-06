@@ -5,6 +5,10 @@
   background-color: $main-darker;
   background-size: cover;
   background-position: center center;
+
+  @screen lg {
+    min-height: 500px;
+  }
 }
 
 .contentheader-strip::after {

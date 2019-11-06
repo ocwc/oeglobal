@@ -31,7 +31,7 @@ module.exports = {
       },
       lineHeight: {
         tight: 1.2,
-        relaxed: 1.6,
+        relaxed: 1.65,
       },
       maxHeight: {
         '16': '4rem',

@@ -15,7 +15,7 @@
 }
 
 .p {
-  @apply mb-4 text-lg leading-normal font-sans;
+  @apply mb-4 text-lg leading-relaxed font-sans;
 }
 
 .base {
@@ -36,7 +36,7 @@
   background-image: linear-gradient(
     to bottom,
     transparent calc(100% - #{$size}),
-    rgba($int-turq, 0.5) $size
+    rgba($latam-orange-cream, 0.5) $size
   );
   background-position: right 50% bottom #{$offset};
   transition: background-position 200ms;
@@ -45,7 +45,7 @@
     background-image: linear-gradient(
       to bottom,
       transparent calc(100% - #{$size}),
-      $int-turq $size
+      $latam-orange-cream $size
     );
     background-position: right 50% bottom 0;
   }
