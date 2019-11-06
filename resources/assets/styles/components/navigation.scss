@@ -12,6 +12,11 @@
 
   position: relative;
   height: 34px;
+
+  &:hover,
+  &:focus {
+    @apply bg-gray4;
+  }
 }
 
 .menu-item.has-children {
@@ -42,13 +47,18 @@
   top: 34px;
 }
 
-.menu-item-child {
-  @apply pl-4 pr-8 flex items-center leading-relaxed;
+.menu-item-child a {
+  @apply block pl-4 pr-8 flex items-center leading-relaxed w-full;
   min-height: 3em;
 
   &:hover {
-    @apply text-latam-orange text-stroke;
+    @apply bg-gray4;
   }
+}
+
+.menu-item__icon {
+  width: 18px;
+  height: auto;
 }
 
 /*

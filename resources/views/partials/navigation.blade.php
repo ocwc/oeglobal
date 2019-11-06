@@ -21,7 +21,7 @@
     @endforeach
 
     <li class="menu-item">
-      @svg('icons/magnify')
+      <a href="?q=">@svg('icons/magnify', 'menu-item__icon')</a>
     </li>
   </ul>
 @endif

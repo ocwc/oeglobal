@@ -13,10 +13,12 @@
                 <span class="image-grid__item__title">{{ $item['title'] }}</span>
             </a>
 
+          {{--
           @if($item['attribution_name'])
             <a class="image-grid__item__attribution"
                href="{!! $item['attribution_url'] !!}">{!! $item['attribution_name'] !!}</a>
-            @endif
+          @endif
+          --}}
         </div>
     @endforeach
 </div>

@@ -7,6 +7,8 @@
   -webkit-scroll-snap-type: mandatory; /* Safari */
   -webkit-scroll-snap-destination: 0% 0%;
   -webkit-overflow-scrolling: touch; /* important for iOS */
+
+  overflow: visible;
 }
 
 .image-grid__item {
@@ -14,6 +16,17 @@
   scroll-snap-align: start; /* latest (Chrome 69+) */
   scroll-snap-coordinate: 0% 0%; /* older (Firefox/IE) */
   -webkit-scroll-snap-coordinate: 0% 0%; /* older (Safari) */
+  transition: transform 0.2s, opacity 0.2s;
+
+  &:hover,
+  &:focus {
+    z-index: 100;
+    transform: scale(1.05);
+
+    .image-grid__item__image {
+      opacity: 1;
+    }
+  }
 }
 
 .image-grid__item__image {
@@ -21,6 +34,7 @@
   padding-bottom: 100%;
   background-size: cover;
   background-position: center center;
+  opacity: 0.8;
 }
 
 .image-grid__item__title {
