@@ -8,7 +8,9 @@
   -webkit-scroll-snap-destination: 0% 0%;
   -webkit-overflow-scrolling: touch; /* important for iOS */
 
-  overflow: visible;
+  @screen lg {
+    overflow: visible;
+  }
 }
 
 .image-grid__item {
