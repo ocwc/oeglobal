@@ -70,6 +70,14 @@
   width: 80px;
 }
 
+.banner {
+  @apply relative mb-2;
+
+  @screen lg {
+    @apply mb-0;
+  }
+}
+
 .banner > .container {
   padding-right: 0;
 
@@ -79,10 +87,6 @@
 }
 
 .menu-open {
-  .banner {
-    @apply relative mb-2;
-  }
-
   .banner .nav {
     @apply flex flex-wrap bg-gray5 px-6 pt-4 pb-8;
   }
@@ -93,10 +97,6 @@
 
   .banner .nav > .menu-item {
     @apply relative flex items-start h-auto cursor-pointer bg-white mr-0;
-  }
-
-  .banner .nav > .menu-item > a {
-    @apply uppercase;
   }
 
   .banner .nav .sub-menu {
