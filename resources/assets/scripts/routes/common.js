@@ -37,6 +37,7 @@ export default {
 
     $('.js-toggle-menu').on('click', () => {
       $('body').toggleClass('menu-open');
+      $('.nav-primary').toggleClass('hidden');
     });
   },
   finalize() {

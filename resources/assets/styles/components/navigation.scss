@@ -15,7 +15,7 @@
 
   &:hover,
   &:focus {
-    @apply bg-gray4;
+    @apply bg-gray5;
   }
 }
 
@@ -52,7 +52,7 @@
   min-height: 3em;
 
   &:hover {
-    @apply bg-gray4;
+    @apply bg-gray5;
   }
 }
 
@@ -61,84 +61,69 @@
   height: auto;
 }
 
-/*
-.banner {
-  @apply shadow bg-white relative;
+.menu-open .toggle-menu {
+  @apply bg-gray5;
 }
 
-.banner .nav {
-  @apply flex flex-wrap;
-}
-
-.banner .nav a {
-  @apply inline-block px-4 py-2 border-none text-gray-300 no-underline font-sans text-sm;
-}
-
-.banner .nav > .menu-item {
-  @apply relative flex items-center h-24 cursor-pointer;
-}
-
-.banner .nav > .menu-item.is-active,
-.banner .nav > .menu-item:hover {
-  @apply bg-main;
-}
-
-.banner .nav > .menu-item > a {
-  @apply uppercase;
-}
-
-.banner .nav > .menu-item.is-active > a,
-.banner .nav > .menu-item:hover > a {
-  @apply text-white;
-}
-
-.banner .nav .sub-menu {
-  box-shadow: 0 1px 4px 0 #8f8f8f;
-  top: 96px;
-
-  @apply hidden absolute left-0 w-48 bg-white flex-col justify-center leading-loose z-20;
-}
-
-.banner .nav :last-child .sub-menu {
-  top: 97px;
-  left: auto;
-  right: 0;
-}
-
-.banner .nav > .menu-item.is-active .sub-menu {
-  @apply flex;
-}
-
-.banner .nav .sub-menu a {
-  @apply text-sm;
-}
-
-.banner .nav .sub-menu .menu-item:hover,
-.banner .nav .sub-menu .menu-item:hover a {
-  @apply bg-main text-white;
-}
-
-.menu-open .toggle-menu svg {
-  #background {
-    fill: $latam-orange;
+.menu-open {
+  .banner {
+    @apply relative mb-2;
   }
 
-  #menu---material {
-    fill: $white;
+  .banner .nav {
+    @apply flex flex-wrap bg-gray5 px-6 pt-4 pb-8;
   }
-}
 
-.menu-open .nav-primary {
-  top: 64px;
-  left: 0;
-  right: 0;
-  box-shadow: 0 1px 4px 0 #8f8f8f;
-  z-index: 10;
+  .banner .nav a {
+    @apply inline-block pl-2 pr-4 py-2 border-none text-black2 no-underline font-sans text-sm;
+  }
 
-  @apply block absolute bg-white px-0 ;
+  .banner .nav > .menu-item {
+    @apply relative flex items-start h-auto cursor-pointer bg-white mr-0;
+  }
+
+  .banner .nav > .menu-item > a {
+    @apply uppercase;
+  }
+
+  .banner .nav .sub-menu {
+    //box-shadow: 0 1px 4px 0 #8f8f8f;
+    top: 96px;
+
+    @apply hidden absolute left-0 w-48 bg-white flex-col justify-center leading-loose z-20;
+  }
+
+  .banner .nav :last-child .sub-menu {
+    top: 97px;
+    left: auto;
+    right: 0;
+  }
+
+  .banner .nav > .menu-item.is-open .sub-menu {
+    @apply flex border-none;
+  }
+
+  .banner .nav .sub-menu a {
+    @apply text-sm;
+  }
+
+  .menu-item.has-children::after {
+    top: 12px;
+    right: 12px;
+  }
+
+  .nav-primary {
+    top: 80px;
+    left: 0;
+    right: 0;
+    box-shadow: 0 1px 4px 0 #8f8f8f;
+    z-index: 10;
+
+    @apply block absolute bg-white px-0;
+  }
 
   .menu-item {
-    @apply w-full h-auto flex-col items-start;
+    @apply w-full h-auto flex-col items-start mb-2;
   }
 
   .menu-item > a {
@@ -147,15 +132,22 @@
     @apply h-10;
   }
 
-  .menu-item.is-active .sub-menu {
+  .menu-item.is-open .sub-menu {
     top: auto;
     position: unset;
 
-    @apply flex w-full pl-4 shadow-none;
+    @apply flex w-full pl-2 shadow-none;
   }
 
-  .menu-item.is-active .sub-menu .menu-item {
-    @apply w-full border-b;
+  .menu-item.is-open .sub-menu .menu-item {
+    @apply w-full;
+  }
+
+  .banner .nav > .menu-item-search {
+    display: none;
+
+    @screen lg {
+      display: inline-block;
+    }
   }
 }
-*/

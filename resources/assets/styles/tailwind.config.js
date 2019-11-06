@@ -27,6 +27,7 @@ module.exports = {
         gray2: '#999999',
         gray3: '#CCCCCC',
         gray4: '#E6E6E6',
+        gray5: '#F2F2F2',
         light: '#E6E6E6',
       },
       lineHeight: {
