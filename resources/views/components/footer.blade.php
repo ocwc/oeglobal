@@ -19,7 +19,7 @@
     </div>
     <div class="flex flex-col lg:flex-row
                 border-t border-white pt-8
-                text-xs leading-loose">
+                small">
       <div class="w-full lg:w-8/12
                   pb-4 lg:pb-0">
         All content on oeconsortium.org is licensed under a Creative Commons Attribution 4.0 License.<br/> Please note
@@ -28,7 +28,7 @@
       </div>
       <div class="flex lg:justify-end lg:items-end
                   w-full lg:w-1/3 lg:pl-10">
-        <a class="underline" href="https://www.oeconsortium.org/terms-of-use-and-privacy-policies/" target="_blank"
+        <a class="mb-0! small underline" href="https://www.oeconsortium.org/terms-of-use-and-privacy-policies/" target="_blank"
            rel="noopener">Terms of Use and Privacy Policies.</a>
       </div>
     </div>
