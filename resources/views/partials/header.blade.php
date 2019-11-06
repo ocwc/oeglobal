@@ -2,7 +2,7 @@
   <!-- test -->
   @component('components.global-header', [])@endcomponent
 
-  <div class="container px-0 lg:px-6">
+  <div class="container pr-0 lg:px-4">
     @component('components.global-navigation', [
       'navigation' => $navigation
     ])@endcomponent

@@ -1,5 +1,5 @@
 <header class="banner">
-  <div class="container flex items-center justify-between
+  <div class="flex items-center justify-between
               h-20 md:h-24">
     <a class="brand flex" href="{{ home_url('/') }}" alt="Home">
       @svg('logos/oelatam', 'nav-logo')
