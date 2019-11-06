@@ -36,7 +36,10 @@
   padding-bottom: 100%;
   background-size: cover;
   background-position: center center;
-  opacity: 0.8;
+
+  @screen lg {
+    opacity: 0.8;
+  }
 }
 
 .image-grid__item__title {

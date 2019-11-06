@@ -9,6 +9,6 @@
                 hidden md:block">
       @include('partials.navigation')
     </nav>
-    <button class="js-toggle-menu toggle-menu flex md:hidden">@svg('icons/menu', 'menu')</button>
+    <button class="js-toggle-menu toggle-menu flex justify-center md:hidden">@svg('icons/menu', 'menu')</button>
   </div>
 </header>

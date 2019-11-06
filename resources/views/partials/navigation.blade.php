@@ -24,7 +24,7 @@
       <a href="?q=">@svg('icons/magnify', 'menu-item__icon')</a>
     </li>
 
-    <li class="menu-item lg:hidden">
+    <li class="menu-item menu-item-search-mobile lg:hidden">
       <form action="/" method="get">
         <input type="search" name="s" id="search" value="" placeholder="Buscar ..." class="h-10 pl-2" />
       </form>
