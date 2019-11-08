@@ -32,5 +32,7 @@
 }
 
 .contentheader-strip__h1 {
-  @apply h1 mb-0;
+  @extend .h1;
+
+  @apply mb-0;
 }

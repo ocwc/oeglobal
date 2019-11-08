@@ -156,6 +156,10 @@
           Saul Burrows (<a href="#">CC by Jareth Navarro</a>)
         </figcaption>
 
+        <blockquote>
+          These principles are at the centre of our conceptualisation of the digital university and interconnect with each other as we consider the politics, practices, and pedagogies of modern universities and the potential for radical change.
+        </blockquote>
+
         <small>All content on oeconsortium.org is licensed under a Creative Commons Attribution 4.0 License.
           Please note that OCW course materials hosted on member sites are governed by the specific licenses chosen by
           the
