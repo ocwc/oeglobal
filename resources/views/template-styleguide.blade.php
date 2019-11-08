@@ -166,6 +166,17 @@
           owners of those sites.</small>
       </article>
     @endcomponent
+
+    @component('components.style-pre', [
+              'title' => 'Person image',
+              'cmd' => ''
+    ])
+      @component('components.person-image', [
+        'src' => 'https://www.oeconsortium.org/wp-content/uploads/2019/02/Backgroun-blco-e1550457370199.png',
+        'alt' => 'First Last Name'
+      ])@endcomponent
+    @endcomponent
+
   </div>
 
   @component('components.style-pre', [
