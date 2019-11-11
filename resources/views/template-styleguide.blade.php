@@ -180,7 +180,7 @@
   </div>
 
   @component('components.style-pre', [
-    'title' => 'Page headers'
+    'title' => 'Page headers - Standard'
   ])
     <div class="my-6">
     @component('components.content-header', [
@@ -208,6 +208,42 @@
     'excerpt' => 'Mundo Posible, como capítulo de World Possible para Guatemala, lleva la biblioteca digital RACHEL por medio de servidores de bajo costo a comunidades y escuelas donde no hay acceso a internet o donde es muy limitado.',
     'background_image' => 'https://www.oelatam.org/wp-content/uploads/2019/10/machu-picchu-1569324.jpg'
     ])@endcomponent
+    </div>
+  @endcomponent
+
+  @component('components.style-pre', [
+    'title' => 'Page headers - Sub Landing'
+  ])
+    <div class="my-6">
+      @component('components.content-header', [
+      'title' => 'Guatemala',
+      'excerpt' => 'Mundo Posible, como capítulo de World Possible para Guatemala, lleva la biblioteca digital RACHEL por medio de servidores de bajo costo a comunidades y escuelas donde no hay acceso a internet o donde es muy limitado.',
+      'variant' => 'sublanding',
+      ])@endcomponent
+    </div>
+
+    <div class="my-6">
+      @component('components.content-header', [
+      'title' => 'Guatemala',
+      'variant' => 'sublanding',
+      ])@endcomponent
+    </div>
+
+    <div class="my-6">
+      @component('components.content-header', [
+      'title' => 'Guatemala',
+      'background_image' => 'https://www.oelatam.org/wp-content/uploads/2019/10/machu-picchu-1569324.jpg',
+      'variant' => 'sublanding',
+      ])@endcomponent
+    </div>
+
+    <div class="my-6">
+      @component('components.content-header', [
+      'title' => 'Guatemala  can also have a much longer title',
+      'excerpt' => 'Mundo Posible, como capítulo de World Possible para Guatemala, lleva la biblioteca digital RACHEL por medio de servidores de bajo costo a comunidades y escuelas donde no hay acceso a internet o donde es muy limitado.',
+      'background_image' => 'https://www.oelatam.org/wp-content/uploads/2019/10/machu-picchu-1569324.jpg',
+      'variant' => 'sublanding',
+      ])@endcomponent
     </div>
   @endcomponent
 @endsection

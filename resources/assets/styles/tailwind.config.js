@@ -65,6 +65,8 @@ module.exports = {
       textStrokeWidth: theme => theme('borderWidth'),
       margin: {
         '1/12': '8.333333333%',
+        '1/3': '33.333333333%',
+        '2/3': '66.6666667%',
       },
     },
     container: {

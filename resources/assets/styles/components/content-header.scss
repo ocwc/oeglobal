@@ -31,8 +31,33 @@
   background-color: rgba(31, 70, 122, 0.5);
 }
 
+.contentheader-sublanding__content {
+  display: inline-block;
+  background-color: $white;
+  padding-top: 52px;
+}
+
+.contentheader-sublanding__nocontent {
+  background-color: transparent;
+}
+
 .contentheader-strip__h1 {
   @extend .h1;
 
   @apply mb-0;
+}
+
+.contentheader-sublanding__h1 {
+  @extend .h1;
+
+  @apply inline-block bg-latam-orange text-light px-4 py-2 absolute mb-0;
+
+  bottom: calc(100% - 40px);
+  left: -6px;
+  max-width: 100%;
+
+  .contentheader-sublanding__nocontent & {
+    max-width: none;
+    position: initial;
+  }
 }
