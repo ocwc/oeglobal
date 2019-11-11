@@ -1,8 +1,8 @@
-.latam-home-gallery .image-grid {
+body.home .latam-home-gallery .image-grid {
   margin-top: -75px;
 }
 
-.latam-home-gallery::after {
+body.home .latam-home-gallery::after {
   content: "";
   display: block;
   position: relative;
