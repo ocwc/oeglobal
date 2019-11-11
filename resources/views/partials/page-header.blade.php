@@ -1,5 +1,3 @@
-Text: {!! $variant !!}
-
 @component('components.content-header', [
   'title' => $title,
   'excerpt' => $excerpt_simple,
