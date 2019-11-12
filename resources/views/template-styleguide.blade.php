@@ -197,35 +197,35 @@
            'line2' => 'Community Relations',
            'line3' => 'Open Education Consortium',
            'line4' => 'Mexico',
-           'href' => '#'
+           'url' => '#',
           ],
           ['image' => ['sizes' => ['square' => 'https://www.oeconsortium.org/wp-content/uploads/2019/02/Backgroun-blco-e1550457370199.png']],
            'line1' => 'Chinelo Chyke',
            'line2' => 'Community Relations',
            'line3' => 'Open Education Consortium',
            'line4' => 'Mexico',
-           'href' => '#'
+           'url' => '#',
           ],
           ['image' => ['sizes' => ['square' => 'https://www.oeconsortium.org/wp-content/uploads/2019/02/Backgroun-blco-e1550457370199.png']],
            'line1' => 'Chinelo Chyke',
            'line2' => 'Community Relations',
            'line3' => 'Open Education Consortium',
            'line4' => 'Mexico',
-           'href' => '#'
+           'url' => '#',
           ],
           ['image' => ['sizes' => ['square' => 'https://www.oeconsortium.org/wp-content/uploads/2019/02/Backgroun-blco-e1550457370199.png']],
            'line1' => 'Chinelo Chyke',
            'line2' => 'Community Relations',
            'line3' => 'Open Education Consortium',
            'line4' => 'Mexico',
-           'href' => '#'
+           'url' => '#',
           ],
           ['image' => ['sizes' => ['square' => 'https://www.oeconsortium.org/wp-content/uploads/2019/02/Backgroun-blco-e1550457370199.png']],
            'line1' => 'Chinelo Chyke',
            'line2' => 'Community Relations',
            'line3' => 'Open Education Consortium',
            'line4' => 'Mexico',
-           'href' => '#'
+           'url' => '#',
           ],
         ]
       ])@endcomponent
