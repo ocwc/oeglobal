@@ -1,8 +1,10 @@
+$medium-image-size: 200px;
+
 .person-image {
   position: relative;
   background: tomato;
-  width: 300px;
-  height: 300px;
+  width: $medium-image-size;
+  height: $medium-image-size;
   margin: 0 auto;
   object-fit: cover;
 }
@@ -10,13 +12,25 @@
 .person-image::after {
   content: "";
   display: block;
-  margin-left: 20px;
-  margin-top: 20px;
+  margin-left: 10px;
+  margin-top: 10px;
   background: url("../images/patterns/pattern-lines.svg") repeat;
   background-size: 5%;
-  width: 300px;
-  height: 300px;
+  width: $medium-image-size;
+  height: $medium-image-size;
   border-radius: 50%;
   position: absolute;
   z-index: -1;
+}
+
+.person-image.large {
+  width: 300px;
+  height: 300px;
+}
+
+.person-image.large::after {
+  margin-left: 20px;
+  margin-right: 20px;
+  width: 300px;
+  height: 300px;
 }

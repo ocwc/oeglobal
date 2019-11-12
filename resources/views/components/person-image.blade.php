@@ -1,4 +1,4 @@
-<div class="person-image rounded-full inline-block">
+<div class="person-image rounded-full inline-block {!! $size !!}">
   <img class="absolute rounded-full" src="{!! $src !!}"
-       alt="{!! $alt !!}">
+       alt="{!! $alt !!}" />
 </div>

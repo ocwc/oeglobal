@@ -171,9 +171,63 @@
               'title' => 'Person image',
               'cmd' => ''
     ])
+      <h3 class="h3">Large</h3>
+
       @component('components.person-image', [
-        'src' => 'https://www.oeconsortium.org/wp-content/uploads/2019/02/Backgroun-blco-e1550457370199.png',
+        'image' => ['sizes' => ['square' => 'https://www.oeconsortium.org/wp-content/uploads/2019/02/Backgroun-blco-e1550457370199.png']],
+        'size' => 'large'
+      ])@endcomponent
+
+      <h3 class="h3">Small</h3>
+
+      @component('components.person-image', [
+        'image' => ['sizes' => ['square' => 'https://www.oeconsortium.org/wp-content/uploads/2019/02/Backgroun-blco-e1550457370199.png']],
         'alt' => 'First Last Name'
+      ])@endcomponent
+    @endcomponent
+
+    @component('components.style-pre', [
+          'title' => 'Person Grid',
+          'cmd' => ''
+    ])
+      @component('components.person-grid', [
+        'items' => [
+          ['image' => ['sizes' => ['square' => 'https://www.oeconsortium.org/wp-content/uploads/2019/02/Backgroun-blco-e1550457370199.png']],
+           'line1' => 'Chinelo Chyke',
+           'line2' => 'Community Relations',
+           'line3' => 'Open Education Consortium',
+           'line4' => 'Mexico',
+           'href' => '#'
+          ],
+          ['image' => ['sizes' => ['square' => 'https://www.oeconsortium.org/wp-content/uploads/2019/02/Backgroun-blco-e1550457370199.png']],
+           'line1' => 'Chinelo Chyke',
+           'line2' => 'Community Relations',
+           'line3' => 'Open Education Consortium',
+           'line4' => 'Mexico',
+           'href' => '#'
+          ],
+          ['image' => ['sizes' => ['square' => 'https://www.oeconsortium.org/wp-content/uploads/2019/02/Backgroun-blco-e1550457370199.png']],
+           'line1' => 'Chinelo Chyke',
+           'line2' => 'Community Relations',
+           'line3' => 'Open Education Consortium',
+           'line4' => 'Mexico',
+           'href' => '#'
+          ],
+          ['image' => ['sizes' => ['square' => 'https://www.oeconsortium.org/wp-content/uploads/2019/02/Backgroun-blco-e1550457370199.png']],
+           'line1' => 'Chinelo Chyke',
+           'line2' => 'Community Relations',
+           'line3' => 'Open Education Consortium',
+           'line4' => 'Mexico',
+           'href' => '#'
+          ],
+          ['image' => ['sizes' => ['square' => 'https://www.oeconsortium.org/wp-content/uploads/2019/02/Backgroun-blco-e1550457370199.png']],
+           'line1' => 'Chinelo Chyke',
+           'line2' => 'Community Relations',
+           'line3' => 'Open Education Consortium',
+           'line4' => 'Mexico',
+           'href' => '#'
+          ],
+        ]
       ])@endcomponent
     @endcomponent
 
