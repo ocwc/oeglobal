@@ -38,6 +38,11 @@ class App extends Controller {
         return get_the_post_thumbnail_url($post, 'large');
     }
 
+    public function featuredImageSquare() {
+        global $post;
+        return get_the_post_thumbnail_url($post, 'square');
+    }
+
     public function title() {
         if ( is_home() ) {
             if ( $home = get_option( 'page_for_posts', true ) ) {
