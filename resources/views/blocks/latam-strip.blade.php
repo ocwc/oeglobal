@@ -19,7 +19,7 @@
       'title' => 'Formación docente',
       'description' => 'Descripción del bloque en dos o tres líneas.',
       'button_title' => 'Ver más…',
-      'button_url' => '#'
+      'button_url' => '/formacion-docente/'
     ]
   )
 ])@endcomponent
