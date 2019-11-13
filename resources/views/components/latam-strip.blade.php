@@ -6,7 +6,7 @@
         <div class="latam-strip__feature__item
                   bg-white border border-gray3
                   mx-10 p-4
-                  w-full md:w-1/3 lg:w-1/3 xl:w-1/4
+                  w-full lg:w-1/3 xl:w-1/4
                   flex flex-col items-center justify-center">
           <img src="@asset($item->icon);" alt="" aria-hidden="true" class="mb-4 w-24">
           <h3 class="mb-4 font-bold text-xl">{{ $item->title }}</h3>
