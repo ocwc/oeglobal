@@ -3,7 +3,7 @@ footer {
   padding-bottom: 50px;
   margin-top: 160px;
 
-  @screen md {
+  @screen lg {
     padding-top: 0;
     padding-bottom: 42px;
   }
@@ -25,7 +25,7 @@ footer::before {
   background-repeat: repeat-x;
   background-position: left bottom;
 
-  @screen md {
-    top: -190px;
+  @screen lg {
+    top: -120px;
   }
 }
