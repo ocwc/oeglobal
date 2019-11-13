@@ -133,6 +133,8 @@ article {
   }
 
   li {
+    @apply font-serif;
+
     list-style: disc inside;
     margin-bottom: 0.5em;
   }

@@ -43,7 +43,7 @@
 }
 
 .image-grid__item__title {
-  @apply absolute font-bold text-2xl px-4 pt-2 pb-4;
+  @apply absolute font-bold text-2xl px-4 pt-2 pb-4 font-sans;
 
   bottom: 0;
   left: 0;

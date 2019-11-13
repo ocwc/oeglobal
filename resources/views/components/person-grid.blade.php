@@ -1,8 +1,8 @@
-<div class="person-grid block mb-16 md:flex md:flex-wrap text-center">
+<div class="person-grid block my-16 md:flex md:flex-wrap text-center">
   @foreach ($items as $item)
-    <div class="w-full md:w-1/2 lg:w-1/3 mb-10">
+    <div class="w-full md:w-1/2 lg:w-1/3 mb-10 font-sans">
     @if ($item['url'])
-      <a href="{!! $item['url'] !!}" class="block">
+      <a href="{!! $item['url'] !!}" class="block font-sans">
     @endif
       @component('components.person-image', [
         'src' => $item['image']['sizes']['square'],
