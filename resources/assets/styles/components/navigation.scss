@@ -41,7 +41,7 @@
 }
 
 .menu-item.is-open .sub-menu {
-  @apply absolute flex left-0 w-56 bg-white flex-col justify-center leading-loose z-20;
+  @apply absolute flex left-0 w-56 bg-white flex-col justify-center leading-loose z-50;
   @apply shadow-md border border-light;
 
   top: 34px;
