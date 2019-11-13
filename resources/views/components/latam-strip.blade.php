@@ -1,4 +1,4 @@
-<div class="latam-strip bg-main-darker flex flex-col justify-end">
+<div class="latam-strip bg-main-darker flex flex-col justify-end font-sans">
   <div class="container">
     <div class="latam-strip__feature flex justify-around
               flex-wrap">
