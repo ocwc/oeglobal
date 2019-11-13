@@ -21,7 +21,7 @@
 .p {
   @apply mb-4 text-sm leading-relaxed font-sans;
 
-  @apply lg {
+  @screen lg {
     @apply text-lg;
   }
 }
