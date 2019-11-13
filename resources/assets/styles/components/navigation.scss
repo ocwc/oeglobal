@@ -128,7 +128,7 @@
     top: 80px;
     left: 0;
     right: 0;
-    z-index: 100;
+    z-index: 200;
 
     @apply block absolute bg-white px-0;
   }
@@ -146,6 +146,7 @@
   .menu-item.is-open .sub-menu {
     top: auto;
     position: unset;
+    z-index: 100;
 
     @apply flex w-full pl-2 shadow-none;
   }

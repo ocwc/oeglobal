@@ -78,7 +78,11 @@
 }
 
 article {
-  @apply text-black2;
+  @apply text-black2 text-sm;
+
+  @screen lg {
+    @apply text-lg;
+  }
 
   h1 {
     @extend .h1;
@@ -106,10 +110,14 @@ article {
 
   p {
     @extend .p;
+
+    @apply font-serif;
   }
 
   a {
     @include anchor();
+
+    @apply font-serif;
   }
 
   figcaption {
@@ -122,5 +130,10 @@ article {
 
   blockquote {
     @extend .blockquote;
+  }
+
+  li {
+    list-style: disc inside;
+    margin-bottom: 0.5em;
   }
 }

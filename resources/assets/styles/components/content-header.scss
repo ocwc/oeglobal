@@ -34,7 +34,12 @@
 .contentheader-sublanding__content {
   display: inline-block;
   background-color: $white;
-  padding-top: 52px;
+  margin: 50px auto;
+
+  @screen lg {
+    margin: auto;
+    padding-top: 52px;
+  }
 }
 
 .contentheader-sublanding__nocontent {
@@ -50,11 +55,14 @@
 .contentheader-sublanding__h1 {
   @extend .h1;
 
-  @apply inline-block bg-latam-orange text-light px-4 py-2 absolute mb-0;
+  @apply inline-block bg-latam-orange text-light px-4 py-2 mb-0;
 
-  bottom: calc(100% - 40px);
-  left: -6px;
-  max-width: 100%;
+  @screen lg {
+    position: absolute;
+    bottom: calc(100% - 40px);
+    left: -6px;
+    max-width: 100%;
+  }
 
   .contentheader-sublanding__nocontent & {
     max-width: none;

@@ -2,18 +2,18 @@
   <div class="contentheader-strip text-black2"
        @if($background_image)style="background-image: url({!! $background_image !!}"@endif>
     <div class="container flex flex-col justify-center">
-      <div class="content px-6
+      <div class="content lg:px-6
                 w-full lg:w-1/2 lg:ml-1/3
                 flex-inline
                 ">
         <div class="contentheader-sublanding__content px-2 pb-4 relative
                     @if(!$excerpt) contentheader-sublanding__nocontent @endif">
-          <h1 class="contentheader-sublanding__h1 z-20">
+          <h1 class="contentheader-sublanding__h1 z-20 -mx-2">
             {!! $title !!}
           </h1>
 
           @if ($excerpt)
-            <div class="leading-relaxed z-20 relative">
+            <div class="leading-relaxed z-20 pt-4 lg:pt-0 px-2 lg:px-0 lg:relative">
               {!! $excerpt !!}
             </div>
           @endif

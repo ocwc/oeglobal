@@ -1,9 +1,31 @@
 footer {
   padding-top: 26px;
   padding-bottom: 50px;
+  margin-top: 160px;
 
   @screen md {
     padding-top: 74px;
     padding-bottom: 42px;
+  }
+}
+
+footer::before {
+  content: "";
+  display: block;
+  position: relative;
+  top: -150px;
+  left: 0;
+  right: 0;
+
+  margin: 0 75px;
+  height: 75px;
+  width: calc(100% - 140px);
+
+  background-image: url("../images/patterns/pattern-arrows.svg");
+  background-repeat: repeat-x;
+  background-position: left bottom;
+
+  @screen md {
+    top: -190px;
   }
 }
