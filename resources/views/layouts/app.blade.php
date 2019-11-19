@@ -9,7 +9,7 @@
 
     @section('container')
     <div class="container">
-      <div class="content mb-6 p-6">
+      <div class="content lg:mb-6 lg:p-6">
         <main class="main">
           @yield('content')
         </main>
