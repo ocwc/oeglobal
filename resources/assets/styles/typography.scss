@@ -93,7 +93,7 @@ article {
   }
 
   h2 {
-    @apply h2;
+    @extend .h2;
   }
 
   h2 a {
@@ -135,7 +135,9 @@ article {
   li {
     @apply font-serif;
 
-    list-style: disc inside;
+    list-style: disc outside;
+    //padding-left: 0.5em;
+    margin-left: 1em;
     margin-bottom: 0.5em;
   }
 }

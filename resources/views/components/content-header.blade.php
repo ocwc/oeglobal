@@ -3,10 +3,10 @@
        @if($background_image)style="background-image: url({!! $background_image !!}"@endif>
     <div class="container flex flex-col justify-center">
       <div class="content lg:px-6
-                w-full lg:w-1/2 lg:ml-1/3
+                w-full lg:min-w-1/2 lg:w-1/2 lg:ml-1/3
                 flex-inline
                 ">
-        <div class="contentheader-sublanding__content px-2 pb-4 relative
+        <div class="contentheader-sublanding__content px-2 pb-4 relative w-full
                     @if(!$excerpt) contentheader-sublanding__nocontent @endif">
           <h1 class="contentheader-sublanding__h1 z-20 -mx-2">
             {!! $title !!}
@@ -25,7 +25,7 @@
   <div class="contentheader-strip text-light"
        @if($background_image)style="background-image: url({!! $background_image !!}"@endif>
     <div class="container flex flex-col justify-center">
-      <div class="content px-6
+      <div class="content px-6 py-12 lg:py-0
                 w-full lg:w-2/3 lg:ml-1/12
                 flex-inline
                 ">

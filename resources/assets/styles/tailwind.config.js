@@ -37,6 +37,9 @@ module.exports = {
       maxHeight: {
         '16': '4rem',
       },
+      minWidth: {
+        '1/2': '50%',
+      },
       fontFamily: {
         sans: [
           'Montserrat',
