@@ -22,9 +22,7 @@
                 small">
       <div class="w-full lg:w-8/12
                   pb-4 lg:pb-0">
-        All content on oeconsortium.org is licensed under a Creative Commons Attribution 4.0 License.<br/> Please note
-        that OCW course materials hosted on member sites are governed by the specific licenses chosen by the owners of
-        those sites.
+        All content on oelatam.org is licensed under a Creative Commons Attribution 4.0 License.
       </div>
       <div class="flex lg:justify-end lg:items-end
                   w-full lg:w-1/3 lg:pl-10">

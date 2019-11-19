@@ -10,14 +10,14 @@
     (object) [
       'icon' => 'images/icons/drawing-latina.svg',
       'title' => 'Estado del arte',
-      'description' => 'Información general, lo que se está haciendo en la región, infografías e imágenes para compartir.',
+      'description' => 'Siguiendo la trayectoria de la Educación Abierta en la región latinoamericana.',
       'button_title' => 'Ver más…',
-      'button_url' => '#'
+      'button_url' => '/que-hacemos/estado-del-arte/'
     ],
     (object) [
       'icon' => 'images/icons/drawing-docente.svg',
       'title' => 'Formación docente',
-      'description' => 'Descripción del bloque en dos o tres líneas.',
+      'description' => 'Recursos Educativos Abiertos para la capacitación docente en temas de educación abierta.',
       'button_title' => 'Ver más…',
       'button_url' => '/formacion-docente/'
     ]

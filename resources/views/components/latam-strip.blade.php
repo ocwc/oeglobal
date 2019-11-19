@@ -16,8 +16,7 @@
       @endforeach
     </div>
     <div class="latam-strip__tagline flex flex-col items-center justify-end">
-      <h2 class="flex flex-initial italic text-center text-white text-2xl text-gray4">Lo que sucede en América
-        Latina…</h2>
+      <h2 class="flex flex-initial italic text-center text-white text-2xl text-gray4">Lo que sucede en Latinoamérica...</h2>
     </div>
   </div>
 </div>
