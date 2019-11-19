@@ -58,6 +58,7 @@ module.exports = {
         ...whitelister('resources/assets/styles/components/_tables.scss'),
         ...whitelister('resources/assets/styles/common/_global.scss'),
         ...whitelister('resources/assets/styles/components/_wp-classes.scss'),
+        ...whitelister('resources/assets/styles/components/buttons.scss'),
       ],
     }),
   ],

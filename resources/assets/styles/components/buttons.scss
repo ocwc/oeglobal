@@ -7,3 +7,10 @@
     @apply bg-latam-orange-cream;
   }
 }
+
+.wp-block-button__link {
+  @extend .btn;
+
+  background-image: none;
+  border-radius: 0;
+}
