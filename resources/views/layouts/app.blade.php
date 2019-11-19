@@ -8,19 +8,20 @@
     @include('partials.header')
 
     @section('container')
-    <div class="container">
-      <div class="content lg:mb-6 lg:p-6">
-        <main class="main">
-          @yield('content')
-        </main>
+      @include('partials.breadcrumbs')
+      <div class="container">
+        <div class="content lg:mb-6 lg:p-6">
+          <main class="main">
+            @yield('content')
+          </main>
 
-        @hasSection('sidebar')
-          <aside class="sidebar">
-            @yield('sidebar')
-          </aside>
-        @endif
+          @hasSection('sidebar')
+            <aside class="sidebar">
+              @yield('sidebar')
+            </aside>
+          @endif
+        </div>
       </div>
-    </div>
     @show
 
     @php(do_action('get_footer'))
