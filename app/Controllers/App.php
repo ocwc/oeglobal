@@ -63,4 +63,16 @@ class App extends Controller {
 
         return get_the_title();
     }
+
+    public static function extractBlockUrl($item) {
+        if ($item['link']) {
+            $url = $item['link'];
+        } else if ( $item['url'] ) {
+            $url = $item['url'];
+        } else {
+            $url = null;
+        };
+
+        return $url;
+    }
 }

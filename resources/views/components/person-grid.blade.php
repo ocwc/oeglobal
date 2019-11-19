@@ -1,8 +1,8 @@
 <div class="person-grid block my-16 md:flex md:flex-wrap text-center">
   @foreach ($items as $item)
     <div class="w-full md:w-1/2 lg:w-1/3 mb-10 font-sans">
-    @if ($item['url'])
-      <a href="{!! $item['url'] !!}" class="block font-sans">
+    @if (App::extractBlockUrl($item))
+      <a href="{!! App::extractBlockUrl($item) !!}" class="block font-sans">
     @endif
       @component('components.person-image', [
         'src' => $item['image']['sizes']['square'],
@@ -14,7 +14,7 @@
       <div class="text-sm text-gray2 mb-2">{!! $item['line3'] !!}</div>
       <div class="text-sm text-gray2">{!! $item['line4'] !!}</div>
 
-    @if ($item['url'])
+    @if (App::extractBlockUrl($item))
       </a>
     @endif
     </div>

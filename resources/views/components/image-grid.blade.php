@@ -3,7 +3,7 @@
         <div class="image-grid__item
                     w-2/3 md:w-1/3 inline-block">
             <a
-                href="{!! $item['url'] !!}"
+                href="{!! App::extractBlockUrl($item) !!}"
             >
             <span
                 class="block w-full image-grid__item__image"
