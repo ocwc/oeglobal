@@ -9,7 +9,7 @@
         <p class="text-gray-600 text-sm">OE LATAM es un nodo regional latinoamericano del consorcio de educación abierta
           OE GLOBAL.</p>
       </div>
-      <div class="w-full lg:w-1/12 pb-4"></div>
+      <div class="w-full lg:w-1/12 pb-8"></div>
 
       @include('partials.navigation-footer')
     </div>
