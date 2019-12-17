@@ -11,6 +11,10 @@ const FriendlyErrorsWebpackPlugin = require('friendly-errors-webpack-plugin');
 const desire = require('./util/desire');
 const config = require('./config');
 
+if (process.env.SITE) {
+  config.devUrl = `http://${process.env.SITE}.test`
+}
+
 const assetsFilenames = config.enabled.cacheBusting
   ? config.cacheBusting
   : '[name]';
