@@ -3,7 +3,7 @@
             lg:h-6
             uppercase text-2xs lg:text-xs leading-loose font-sans text-right">
   <div class="container">
-    <a class="global-header__item" href="#">OE Global</a><a class="global-header__item active" href="#">OE LATAM</a><a class="global-header__item" href="#">CCCOER</a><a class="global-header__item" href="#">OE Global Conference</a><a class="global-header__item" href="#">OE Week</a><a class="global-header__item" href="#">OE Awards</a>
+    <a class="global-header__item" href="https://www.oeconsortium.org">OE Global</a><a class="global-header__item active" href="https://www.oelatam.org">OE LATAM</a><a class="global-header__item" href="https://www.cccoer.org">CCCOER</a><a class="global-header__item" href="https://confernece.oeconsortium.org">OE Global Conference</a><a class="global-header__item" href="https://www.openeducationweek.org">OE Week</a><a class="global-header__item" href="https://www.oeconsortium.org/projects/open-education-awards-for-excellence/2019-winners-of-oe-awards/">OE Awards</a>
   </div>
 </div>
 
