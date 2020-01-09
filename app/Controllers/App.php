@@ -15,15 +15,19 @@ class App extends Controller {
     }
 
     public function navigation() {
-        $navigation = ( new Navi() )->build( 'primary_navigation' )->toArray();
+        if ( has_nav_menu( 'primary_navigation' ) ) {
+            $navigation = ( new Navi() )->build( 'primary_navigation' )->toArray();
 
-        return $navigation;
+            return $navigation;
+        }
     }
 
     public function navigationFooter() {
-        $navigation = ( new Navi() )->build( 'footer_navigation' )->toArray();
+        if ( has_nav_menu( 'footer_navigation' ) ) {
+            $navigation = ( new Navi() )->build( 'footer_navigation' )->toArray();
 
-        return $navigation;
+            return $navigation;
+        }
     }
 
     public function excerptSimple() {
@@ -74,5 +78,17 @@ class App extends Controller {
         };
 
         return $url;
+    }
+
+    public function is_oeg() {
+        return OEG_SITE === 'OEG';
+    }
+
+    public function isLatam() {
+        return OEG_SITE === 'LATAM';
+    }
+
+    public function site() {
+        return strtolower(OEG_SITE);
     }
 }

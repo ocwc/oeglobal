@@ -25,7 +25,7 @@
     @show
 
     @php(do_action('get_footer'))
-    @include('components.footer')
+    @include('components.footer', ['site' => $site])
 
     @php(wp_footer())
   </body>

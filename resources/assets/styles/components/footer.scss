@@ -21,11 +21,18 @@ footer::before {
   height: 75px;
   width: calc(100% - 140px);
 
-  background-image: url("../images/patterns/pattern-arrows.svg");
   background-repeat: repeat-x;
   background-position: left bottom;
 
   @screen lg {
     top: -120px;
   }
+}
+
+body.latam footer::before {
+  background-image: url("../images/patterns/pattern-arrows.svg");
+}
+
+.oeg-logo-shadow {
+  filter: drop-shadow(0 4px 4px rgba(0, 0, 0, 0.4));
 }
