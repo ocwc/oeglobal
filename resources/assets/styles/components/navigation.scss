@@ -22,7 +22,7 @@
 .menu-item.has-children {
   @apply pr-6;
 
-  &::after {
+  body.latam &::after {
     content: "+";
     position: absolute;
     right: 4px;
@@ -31,11 +31,11 @@
 }
 
 .menu-item.active {
-  border-bottom: 2px solid $brand-primary;
+  border-bottom: 2px solid theme("colors.primary");
 }
 
 .menu-item.has-children.is-open {
-  &::after {
+  body.latam &::after {
     content: "-";
   }
 }

@@ -1,5 +1,7 @@
 const { wordpressUtilities } = require('tailwindcss-wordpress');
 
+const SITE = process.env.SITE;
+
 module.exports = {
   theme: {
     extend: {
@@ -84,3 +86,9 @@ module.exports = {
   },
   plugins: [wordpressUtilities],
 };
+
+if (SITE === 'latam') {
+  module.exports.theme.extend.colors.primary = module.exports.theme.extend.colors.latam.orange;
+} else {
+  module.exports.theme.extend.colors.primary = module.exports.theme.extend.colors.main;
+}
