@@ -1,0 +1,37 @@
+.oeg-hero {
+  background-image: url("../images/heros/oeg-home1.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.oeg-hero .container {
+  min-height: 400px;
+}
+
+.oeg-hero__panel {
+  position: relative;
+  background-color: theme("colors.white");
+
+  @screen lg {
+    margin-left: 45%;
+  }
+}
+
+.oeg-hero__panel h1 {
+  background-color: theme("colors.int.turq");
+  display: inline-flex;
+
+  margin: -30px 0 0 -16px;
+
+  @apply text-2xl font-bold font-sans text-white px-4 py-2;
+}
+
+.oeg-hero__cta {
+  margin-bottom: -16px;
+  margin-right: 18px;
+  text-align: right;
+}
+
+.oeg-hero__cta .btn:first-child {
+  margin-right: 10px;
+}

@@ -8,6 +8,16 @@
   }
 }
 
+.btn.oeg {
+  @apply bg-int-red;
+
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.33);
+
+  &:hover {
+    background-color: lighten(#ff5547, 10%);
+  }
+}
+
 .wp-block-button__link {
   @extend .btn;
 

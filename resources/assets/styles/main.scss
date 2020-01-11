@@ -30,9 +30,16 @@
 @import "components/footer";
 @import "components/navigation";
 @import "components/breadcrumbs";
+
+/* OEG */
+@import "components/oeg-hero";
+
+/* LATAM */
 @import "components/latam-hero";
 @import "components/latam-strip";
 @import "components/latam-home-gallery";
+
+/* Gutenberg blocks */
 @import "components/image-grid";
 @import "components/person-grid";
 @import "components/person-image";

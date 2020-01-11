@@ -8,7 +8,8 @@
   @include('partials.header')
 
   @while(have_posts()) @php the_post() @endphp
-  @include('partials.content-bare')
+    @component('components.oeg-hero', [])@endcomponent
+
   @endwhile
 
   @php(do_action('get_footer'))
