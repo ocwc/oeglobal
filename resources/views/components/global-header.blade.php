@@ -1,4 +1,4 @@
-<div class="global-header bg-main
+<div class="global-header bg-shade-40
             w-full hidden md:flex flex-row items-center align-center justify-end
             lg:h-6
             uppercase text-2xs lg:text-xs leading-loose font-sans text-right">
