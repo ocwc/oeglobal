@@ -22,6 +22,17 @@ module.exports = {
           orange: '#FF922D',
           'orange-cream': '#FFC794',
         },
+        shade: {
+          10: '#0A1729',
+          20: '#142F52',
+          30: '#1F467A',
+          40: '#195BB3',
+          50: '#0D59F2',
+          60: '#3D7AF5',
+          70: '#6E9CF7',
+          80: '#9EBDFA',
+          90: '#CFDEFC',
+        },
         black: '#3333333',
         black2: '#4D4D4D',
         dark: '#4A4A4A',
@@ -89,6 +100,10 @@ module.exports = {
 
 if (SITE === 'latam') {
   module.exports.theme.extend.colors.primary = module.exports.theme.extend.colors.latam.orange;
+  module.exports.theme.extend.colors.menuHover = module.exports.theme.extend.colors.gray5;
 } else {
   module.exports.theme.extend.colors.primary = module.exports.theme.extend.colors.main;
+  module.exports.theme.extend.colors.menuHover = module.exports.theme.extend.colors.shade['90'];
 }
+
+console.log(module.exports.theme.extend.colors.menuHover);

@@ -26,7 +26,8 @@
 
     <li class="menu-item menu-item-search-mobile lg:hidden">
       <form action="/" method="get" class="w-full">
-        <input type="search" name="s" id="search" value="" placeholder="Buscar ..." class="h-10 pl-2" />
+        <?php // TODO translate "Search" to "Buscar" ?>
+        <input type="search" name="s" id="search" value="" placeholder="Search ..." class="h-10 pl-2" />
       </form>
     </li>
   </ul>

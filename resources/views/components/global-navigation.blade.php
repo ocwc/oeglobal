@@ -2,7 +2,11 @@
   <div class="flex items-center justify-between
               h-20 lg:h-24">
     <a class="brand flex" href="{{ home_url('/') }}" alt="Home">
-      @svg('logos/oelatam', 'nav-logo')
+      @if ($site === 'latam')
+        @svg('logos/oelatam', 'nav-logo')
+      @else
+        @svg('logos/oeglobal-color', 'nav-logo')
+      @endif
     </a>
     <nav role="navigation"
          class="nav-primary
