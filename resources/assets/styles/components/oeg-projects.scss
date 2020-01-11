@@ -1,0 +1,65 @@
+.oeg-projects {
+  position: relative;
+}
+
+.oeg-projects::before {
+  position: absolute;
+  left: 0;
+  top: -70px;
+  z-index: -1;
+  content: "";
+  height: 171px;
+  width: 171px;
+  border-radius: 100%;
+  background-color: theme("colors.int.yellow");
+}
+
+.oeg-projects__intro {
+  margin-top: 50px;
+  margin-bottom: 33px;
+}
+
+.oeg-projects__special {
+  position: relative;
+  background-image: url("../images/patterns/pattern-lines.svg");
+  background-repeat: repeat;
+}
+
+.oeg-projects__special::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 10px;
+  width: calc(100% - 120px);
+  background-color: white;
+}
+
+.oeg-projects__special::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 10px;
+  height: calc(100% - 60px);
+  background-color: white;
+}
+
+.oeg-projects__special-inner {
+  background-color: white;
+  height: calc(100% - 5px);
+  margin: 2px -2px 2px 2px;
+}
+
+.oeg-projects__special-inner::before {
+  content: "";
+  position: absolute;
+  right: 12px;
+  top: -25px;
+  width: 57px;
+  height: 52px;
+
+  background-image: url("../images/icons/oeg-bubble.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}

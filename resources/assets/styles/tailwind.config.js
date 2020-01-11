@@ -105,5 +105,3 @@ if (SITE === 'latam') {
   module.exports.theme.extend.colors.primary = module.exports.theme.extend.colors.main;
   module.exports.theme.extend.colors.menuHover = module.exports.theme.extend.colors.shade['90'];
 }
-
-console.log(module.exports.theme.extend.colors.menuHover);
