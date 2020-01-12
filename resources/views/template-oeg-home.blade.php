@@ -10,6 +10,7 @@
   @while(have_posts()) @php the_post() @endphp
     @component('components.oeg-hero', [])@endcomponent
     @component('components.oeg-projects', [])@endcomponent
+    @component('components.oeg-highlight', [])@endcomponent
   @endwhile
 
   @php(do_action('get_footer'))

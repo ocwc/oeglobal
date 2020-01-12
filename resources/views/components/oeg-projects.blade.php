@@ -1,4 +1,4 @@
-<div class="container oeg-projects">
+<div class="container oeg-projects mb-40">
   <div class="oeg-projects__intro w-full">
     <h1 class="text-center font-bold font-sans text-2xl text-dark">Explore the Open Education Community</h1>
   </div>

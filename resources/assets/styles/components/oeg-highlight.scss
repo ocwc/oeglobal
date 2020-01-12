@@ -1,0 +1,28 @@
+$highlight-bg-image: url(/wp-content/uploads/2020/01/highglight.jpg);
+
+.oeg-highlight {
+  background-color: theme("colors.main-light");
+  background-image: $highlight-bg-image;
+  background-size: cover;
+
+  @screen lg {
+    background-image: none;
+  }
+}
+
+.oeg-highlight__image {
+  background-size: cover;
+  background-image: $highlight-bg-image;
+}
+
+.oeg-highlight__content {
+  height: 100%;
+  padding: 50px 0 60px;
+  min-height: 300px;
+
+  @apply text-white font-sans leading-relaxed;
+
+  @screen lg {
+    min-height: 453px;
+  }
+}

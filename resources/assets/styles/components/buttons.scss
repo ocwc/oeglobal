@@ -18,6 +18,16 @@
   }
 }
 
+.btn.oeg-inverted {
+  @apply bg-white text-black font-normal;
+
+  text-shadow: none;
+
+  &:hover {
+    @apply bg-gray-300;
+  }
+}
+
 .wp-block-button__link {
   @extend .btn;
 

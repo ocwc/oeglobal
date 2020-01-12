@@ -33,7 +33,7 @@ module.exports = {
           80: '#9EBDFA',
           90: '#CFDEFC',
         },
-        black: '#3333333',
+        black: '#333333',
         black2: '#4D4D4D',
         dark: '#4A4A4A',
         gray1: '#666666',
@@ -80,6 +80,9 @@ module.exports = {
         '3xl': '2rem',
       },
       textStrokeWidth: theme => theme('borderWidth'),
+      spacing: {
+        '9': '1.75rem',
+      },
       margin: {
         '1/12': '8.333333333%',
         '1/3': '33.333333333%',
