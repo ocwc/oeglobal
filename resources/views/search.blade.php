@@ -1,17 +1,19 @@
 @extends('layouts.app')
 
-@section('content')
-  @include('partials.page-header')
+@section('container')
+  @include('partials.breadcrumbs')
+  @include('partials.search-header')
 
   @if (!have_posts())
-    <div class="alert alert-warning">
-      {{ __('Sorry, no results were found.', 'sage') }}
-    </div>
-    {!! get_search_form(false) !!}
+    <article class="container">
+      <div class="content lg:mb-6 lg:p-6 w-full">
+        {{ __('Sorry, no results were found.', 'sage') }}
+      </div>
+    </article>
   @endif
 
   @while(have_posts()) @php the_post() @endphp
-    @include('partials.content-search')
+    @include('partials.content-excerpt')
   @endwhile
 
   {!! get_the_posts_navigation() !!}

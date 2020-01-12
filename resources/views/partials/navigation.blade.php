@@ -21,7 +21,7 @@
     @endforeach
 
     <li class="menu-item menu-item-search">
-      <a href="?q=">@svg('icons/magnify', 'menu-item__icon')</a>
+      <a href="/search/">@svg('icons/magnify', 'menu-item__icon')</a>
     </li>
 
     <li class="menu-item menu-item-search-mobile lg:hidden">

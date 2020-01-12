@@ -39,6 +39,10 @@
               {!! $excerpt !!}
             </div>
           @endif
+
+          @if ($is_search)
+            {!! get_search_form(false) !!}
+          @endif
         </div>
       </div>
     </div>

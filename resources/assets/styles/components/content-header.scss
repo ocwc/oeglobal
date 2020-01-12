@@ -41,6 +41,10 @@ body.latam .contentheader-strip::after {
 
     background-color: rgba(31, 70, 122, 0.5);
   }
+
+  body.search & {
+    min-width: 80%;
+  }
 }
 
 .contentheader-sublanding__content {

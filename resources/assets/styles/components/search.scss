@@ -1,0 +1,33 @@
+.search-form {
+  position: relative;
+  width: 100%;
+  color: theme("colors.gray.500");
+
+  @screen lg {
+    display: inline-block;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+
+    top: 8px;
+    right: 7px;
+    width: 15px;
+    height: 15px;
+
+    background-image: url("../images/icons/magnify.svg");
+    background-size: cover;
+  }
+
+  input {
+    width: 100%;
+    padding: 4px 16px;
+  }
+
+  input::-webkit-input-placeholder,
+  input::-moz-placeholder,
+  input::placeholder {
+    font-size: 14px;
+  }
+}
