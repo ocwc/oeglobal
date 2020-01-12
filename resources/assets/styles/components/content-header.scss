@@ -6,12 +6,14 @@
   background-size: cover;
   background-position: center center;
 
-  @screen lg {
-    min-height: 500px;
+  body.latam & {
+    @screen lg {
+      min-height: 500px;
+    }
   }
 }
 
-.contentheader-strip::after {
+body.latam .contentheader-strip::after {
   content: "";
   position: absolute;
   top: 0;
@@ -28,7 +30,17 @@
 
 .contentheader-strip__content {
   display: inline-block;
-  background-color: rgba(31, 70, 122, 0.5);
+
+  @apply px-6 py-4;
+
+  // theme("colors.main-darker")
+  background-color: rgba(31, 70, 122, 0.8);
+
+  body.latam & {
+    @apply px-2 py-4;
+
+    background-color: rgba(31, 70, 122, 0.5);
+  }
 }
 
 .contentheader-sublanding__content {
@@ -49,7 +61,11 @@
 .contentheader-strip__h1 {
   @extend .h1;
 
-  @apply mb-0;
+  @apply mb-6;
+
+  body.latam & {
+    @apply mb-0;
+  }
 }
 
 .contentheader-sublanding__h1 {

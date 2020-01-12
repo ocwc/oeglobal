@@ -29,7 +29,7 @@
                 w-full lg:w-2/3 lg:ml-1/12
                 flex-inline
                 ">
-        <div class="contentheader-strip__content px-2 py-4">
+        <div class="contentheader-strip__content">
           <h1 class="contentheader-strip__h1 z-20 relative">
             {!! $title !!}
           </h1>
