@@ -16,5 +16,7 @@
     @include('partials.content-excerpt')
   @endwhile
 
-  {!! get_the_posts_navigation() !!}
+  <div class="container">
+    {!! get_the_posts_navigation() !!}
+  </div>
 @endsection
