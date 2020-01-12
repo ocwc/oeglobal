@@ -38,7 +38,7 @@
           and aspirations.</p>
         <p class="px-6 pb-4 text-left">Here are a few of our current special projects done in partnership with others.</p>
 
-        <a class="btn oeg mb-6" href="#">Learn more</a>
+        <a class="btn oeg mb-6" href="/activities/special-projects/">Learn more</a>
       </div>
     </div>
 
