@@ -1,19 +1,18 @@
 <article @php(post_class())>
   <header>
-    <h1 class="entry-title">
-      {!! $title !!}
-    </h1>
-
     @include('partials/entry-meta')
   </header>
 
-  <div class="entry-content">
+  <div class="content lg:mb-6 w-full entry-content">
     @php(the_content())
   </div>
-
-  <footer>
-    {!! wp_link_pages(['echo' => 0, 'before' => '<nav class="page-nav"><p>' . __('Pages:', 'sage'), 'after' => '</p></nav>']) !!}
-  </footer>
-
-  @php(comments_template())
 </article>
+
+<div class="flex flex-wrap mt-10">
+  <div class="w-1/2 prev-next-post prev">
+    @php(previous_post_link('%link', 'Previous Post'))
+  </div>
+  <div class="w-1/2 text-right prev-next-post next">
+    @php(next_post_link('%link', 'Next Post'))
+  </div>
+</div>

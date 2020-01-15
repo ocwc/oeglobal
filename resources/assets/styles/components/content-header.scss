@@ -31,7 +31,9 @@ body.latam .contentheader-strip::after {
 .contentheader-strip__content {
   display: inline-block;
 
-  @apply px-6 py-4;
+  @screen lg {
+    @apply px-6 py-4;
+  }
 
   // theme("colors.main-darker")
   background-color: rgba(31, 70, 122, 0.8);

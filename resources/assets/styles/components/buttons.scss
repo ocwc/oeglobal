@@ -34,3 +34,40 @@
   background-image: none;
   border-radius: 0;
 }
+
+.prev-next-post a {
+  @apply font-bold p-2 inline-flex;
+
+  border: 2px solid theme("colors.primary");
+  position: relative;
+}
+
+.prev-next-post.next a {
+  padding-left: 16px;
+  padding-right: 36px;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 12px;
+    right: 10px;
+    height: 16px;
+    width: 16px;
+    background-image: url("../images/icons/arrow-right.svg");
+  }
+}
+
+.prev-next-post.prev a {
+  padding-right: 16px;
+  padding-left: 36px;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 12px;
+    left: 10px;
+    height: 16px;
+    width: 16px;
+    background-image: url("../images/icons/arrow-left.svg");
+  }
+}

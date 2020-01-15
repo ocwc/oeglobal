@@ -1,4 +1,4 @@
-@if ($variant == 'sublanding')
+@if ($variant === 'sublanding')
   <div class="contentheader-strip text-black2"
        @if($background_image)style="background-image: url({!! $background_image !!}"@endif>
     <div class="container flex flex-col justify-center">
@@ -26,7 +26,11 @@
        @if($background_image)style="background-image: url({!! $background_image !!}"@endif>
     <div class="container flex flex-col justify-center">
       <div class="content px-6 py-12 lg:py-0
-                w-full lg:w-2/3 lg:ml-1/12
+                @if ($variant === 'sidebar')
+                  w-full
+                @else
+                  w-full lg:w-2/3 lg:ml-1/12
+                @endif
                 flex-inline
                 ">
         <div class="contentheader-strip__content">

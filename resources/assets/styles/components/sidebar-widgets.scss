@@ -1,0 +1,17 @@
+.widget {
+  background-color: theme("colors.gray5");
+
+  @apply px-4 py-6 mb-4 font-sans;
+}
+
+.widget h3 {
+  @apply font-sans text-xl mb-6;
+}
+
+.widget ul li {
+  @apply mb-2;
+}
+
+.widget ul li a {
+  @apply underline;
+}
