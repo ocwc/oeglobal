@@ -10,7 +10,7 @@
     </header>
 
     <div class="entry-summary">
-      @php(the_excerpt())
+      @php(the_content())
     </div>
   </div>
 </article>
