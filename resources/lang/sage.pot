@@ -1,0 +1,117 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-01-12 17:01+0700\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: resources/functions.php:17
+msgid "Sage &rsaquo; Error"
+msgstr ""
+
+#: resources/functions.php:27
+msgid "You must be using PHP 7.1 or greater."
+msgstr ""
+
+#: resources/functions.php:27
+msgid "Invalid PHP version"
+msgstr ""
+
+#: resources/functions.php:34
+msgid "You must be using WordPress 4.7.0 or greater."
+msgstr ""
+
+#: resources/functions.php:34
+msgid "Invalid WordPress version"
+msgstr ""
+
+#: resources/functions.php:43
+msgid "You must run <code>composer install</code> from the Sage directory."
+msgstr ""
+
+#: resources/functions.php:44
+msgid "Autoloader not found."
+msgstr ""
+
+#: resources/functions.php:59
+#, php-format
+msgid "Error locating <code>%s</code> for inclusion."
+msgstr ""
+
+#: app/filters.php:35
+msgid "Continued"
+msgstr ""
+
+#: app/setup.php:48
+msgid "Primary Navigation"
+msgstr ""
+
+#: app/setup.php:49
+msgid "Footer Navigation"
+msgstr ""
+
+#: app/setup.php:89
+msgid "Primary"
+msgstr ""
+
+#: app/setup.php:93
+msgid "Footer"
+msgstr ""
+
+#: app/Controllers/App.php:56
+msgid "Latest Posts"
+msgstr ""
+
+#: app/Controllers/App.php:62
+#, php-format
+msgid "Search Results for %s"
+msgstr ""
+
+#: app/Controllers/App.php:65
+msgid "Not Found"
+msgstr ""
+
+#: resources/views/index.blade.php:8 resources/views/search.blade.php:10
+msgid "Sorry, no results were found."
+msgstr ""
+
+#: resources/views/404.blade.php:8
+msgid "Sorry, but the page you were trying to view does not exist."
+msgstr ""
+
+#: resources/views/partials/comments.blade.php:17
+msgid "&larr; Older comments"
+msgstr ""
+
+#: resources/views/partials/comments.blade.php:23
+msgid "Newer comments &rarr;"
+msgstr ""
+
+#: resources/views/partials/comments.blade.php:33
+msgid "Comments are closed."
+msgstr ""
+
+#: resources/views/partials/searchform.blade.php:3
+msgctxt "label"
+msgid "Search for:"
+msgstr ""
+
+#: resources/views/partials/content-single.blade.php:15
+msgid "Pages:"
+msgstr ""
+
+#: resources/views/partials/entry-meta.blade.php:6
+msgid "By"
+msgstr ""
