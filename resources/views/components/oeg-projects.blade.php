@@ -58,13 +58,7 @@
                 'name' => 'OE LATAM',
                 'image' => '/wp-content/themes/oeglobal/resources/assets/images/logos/oelatam.svg',
                 'text' => 'Espacio de diálogo para compartir ideas, proyectos y experiencias de las iniciativas que se desarrollan en la región, así como identificar retos, necesidades y áreas de posible colaboración.',
-                'url' => 'https://www.oelatam.org'
-            ],
-            [
-                'name' => 'Virtual Educa',
-                'image' => '/wp-content/themes/oeglobal/resources/assets/images/logos/virtual-educa.png',
-                'text' => 'Espacio de diálogo para compartir ideas, proyectos y experiencias de las iniciativas que se desarrollan en la región, así como identificar retos, necesidades y áreas de posible colaboración. ',
-                'url' => '#'
+                'url' => 'https://www.oelatam.org/'
             ]
         ]
       ])
