@@ -10,9 +10,9 @@
 
 <div class="flex flex-wrap mt-10">
   <div class="w-1/2 prev-next-post prev">
-    @php(previous_post_link('%link', 'Previous Post'))
+    @php(previous_post_link('%link', 'Previous'))
   </div>
   <div class="w-1/2 text-right prev-next-post next">
-    @php(next_post_link('%link', 'Next Post'))
+    @php(next_post_link('%link', 'Next'))
   </div>
 </div>

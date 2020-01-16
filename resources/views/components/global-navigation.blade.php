@@ -1,6 +1,5 @@
 <header class="banner">
-  <div class="flex items-center justify-between
-              h-20 lg:h-24">
+  <div class="flex items-center justify-between h-full">
     <a class="brand flex" href="{{ home_url('/') }}" alt="Home">
       @if ($site === 'latam')
         @svg('logos/oelatam', 'nav-logo')

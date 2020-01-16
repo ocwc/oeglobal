@@ -1,5 +1,12 @@
 .brand {
   @screen lg {
+    width: 162px;
+    height: auto;
+  }
+}
+
+body.latam .brand {
+  @screen lg {
     @apply py-2;
     width: 235px;
     height: 63px;

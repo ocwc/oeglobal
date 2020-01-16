@@ -81,9 +81,11 @@
 }
 
 .banner {
-  @apply relative mb-2;
+  @apply relative mb-2 h-20;
 
   @screen lg {
+    height: 60px;
+
     @apply mb-0;
   }
 }

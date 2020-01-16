@@ -1,5 +1,4 @@
-<header class="banner">
-  <!-- test -->
+<header>
   @component('components.global-header', [
     'is_oeg' => $is_oeg,
     'is_latam' => $is_latam
