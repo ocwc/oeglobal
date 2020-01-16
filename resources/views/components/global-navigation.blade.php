@@ -10,7 +10,7 @@
     </a>
     <nav role="navigation"
          class="nav-primary
-                hidden lg:block">
+                hidden lg:block flex">
       @include('partials.navigation')
     </nav>
     <button class="js-toggle-menu toggle-menu flex justify-center lg:hidden">@svg('icons/menu', 'menu')</button>

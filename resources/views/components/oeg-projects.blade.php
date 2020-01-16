@@ -2,8 +2,8 @@
   <div class="oeg-projects__intro w-full">
     <h1 class="text-center font-bold font-sans text-2xl text-dark">Explore the Open Education Community</h1>
   </div>
-  <div class="flex flex-wrap -mx-2">
-    <div class="my-2 px-2 w-3/4">
+  <div class="flex flex-wrap -mx-4">
+    <div class="my-4 px-4 w-3/4">
       @component('components.oeg-projects-collection', [
         'title' => 'Global Ongoing Projects',
         'items' => [
@@ -30,7 +30,7 @@
       @endcomponent
     </div>
 
-    <div class="my-2 px-2 py-2 w-1/4 text-center oeg-projects__special">
+    <div class="my-4 px-2 py-2 w-1/4 text-center oeg-projects__special">
       <div class="oeg-projects__special-inner">
         <h2 class="font-semibold italic font-sans text-xl w-1/2 mx-auto pt-8 pb-6">Special Projects</h2>
 
