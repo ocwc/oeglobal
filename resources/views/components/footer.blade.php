@@ -9,11 +9,9 @@
           <img src="@asset('images/logos/oeglobal-white.svg')" class="w-full h-auto max-h-20 mb-4 oeg-logo-shadow"
                alt="" OE Global Logo" />
           <p class="text-white text-center text-sm mt-4">
-            <a href="#">Contact</a>
+            <a href="/about-us/contact-us/">Contact</a>
             <span class="px-1">|</span>
-            <a href="#">Facebook</a>
-            <span class="px-1">|</span>
-            <a href="#">Twitter</a>
+            <a href="https://twitter.com/oeconsortium">Twitter</a>
           </p>
         </div>
       @elseif ($site === 'latam')
