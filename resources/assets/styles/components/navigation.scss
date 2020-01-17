@@ -48,8 +48,7 @@
 }
 
 .menu-item-child a {
-  @apply block pl-4 pr-8 flex items-center leading-relaxed w-full;
-  min-height: 3em;
+  @apply block pl-4 pr-8 py-2 flex items-center leading-relaxed w-full;
 
   &:hover {
     background-color: theme("colors.menuHover");
