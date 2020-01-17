@@ -34,7 +34,7 @@
       <div class="oeg-projects__special-inner">
         <h2 class="font-semibold italic font-sans text-xl w-1/2 mx-auto pt-8 pb-6">Special Projects</h2>
 
-        <p class="px-6 pb-4 text-left">The Open Education Consortium forms strategic partnerships with other organizations who share common goals
+        <p class="px-6 pb-4 text-left">The Open Education Global forms strategic partnerships with other organizations who share common goals
           and aspirations.</p>
         <p class="px-6 pb-4 text-left">Here are a few of our current special projects done in partnership with others.</p>
 
