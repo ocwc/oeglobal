@@ -23,7 +23,7 @@ add_filter( 'body_class', function ( array $classes ) {
         return preg_replace( [ '/-blade(-php)?$/', '/^page-template-views/' ], '', $class );
     }, $classes );
 
-    $classes[] = strtolower(OEG_SITE);
+    $classes[] = strtolower( OEG_SITE );
 
     return array_filter( $classes );
 } );
@@ -133,19 +133,27 @@ add_filter( 'block_categories', function ( $categories, $post ) {
     );
 }, 10, 2 );
 
-add_filter('get_search_form', function () {
+add_filter( 'get_search_form', function () {
     return \App\template( 'partials.searchform' );
-});
+} );
 
-add_filter( 'get_the_archive_title', function ($title) {
+add_filter( 'get_the_archive_title', function ( $title ) {
     if ( is_category() ) {
         $title = single_cat_title( '', false );
     } elseif ( is_tag() ) {
         $title = single_tag_title( '', false );
     } elseif ( is_author() ) {
-        $title = '<span class="vcard">' . get_the_author() . '</span>' ;
+        $title = '<span class="vcard">' . get_the_author() . '</span>';
     } elseif ( is_tax() ) { //for custom post types
         $title = sprintf( __( '%1$s' ), single_term_title( '', false ) );
     }
+
     return $title;
-});
+} );
+
+
+add_filter( 'query_vars', function ( $query_vars ) {
+    $query_vars[] = 'member_id';
+
+    return $query_vars;
+} );

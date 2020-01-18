@@ -11,6 +11,8 @@
 .btn.oeg {
   @apply bg-int-red;
 
+  background-image: none;
+  transition: none;
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.33);
 
   &:hover {
@@ -22,6 +24,19 @@
   @apply bg-white text-black font-normal;
 
   text-shadow: none;
+
+  &:hover {
+    @apply bg-gray-300;
+  }
+}
+
+.btn.simple {
+  @apply font-bold p-2 inline-flex text-black2;
+
+  background: none;
+  text-shadow: none;
+  border: 2px solid theme("colors.primary");
+  position: relative;
 
   &:hover {
     @apply bg-gray-300;
