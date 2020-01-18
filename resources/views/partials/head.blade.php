@@ -8,5 +8,6 @@
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
   <link rel="manifest" href="/site.webmanifest">
   <meta name="theme-color" content="#ffffff">
+  <meta property="og:image" content="@asset('images/og/oeglobal.png')">
   @php(wp_head())
 </head>
