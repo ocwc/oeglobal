@@ -2,6 +2,8 @@
 
 namespace App;
 
+use Sober\Controller\Controller;
+
 /**
  * Add <body> classes
  */
@@ -157,3 +159,15 @@ add_filter( 'query_vars', function ( $query_vars ) {
 
     return $query_vars;
 } );
+
+add_filter('document_title_parts', function (array $parts) {
+    if (is_page_template('views/template-members-detail.blade.php') ) {
+        $member = Controllers\TemplateMembersDetail::member();
+        if ($member->name) {
+            $parts['title'] = $member->name;
+        }
+    }
+
+    return $parts;
+}, 10, 1);
+
