@@ -8,8 +8,8 @@
       <p class="px-4 py-8 font-sans leading-relaxed">The Open Education Global is a worldwide community of hundreds of universities and associated organizations
         committed to advancing Open Education worldwide.</p>
       <div class="oeg-hero__cta">
-        <a class="btn oeg" href="https://beta.oeglobal.org/about-us/what-we-do/">Learn more</a>
-        <a class="btn oeg" href="#">Join OE Global</a>
+        <a class="btn oeg" href="/about-us/what-we-do/">Learn more</a>
+        <a class="btn oeg" href="/become-a-member/">Join OE Global</a>
       </div>
     </div>
   </div>
