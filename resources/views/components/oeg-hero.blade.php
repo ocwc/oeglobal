@@ -5,7 +5,7 @@
       <div class="flex">
         <h1 class="inline-flex">What is Open Education Global?</h1>
       </div>
-      <p class="px-4 py-8 font-sans leading-relaxed">The Open Education Global is a worldwide community of hundreds of universities and associated organizations
+      <p class="px-4 py-8 font-sans leading-relaxed">Open Education Global is a worldwide community of hundreds of universities and associated organizations
         committed to advancing Open Education worldwide.</p>
       <div class="oeg-hero__cta">
         <a class="btn oeg" href="/about-us/what-we-do/">Learn more</a>
