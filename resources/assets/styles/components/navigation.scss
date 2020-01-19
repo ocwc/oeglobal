@@ -1,17 +1,19 @@
 .nav-logo {
-  height: 46px;
-  width: auto;
+  @apply h-10;
 
-  @screen md {
-    height: 49px;
+  @screen sm {
+    @apply h-12;
+  }
+
+  @screen lg {
+    @apply h-16;
   }
 }
 
 .menu-item {
-  @apply mr-4 pl-2 pr-3 relative flex items-center;
+  @apply mr-2 px-3 py-4 relative flex items-center;
 
   position: relative;
-  height: 34px;
 
   &:hover,
   &:focus {
@@ -25,8 +27,8 @@
   &::after {
     content: "+";
     position: absolute;
-    right: 4px;
-    top: 4px;
+    right: 0.5rem;
+    top: calc(50% - 0.75em);
   }
 }
 
@@ -44,7 +46,7 @@
   @apply absolute flex left-0 w-56 bg-white flex-col justify-center leading-loose z-50;
   @apply shadow-md border border-light;
 
-  top: 34px;
+  top: 100%;
 }
 
 .menu-item-child a {
@@ -80,11 +82,9 @@
 }
 
 .banner {
-  @apply relative mb-2 h-20;
+  @apply relative;
 
   @screen lg {
-    height: 60px;
-
     @apply mb-0;
   }
 }
@@ -133,7 +133,7 @@
   }
 
   .menu-item.has-children::after {
-    top: 12px;
+    top: 1.25rem;
     right: 12px;
   }
 
@@ -175,7 +175,7 @@
   .menu-item-search-mobile {
     position: relative;
     width: 100%;
-    padding-right: 28px;
+    padding-right: 3rem;
 
     @screen lg {
       display: inline-block;
@@ -184,11 +184,10 @@
     &::after {
       content: "";
       position: absolute;
-
-      top: 12px;
-      right: 7px;
-      width: 15px;
-      height: 15px;
+      top: 1rem;
+      right: 0.75rem;
+      width: 20px;
+      height: 20px;
 
       background-image: url("../images/icons/magnify.svg");
       background-size: cover;
