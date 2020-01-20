@@ -1,0 +1,9 @@
+#mc_embed_signup .control-label {
+  @apply mt-4;
+}
+
+#mc_embed_signup .form-control {
+  background-color: theme("colors.gray4");
+
+  @apply mb-4;
+}
