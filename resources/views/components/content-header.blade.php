@@ -48,7 +48,7 @@
     </div>
   </div>
 @else
-  <div class="contentheader-strip text-light"
+  <div class="contentheader-strip text-light mb-12"
        @if($background_image)style="background-image: url({!! $background_image !!}"@endif>
     <div class="container flex flex-col justify-center">
       <div class="content px-6 py-12 lg:py-0
