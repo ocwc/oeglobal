@@ -5,7 +5,7 @@
       <p>With a unique mix of collaboration and innovation leadership (and some personal experiences of our own), we
         bring a
         new perspective to open education.</p>
-      <a href="#" class="btn oeg-inverted mt-6">Let's meet ...</a>
+      <a href="/people-of-oeg/" class="btn oeg-inverted mt-6">Let's meet ...</a>
     </div>
     <div class="hidden lg:flex flex-1 oeg-highlight__image">
     </div>
