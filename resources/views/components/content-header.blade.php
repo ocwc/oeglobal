@@ -48,8 +48,15 @@
       </div>
     </div>
   </div>
+
+  @if ($attribution)
+    <div class="contentheader-attribution font-sans text-xs text-gray2 my-2">
+      {!! $attribution !!}
+    </div>
+  @endif
 @else
-  <div class="contentheader-strip text-light mb-12"
+  <div class="contentheader-strip text-light
+      @if ($attribution) mb-2 @else mb-12 @endif"
        @if($background_image)style="background-image: url({!! $background_image !!}"@endif>
     <div class="container flex flex-col justify-center">
       <div class="content px-6 py-12 lg:py-0
@@ -74,4 +81,12 @@
       </div>
     </div>
   </div>
+
+  @if ($attribution)
+    <div class="mb-8 pr-4 text-right">
+        <div class="contentheader-attribution font-sans text-xs text-gray2">
+          {!! $attribution !!}
+        </div>
+    </div>
+  @endif
 @endif
