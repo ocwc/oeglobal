@@ -22,7 +22,8 @@
     </div>
   </div>
 @elseif ($variant === 'sidebar')
-  <div class="contentheader-strip text-light"
+  <div class="contentheader-strip text-light
+              @if($background_image) with-bg-image @endif"
        @if($background_image)style="background-image: url({!! $background_image !!}"@endif>
     <div class="container flex flex-col justify-end">
       <div class="content px-0 py-2 lg:py-0

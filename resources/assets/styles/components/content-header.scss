@@ -13,6 +13,18 @@
   }
 }
 
+.contentheader-strip.with-bg-image::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 0;
+
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
 body.latam .contentheader-strip::after {
   content: "";
   position: absolute;
@@ -42,6 +54,10 @@ body.latam .contentheader-strip::after {
     @apply px-2 py-4;
 
     background-color: rgba(31, 70, 122, 0.5);
+  }
+
+  .contentheader-strip.with-bg-image & {
+    background-color: transparent;
   }
 
   body.search & {
