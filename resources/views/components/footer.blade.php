@@ -11,7 +11,7 @@
           <p class="text-white text-center text-sm mt-4">
             <a href="/about-us/contact-us/">Contact</a>
             <span class="px-1">|</span>
-            <a href="https://twitter.com/oeconsortium">Twitter</a>
+            <a href="https://twitter.com/OpenEdGlobal">Twitter</a>
           </p>
         </div>
       @elseif ($site === 'latam')

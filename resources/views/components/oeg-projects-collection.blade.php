@@ -3,8 +3,8 @@
   @foreach ($items as $item)
     <div class="my-2 px-2 w-full lg:w-1/3 overflow-hidden">
       <div class="bg-gray4 p-6">
-        <a href="{!! $item['url'] !!}" class="text-center">
-          <img class="pb-4 m-auto h-full max-h-16" src="{!! $item['image'] !!}" alt="{!! $item['name'] !!}"/>
+        <a href="{!! $item['url'] !!}" class="text-center pb-4 block">
+          <img class="m-auto h-16 lg:h-12" src="{!! $item['image'] !!}" alt="{!! $item['name'] !!}"/>
         </a>
 
         <p>{!! $item['text'] !!}</p>

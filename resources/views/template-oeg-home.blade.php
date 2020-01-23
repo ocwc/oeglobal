@@ -11,6 +11,7 @@
     @component('components.oeg-hero', [])@endcomponent
     @component('components.oeg-projects', [])@endcomponent
     @component('components.oeg-highlight', [])@endcomponent
+    @include('partials.home-news')
   @endwhile
 
   @php(do_action('get_footer'))
