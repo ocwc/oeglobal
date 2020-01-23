@@ -12,4 +12,8 @@ class Category extends Controller
             return $image['sizes']['large'];
         }
     }
+
+    public function ExcerptSimple() {
+        return category_description();
+    }
 }
