@@ -72,7 +72,7 @@
   &::after {
     content: "";
     position: absolute;
-    top: 12px;
+    top: calc(50% - 8px);
     left: 10px;
     height: 16px;
     width: 16px;
