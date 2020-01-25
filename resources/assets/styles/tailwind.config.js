@@ -97,6 +97,7 @@ module.exports = {
   variants: {
     textStrokeWidth: ['responsive', 'hover'],
     padding: ['responsive', 'last'],
+    tableLayout: ['responsive', 'hover', 'focus'],
   },
   plugins: [wordpressUtilities],
 };
