@@ -1,7 +1,5 @@
 .btn {
-  @apply font-bold p-2 bg-latam-orange inline-flex text-white;
-
-  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.73);
+  @apply font-bold px-4 py-3 bg-latam-orange inline-flex text-white;
 
   &:hover {
     @apply bg-latam-orange-cream;
@@ -12,8 +10,7 @@
   @apply bg-int-red;
 
   background-image: none;
-  transition: none;
-  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.33);
+  transition: background-color 0.25s;
 
   &:hover {
     background-color: lighten(#ff5547, 10%);
@@ -23,18 +20,15 @@
 .btn.oeg-inverted {
   @apply bg-white text-black font-normal;
 
-  text-shadow: none;
-
   &:hover {
     @apply bg-gray-300;
   }
 }
 
 .btn.simple {
-  @apply font-bold p-2 inline-flex text-black2;
+  @apply font-bold px-4 py-3 inline-flex text-black2;
 
   background: none;
-  text-shadow: none;
   border: 2px solid theme("colors.primary");
   position: relative;
 
@@ -51,9 +45,8 @@
 }
 
 .prev-next-post a {
-  @apply font-bold p-2 inline-flex;
-
-  border: 2px solid theme("colors.primary");
+  @extend .btn;
+  @extend .oeg-inverted;
   position: relative;
 }
 
@@ -64,7 +57,7 @@
   &::after {
     content: "";
     position: absolute;
-    top: 12px;
+    top: calc(50% - 8px);
     right: 10px;
     height: 16px;
     width: 16px;
@@ -79,7 +72,7 @@
   &::after {
     content: "";
     position: absolute;
-    top: 12px;
+    top: calc(50% - 8px);
     left: 10px;
     height: 16px;
     width: 16px;

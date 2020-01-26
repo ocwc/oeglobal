@@ -7,7 +7,7 @@
           <img class="m-auto h-16 lg:h-12" src="{!! $item['image'] !!}" alt="{!! $item['name'] !!}"/>
         </a>
 
-        <p>{!! $item['text'] !!}</p>
+        <p class="leading-normal">{!! $item['text'] !!}</p>
         <a class="inline-block mt-6" href="{!! $item['url'] !!}">Learn more ...</a>
       </div>
     </div>
