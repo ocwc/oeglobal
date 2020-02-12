@@ -9,8 +9,8 @@
         'alt' => $item['line1'],
       ])@endcomponent
 
-      <div class="text-xl mt-8 mb-4">{!! $item['line1'] !!}</div>
-      <div class="italic mb-2">{!! $item['line2'] !!}</div>
+      <div class="text-xl mt-2 mb-0">{!! $item['line1'] !!}</div>
+      <div class="italic text-sm mb-0">{!! $item['line2'] !!}</div>
       <div class="text-sm text-gray2 mb-2">{!! $item['line3'] !!}</div>
       <div class="text-sm text-gray2">{!! $item['line4'] !!}</div>
 
