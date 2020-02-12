@@ -129,7 +129,7 @@ article {
   a {
     @include anchor();
 
-    @apply font-serif;
+    @apply font-serif break-words;
   }
 
   figcaption {
