@@ -129,7 +129,7 @@ article {
   a {
     @include anchor();
 
-    @apply font-serif;
+    @apply font-serif break-words;
   }
 
   figcaption {
@@ -183,5 +183,22 @@ article {
     li a {
       @apply font-sans;
     }
+  }
+}
+
+.wp-block-file {
+  @apply my-8;
+
+  a {
+    @apply font-sans;
+  }
+
+  .wp-block-file__button {
+    @extend .btn;
+    @extend .oeg;
+
+    @apply bg-int-red;
+
+    border-radius: 2px;
   }
 }
