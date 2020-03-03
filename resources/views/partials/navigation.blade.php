@@ -20,14 +20,14 @@
       </li>
     @endforeach
 
-    <li class="menu-item menu-item-search">
-      <a href="/search/">@svg('icons/magnify', 'menu-item__icon')</a>
+    <li class="menu-item menu-item-search pr-3">
+      <a class="pl-1 pr-1" href="/search/">@svg('icons/magnify', 'menu-item__icon')</a>
     </li>
 
     <li class="menu-item menu-item-search-mobile lg:hidden">
       <form action="/" method="get" class="w-full">
         <?php // TODO translate "Search" to "Buscar" ?>
-        <input type="search" name="s" id="search" value="" placeholder="Search ..." class="h-10 pl-2" />
+        <input type="search" name="s" id="search" value="" placeholder="Search ..." class="h-20 pl-4 pr-20" />
       </form>
     </li>
   </ul>
