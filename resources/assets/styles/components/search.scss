@@ -11,23 +11,23 @@
     content: "";
     position: absolute;
 
-    top: 8px;
-    right: 7px;
-    width: 15px;
-    height: 15px;
+    top: calc(50% - 14px);
+    right: 1rem;
+    width: 24px;
+    height: 24px;
 
     background-image: url("../images/icons/magnify.svg");
     background-size: cover;
   }
 
   input {
-    width: 100%;
-    padding: 4px 16px;
+    // width: 100%;
+    // padding: 4px 16px;
   }
 
   input::-webkit-input-placeholder,
   input::-moz-placeholder,
   input::placeholder {
-    font-size: 14px;
+    // font-size: 14px;
   }
 }
