@@ -21,7 +21,7 @@
     @endforeach
 
     <li class="menu-item menu-item-search pr-3">
-      <a class="pl-1 pr-1" href="/search/">@svg('icons/magnify', 'menu-item__icon')</a>
+      <a class="px-1" href="/search/">@svg('icons/magnify', 'menu-item__icon')</a>
     </li>
 
     <li class="menu-item menu-item-search-mobile lg:hidden">
