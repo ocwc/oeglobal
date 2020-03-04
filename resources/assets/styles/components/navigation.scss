@@ -62,10 +62,6 @@
   height: auto;
 }
 
-.menu-item-search {
-  padding-right: 8px;
-}
-
 .menu-open .toggle-menu {
   background-color: theme("colors.menuHover");
 }
@@ -105,7 +101,7 @@
   }
 
   .banner .nav a {
-    @apply inline-block pl-2 pr-4 py-2 border-none text-black2 no-underline font-sans text-sm;
+    @apply inline-block pl-2 pr-4 py-2 border-none text-black2 no-underline font-sans;
   }
 
   .banner .nav > .menu-item {
@@ -129,7 +125,7 @@
   }
 
   .banner .nav .sub-menu a {
-    @apply text-sm;
+    @apply text-base;
   }
 
   .menu-item.has-children::after {
@@ -175,7 +171,7 @@
   .menu-item-search-mobile {
     position: relative;
     width: 100%;
-    padding-right: 3rem;
+    padding: 0;
 
     @screen lg {
       display: inline-block;
@@ -184,8 +180,8 @@
     &::after {
       content: "";
       position: absolute;
-      top: 1rem;
-      right: 0.75rem;
+      top: calc(50% - 10px);
+      right: 30px;
       width: 20px;
       height: 20px;
 
