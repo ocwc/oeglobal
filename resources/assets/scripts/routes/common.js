@@ -39,6 +39,10 @@ export default {
       $('body').toggleClass('menu-open');
       $('.nav-primary').toggleClass('hidden');
     });
+
+    $('.js-show-more').on('click', function() {
+      console.log($(this).next('ul').toggleClass('hidden'));
+    })
   },
   finalize() {
     // JavaScript to be fired on all pages, after page specific JS is fired

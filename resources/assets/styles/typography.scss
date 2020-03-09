@@ -126,7 +126,8 @@ article {
     @apply font-serif;
   }
 
-  a {
+  a,
+  .a {
     @include anchor();
 
     @apply font-serif break-words;
