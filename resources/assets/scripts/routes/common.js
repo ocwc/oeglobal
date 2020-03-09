@@ -41,7 +41,7 @@ export default {
     });
 
     $('.js-show-more').on('click', function() {
-      $(this).next('ul').toggleClass('hidden');
+      $(this).next('ul').toggleClass('hidden', 'block');
     })
   },
   finalize() {
