@@ -41,7 +41,7 @@ export default {
     });
 
     $('.js-show-more').on('click', function() {
-      console.log($(this).next('ul').toggleClass('hidden'));
+      $(this).next('ul').toggleClass('hidden');
     })
   },
   finalize() {
