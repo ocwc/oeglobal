@@ -185,21 +185,149 @@ article {
       @apply font-sans;
     }
   }
-}
 
-.wp-block-file {
-  @apply my-8;
+  .wp-block-file {
+    @apply my-8 p-4 bg-gray5;
 
-  a {
-    @apply font-sans;
+    @screen sm {
+      @apply p-8;
+    }
+
+    a {
+      @apply font-sans;
+    }
+
+    .wp-block-file__button {
+      @extend .btn;
+      @extend .oeg;
+
+      @apply bg-int-red;
+
+      border-radius: 2px;
+    }
   }
 
-  .wp-block-file__button {
-    @extend .btn;
-    @extend .oeg;
+  /* Dummy Content Blocks added by @mario */
 
-    @apply bg-int-red;
-
-    border-radius: 2px;
+  .wp-block-image {
+    @apply p-3 border-solid border-2 bg-white;
   }
+
+  .wp-block-image.alignwide,
+  .wp-block-image.alignfull {
+    @apply border-0 p-0;
+  }
+
+  .wp-block-gallery,
+  .wp-block-coblocks-gallery-carousel,
+  .wp-block-coblocks-gallery-stacked {
+    @apply my-8;
+  }
+
+  .wp-block-coblocks-gallery-stacked {
+    ul {
+      @apply m-0 p-0;
+    }
+  }
+
+  .wp-block-button {
+    .wp-block-button__link {
+      @extend .btn;
+    	@extend .oeg;
+
+      @apply font-sans;
+    }
+  }
+
+  .wp-block-table {
+    table {
+      td {
+        @apply p-3;
+      }
+
+      tfoot {
+        @apply font-bold;
+      }
+    }
+
+    &.is-style-regular {
+      table {
+        thead {
+          th {
+            @apply p-3 border-2;
+          }
+        }
+
+        td {
+          @apply p-3 border-2;
+        }
+      }
+    }
+
+    &.is-style-stripes {
+      table {
+        td {
+          @apply p-4;
+        }
+      }
+    }
+  }
+
+  .wp-block-categories {
+    @apply list-none ml-0 pl-0;
+
+    li {
+      @apply list-none mb-3 ml-2 font-sans;
+
+      a {
+        @apply bg-int-turq border-0 py-1 px-2 rounded-sm;
+
+        background-image: none;
+      }
+    }
+	}
+
+	.wp-block-latest-posts {
+		@apply list-none m-0 p-4 border-2 border-main-90 font-bold;
+
+		@screen md {
+			@apply p-8;
+		}
+
+		li {
+			@apply list-none mb-4 ml-0;
+
+			time {
+				@apply font-sans font-normal;
+			}
+
+			.wp-block-latest-posts__post-excerpt {
+				@apply font-sans font-normal;
+			}
+		}
+
+		li:nth-last-child() {
+			@apply mb-0;
+		}
+
+		&.has-dates {
+			li {
+				@apply mb-8;
+
+				&:nth-last-child() {
+					@apply mb-0;
+				}
+			}
+		}
+	}
+
+	.wp-block-columns {
+		.wp-block-column {
+			p {
+				@screen sm {
+					@apply text-base mb-3 leading-normal;
+				}
+			}
+		}
+	}
 }
