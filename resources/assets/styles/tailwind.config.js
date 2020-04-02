@@ -74,7 +74,7 @@ module.exports = {
         ],
       },
       letterSpacing: {
-        'widest': '1px',
+        widest: '1px',
       },
       fontSize: {
         '3xs': '0.5rem',
@@ -105,9 +105,13 @@ module.exports = {
 };
 
 if (SITE === 'latam') {
-  module.exports.theme.extend.colors.primary = module.exports.theme.extend.colors.latam.orange;
-  module.exports.theme.extend.colors.menuHover = module.exports.theme.extend.colors.gray5;
+  module.exports.theme.extend.colors.primary =
+    module.exports.theme.extend.colors.latam.orange;
+  module.exports.theme.extend.colors.menuHover =
+    module.exports.theme.extend.colors.gray5;
 } else {
-  module.exports.theme.extend.colors.primary = module.exports.theme.extend.colors.main;
-  module.exports.theme.extend.colors.menuHover = module.exports.theme.extend.colors.shade['90'];
+  module.exports.theme.extend.colors.primary =
+    module.exports.theme.extend.colors.main;
+  module.exports.theme.extend.colors.menuHover =
+    module.exports.theme.extend.colors.shade['90'];
 }

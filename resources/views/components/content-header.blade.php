@@ -41,9 +41,9 @@
             </div>
           @endif
 
-          @if ($is_search)
+          {{-- @if ($is_search)
             {!! get_search_form(false) !!}
-          @endif
+          @endif --}}
         </div>
       </div>
     </div>
