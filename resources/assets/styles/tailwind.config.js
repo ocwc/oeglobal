@@ -12,10 +12,12 @@ module.exports = {
         'main-light': '#3D7AF5',
         'main-lighter': '#6E9CF7',
         'main-lightest': '#9EBDFA',
+        'main-90': '#CFDEFC',
         int: {
           turq: '#26D7B2',
           yellow: '#FFE525',
           red: '#FF5547',
+          'red-lighter': 'FF7B70',
           fuchsia: '#DB43D8',
         },
         latam: {
