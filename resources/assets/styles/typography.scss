@@ -142,6 +142,8 @@ article {
   }
 
   blockquote {
+    @apply my-8;
+
     p {
       @extend .blockquote;
     }
@@ -210,12 +212,17 @@ article {
   /* Dummy Content Blocks added by @mario */
 
   .wp-block-image {
-    @apply p-3 border-solid border-2 bg-white;
-  }
+    @apply my-8;
 
-  .wp-block-image.alignwide,
-  .wp-block-image.alignfull {
-    @apply border-0 p-0;
+    figcaption {
+      @apply leading-normal px-2;
+    }
+
+    &:not(.size-large) {
+      figcaption {
+        @apply text-center;
+      }
+    }
   }
 
   .wp-block-gallery,
@@ -231,36 +238,45 @@ article {
   }
 
   .wp-block-button {
+    @apply my-1;
+
     .wp-block-button__link {
       @extend .btn;
-    	@extend .oeg;
+      @extend .oeg;
 
       @apply font-sans;
+    }
+
+    &.is-style-outline {
+      .wp-block-button__link {
+        @extend .btn;
+        @extend .oeg-inverted;
+      }
     }
   }
 
   .wp-block-table {
-    table {
-      td {
-        @apply p-3;
-      }
+    @apply my-8;
 
-      tfoot {
-        @apply font-bold;
+    td {
+      @apply border px-4 py-2;
+    }
+
+    tfoot {
+      @apply italic;
+
+      td {
+        @apply border-0;
       }
     }
 
-    &.is-style-regular {
-      table {
-        thead {
-          th {
-            @apply p-3 border-2;
-          }
-        }
+    thead {
+      th {
+        @apply px-4 py-2;
+      }
 
-        td {
-          @apply p-3 border-2;
-        }
+      td {
+        @apply border-0 px-4 py-2;
       }
     }
 
