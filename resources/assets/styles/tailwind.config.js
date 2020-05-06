@@ -12,12 +12,10 @@ module.exports = {
         'main-light': '#3D7AF5',
         'main-lighter': '#6E9CF7',
         'main-lightest': '#9EBDFA',
-        'main-90': '#CFDEFC',
         int: {
           turq: '#26D7B2',
           yellow: '#FFE525',
           red: '#FF5547',
-          'red-lighter': 'FF7B70',
           fuchsia: '#DB43D8',
         },
         latam: {
@@ -74,7 +72,7 @@ module.exports = {
         ],
       },
       letterSpacing: {
-        widest: '1px',
+        'widest': '1px',
       },
       fontSize: {
         '3xs': '0.5rem',
@@ -99,19 +97,14 @@ module.exports = {
   variants: {
     textStrokeWidth: ['responsive', 'hover'],
     padding: ['responsive', 'last'],
-    tableLayout: ['responsive', 'hover', 'focus'],
   },
   plugins: [wordpressUtilities],
 };
 
 if (SITE === 'latam') {
-  module.exports.theme.extend.colors.primary =
-    module.exports.theme.extend.colors.latam.orange;
-  module.exports.theme.extend.colors.menuHover =
-    module.exports.theme.extend.colors.gray5;
+  module.exports.theme.extend.colors.primary = module.exports.theme.extend.colors.latam.orange;
+  module.exports.theme.extend.colors.menuHover = module.exports.theme.extend.colors.gray5;
 } else {
-  module.exports.theme.extend.colors.primary =
-    module.exports.theme.extend.colors.main;
-  module.exports.theme.extend.colors.menuHover =
-    module.exports.theme.extend.colors.shade['90'];
+  module.exports.theme.extend.colors.primary = module.exports.theme.extend.colors.main;
+  module.exports.theme.extend.colors.menuHover = module.exports.theme.extend.colors.shade['90'];
 }

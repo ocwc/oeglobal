@@ -304,7 +304,7 @@ article {
 	}
 
 	.wp-block-latest-posts {
-		@apply list-none m-0 p-4 border-2 border-main-90 font-bold;
+		@apply list-none my-8 p-4 border-2 border-main-light font-bold;
 
 		@screen md {
 			@apply p-8;
