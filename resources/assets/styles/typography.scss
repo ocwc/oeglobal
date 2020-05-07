@@ -1,5 +1,5 @@
 .h1 {
-  @apply mb-8 text-3xl leading-tight font-bold font-sans;
+  @apply mb-8 text-3xl leading-tight;
 
   @screen lg {
     @apply text-4xl;
@@ -7,19 +7,31 @@
 }
 
 .h2 {
-  @apply mb-4 text-2xl leading-tight font-sans;
+  @apply mb-4 text-2xl leading-tight;
 }
 
 .h3 {
-  @apply mb-4 text-xl leading-tight font-sans;
+  @apply mb-4 text-xl leading-tight;
 }
 
 .h4 {
-  @apply mb-4 text-lg leading-tight font-sans;
+  @apply mb-4 text-lg leading-tight;
+}
+
+.h5 {
+  @apply mb-4 text-base;
+}
+
+.h1,
+.h2,
+.h3,
+.h4,
+.h5 {
+  @apply font-sans font-bold;
 }
 
 .p {
-  @apply mb-4 text-lg leading-relaxed font-sans;
+  @apply mb-4 text-lg leading-relaxed;
 
   @screen lg {
     @apply text-xl;
@@ -95,7 +107,7 @@ article {
   h2 {
     @extend .h2;
 
-    @apply mt-12 mb-4 font-bold text-2xl;
+    @apply mt-20 mb-4 text-2xl;
 
     @screen sm {
       @apply text-3xl;
@@ -104,16 +116,18 @@ article {
 
   h2 a {
     @include anchor($size: 4px, $offset: 4px);
-
-    @apply font-sans;
   }
 
   h3 {
-    @apply h3 text-2xl mt-12 mb-4 font-normal;
+    @apply h3 text-2xl mt-12 mb-4 font-bold;
   }
 
   h4 {
-    @apply h4;
+    @apply h4 font-bold;
+  }
+
+  h5 {
+    @apply h5 font-bold;
   }
 
   p.wp-block-subhead {
@@ -170,7 +184,7 @@ article {
   }
 
   pre {
-    @apply bg-gray-500 p-8 overflow-x-scroll;
+    @apply bg-gray-800 p-8 overflow-x-scroll;
   }
 
   table.wp-block-table {
@@ -189,14 +203,14 @@ article {
   }
 
   .wp-block-file {
-    @apply my-8 p-4 bg-gray-500;
+    @apply my-8 p-4 bg-gray-900;
 
     @screen sm {
       @apply p-8;
     }
 
     a {
-      @apply font-sans;
+      @apply font-sans font-bold;
     }
 
     .wp-block-file__button {
@@ -238,7 +252,7 @@ article {
   }
 
   .wp-block-button {
-    @apply my-1;
+    @apply my-4;
 
     .wp-block-button__link {
       @extend .btn;

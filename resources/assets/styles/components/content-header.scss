@@ -82,8 +82,9 @@ body.latam .contentheader-strip::after {
 
 .contentheader-strip__h1 {
   @extend .h1;
+  @extend .text-shadow;
 
-  @apply mb-6;
+  @apply mb-6 text-blue-900;
 
   body.latam & {
     @apply mb-0;

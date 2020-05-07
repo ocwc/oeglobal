@@ -29,6 +29,10 @@ footer::before {
   }
 }
 
+a.h4 {
+  color: theme("colors.blue-900");
+}
+
 body.latam footer::before {
   background-image: url("../images/patterns/pattern-arrows.svg");
 }
