@@ -7,7 +7,7 @@
 }
 
 .btn.oeg {
-  @apply bg-int-red;
+  @apply bg-red-600;
 
   background-image: none;
   transition: background-color 0.25s;
@@ -18,22 +18,22 @@
 }
 
 .btn.oeg-inverted {
-  @apply bg-white text-black font-normal;
+  @apply bg-white text-black-200 font-normal;
 
   &:hover {
-    @apply bg-gray-300;
+    @apply bg-gray-900;
   }
 }
 
 .btn.simple {
-  @apply font-bold px-4 py-3 inline-flex text-black2;
+  @apply font-bold px-4 py-3 inline-flex text-black-200;
 
   background: none;
   border: 2px solid theme("colors.primary");
   position: relative;
 
   &:hover {
-    @apply bg-gray-300;
+    @apply bg-black-300;
   }
 }
 

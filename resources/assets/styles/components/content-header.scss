@@ -2,9 +2,10 @@
   display: flex;
   position: relative;
   min-height: 336px;
-  background-color: $main-darker;
+  background-color: theme("colors.blue-300");
   background-size: cover;
   background-position: center center;
+  color: theme("colors.blue-900");
 
   body.latam & {
     @screen lg {
@@ -47,8 +48,7 @@ body.latam .contentheader-strip::after {
     @apply px-6 py-4;
   }
 
-  // theme("colors.main-darker")
-  background-color: rgba(31, 70, 122, 0.8);
+  background-color: #1f377ae5; //colors.blue-300
 
   body.latam & {
     @apply px-2 py-4;
@@ -93,7 +93,7 @@ body.latam .contentheader-strip::after {
 .contentheader-sublanding__h1 {
   @extend .h2;
 
-  @apply inline-block bg-latam-orange text-light px-4 py-2 mb-0;
+  @apply inline-block bg-latam-orange text-gray-900 px-4 py-2 mb-0;
 
   @screen lg {
     position: absolute;

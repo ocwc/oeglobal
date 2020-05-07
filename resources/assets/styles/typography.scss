@@ -78,7 +78,7 @@
 }
 
 article {
-  @apply text-black2 text-sm;
+  @apply text-black-200 text-sm;
 
   @screen lg {
     @apply text-lg;
@@ -170,7 +170,7 @@ article {
   }
 
   pre {
-    @apply bg-gray5 p-8 overflow-x-scroll;
+    @apply bg-gray-500 p-8 overflow-x-scroll;
   }
 
   table.wp-block-table {
@@ -189,7 +189,7 @@ article {
   }
 
   .wp-block-file {
-    @apply my-8 p-4 bg-gray5;
+    @apply my-8 p-4 bg-gray-500;
 
     @screen sm {
       @apply p-8;
@@ -203,7 +203,7 @@ article {
       @extend .btn;
       @extend .oeg;
 
-      @apply bg-int-red;
+      @apply bg-red-500;
 
       border-radius: 2px;
     }
@@ -296,7 +296,7 @@ article {
       @apply list-none mb-3 ml-2 font-sans;
 
       a {
-        @apply bg-int-turq border-0 py-1 px-2 rounded-sm;
+        @apply bg-turq-500 text-turq-200 border-0 py-1 px-2 rounded-sm;
 
         background-image: none;
       }
@@ -304,7 +304,7 @@ article {
 	}
 
 	.wp-block-latest-posts {
-		@apply list-none my-8 p-4 border-2 border-main-light font-bold;
+		@apply list-none my-8 p-4 border-2 border-gray-800 bg-gray-900 font-bold;
 
 		@screen md {
 			@apply p-8;
