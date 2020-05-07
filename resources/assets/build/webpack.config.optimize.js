@@ -18,7 +18,7 @@ class TailwindExtractor {
 module.exports = {
   plugins: [
     new ImageminPlugin({
-      optipng: { optimizationLevel: 7 },
+      // optipng: { optimizationLevel: 7 },
       gifsicle: { optimizationLevel: 3 },
       pngquant: { quality: "65-90", speed: 4 },
       svgo: {
@@ -56,10 +56,8 @@ module.exports = {
       ],
       whitelist: [
         require("purgecss-with-wordpress").whitelist,
-        ...whitelister("resources/assets/styles/components/_tables.scss"),
-        ...whitelister("resources/assets/styles/common/_global.scss"),
-        ...whitelister("resources/assets/styles/common/_typography.scss"),
-        ...whitelister("resources/assets/styles/components/_wp-classes.scss"),
+        ...whitelister("resources/assets/styles/common/typography.scss"),
+        ...whitelister("resources/assets/styles/common/utilities.scss"),
         ...whitelister("resources/assets/styles/components/buttons.scss"),
         ...whitelister("resources/assets/styles/components/mailchimp.scss"),
         ...whitelister("resources/assets/styles/components/gravityforms.scss"),

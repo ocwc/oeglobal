@@ -1,20 +1,20 @@
-'use strict'; // eslint-disable-line
+"use strict"; // eslint-disable-line
 
-const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const ExtractTextPlugin = require("extract-text-webpack-plugin");
 
-const config = require('./config');
+const config = require("./config");
 
 /** Default PostCSS plugins */
 let postcssPlugins = [
-  require('tailwindcss')(`${config.paths.assets}/styles/tailwind.config.js`),
-  require('autoprefixer')(),
+  require("tailwindcss")(`${config.paths.assets}/styles/tailwind.config.js`),
+  require("autoprefixer")()
 ];
 
 /** Add cssnano when optimizing */
 config.enabled.optimize
   ? postcssPlugins.push(
-      require('cssnano')({
-        preset: ['default', { discardComments: { removeAll: true } }],
+      require("cssnano")({
+        preset: ["default", { discardComments: { removeAll: true } }]
       })
     )
   : false;
@@ -26,31 +26,31 @@ module.exports = {
         test: /\.scss$/,
         include: config.paths.assets,
         use: ExtractTextPlugin.extract({
-          fallback: 'style',
+          fallback: "style",
           use: [
-            { loader: 'cache' },
-            { loader: 'css', options: { sourceMap: false } },
+            { loader: "cache" },
+            { loader: "css", options: { sourceMap: false } },
             {
-              loader: 'postcss',
+              loader: "postcss",
               options: {
                 parser: config.enabled.optimize
-                  ? 'postcss-safe-parser'
+                  ? "postcss-safe-parser"
                   : undefined,
                 plugins: postcssPlugins,
-                sourceMap: false,
-              },
+                sourceMap: false
+              }
             },
             {
-              loader: 'resolve-url',
-              options: { silent: true, sourceMap: false },
+              loader: "resolve-url",
+              options: { silent: true, sourceMap: false }
             },
             {
-              loader: 'sass',
-              options: { sourceComments: true, sourceMap: false },
-            },
-          ],
-        }),
-      },
-    ],
-  },
+              loader: "sass",
+              options: { sourceComments: true, sourceMap: false }
+            }
+          ]
+        })
+      }
+    ]
+  }
 };
