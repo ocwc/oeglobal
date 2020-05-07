@@ -6,7 +6,6 @@ const UglifyJsPlugin = require("uglifyjs-webpack-plugin");
 const glob = require("glob-all");
 const PurgecssPlugin = require("purgecss-webpack-plugin");
 const whitelister = require("purgecss-whitelister");
-import purgecssWordpress from "purgecss-with-wordpress";
 
 const config = require("./config");
 
@@ -56,6 +55,7 @@ module.exports = {
         }
       ],
       whitelist: [
+        require("purgecss-with-wordpress").whitelist,
         ...whitelister("resources/assets/styles/components/_tables.scss"),
         ...whitelister("resources/assets/styles/common/_global.scss"),
         ...whitelister("resources/assets/styles/common/_typography.scss"),
@@ -63,7 +63,6 @@ module.exports = {
         ...whitelister("resources/assets/styles/components/buttons.scss"),
         ...whitelister("resources/assets/styles/components/mailchimp.scss"),
         ...whitelister("resources/assets/styles/components/gravityforms.scss"),
-        ...purgecssWordpress.whitelist,
         /^wp/
       ]
     })
