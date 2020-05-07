@@ -1,10 +1,10 @@
-<div class="latam-strip bg-main-darker flex flex-col justify-end font-sans">
+<div class="latam-strip bg-blue-300 flex flex-col justify-end font-sans">
   <div class="container">
     <div class="latam-strip__feature flex justify-around
               flex-wrap">
       @foreach($items as $item)
         <div class="latam-strip__feature__item
-                  bg-white border border-gray3
+                  bg-white border border-gray-600
                   mx-10 p-4
                   w-full lg:w-1/3 xl:w-1/4
                   flex flex-col items-center justify-center">

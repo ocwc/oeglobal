@@ -1,8 +1,8 @@
 $white: #fff;
-$gray4: #e6e6e6;
+$gray4: theme("colors.gray-900");
 
-$int-turq: #26d7b2;
+$int-turq: theme("colors.turq-500");
 $latam-orange: #ff922d;
 $latam-orange-cream: #ffc794;
 
-$main-darker: #1f467a;
+$main-darker: theme("colors.blue-200");

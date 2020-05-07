@@ -44,7 +44,7 @@
 
 .menu-item.is-open .sub-menu {
   @apply absolute flex left-0 w-56 bg-white flex-col justify-center leading-loose z-50;
-  @apply shadow-md border border-light;
+  @apply shadow-md border border-gray-900;
 
   top: 100%;
 }
@@ -101,7 +101,7 @@
   }
 
   .banner .nav a {
-    @apply inline-block pl-2 pr-4 py-2 border-none text-black2 no-underline font-sans;
+    @apply inline-block pl-2 pr-4 py-2 border-none text-black-200 no-underline font-sans;
   }
 
   .banner .nav > .menu-item {

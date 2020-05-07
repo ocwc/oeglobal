@@ -1,4 +1,4 @@
-<footer class="bg-main-darker text-light">
+<footer class="bg-blue-300 text-blue-900">
   <div class="container">
     <div class="flex flex-wrap lg:flex-no-wrap pb-6">
       @if ($site === 'oeg')
@@ -20,7 +20,7 @@
                   p-4
                   mx-4 md:mx-0">
           @svg('logos/oelatam', 'w-full h-auto max-h-16 mb-4')
-          <p class="text-gray-600 text-sm">OE LATAM es un nodo regional latinoamericano del consorcio de educación
+          <p class="text-gray-500 text-sm">OE LATAM es un nodo regional latinoamericano del consorcio de educación
             abierta
             OE GLOBAL.</p>
         </div>
