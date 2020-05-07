@@ -8487,6 +8487,11 @@ purgecss-whitelister@^2.3.1:
     gonzales-pe "^4.2.4"
     scss-parser "1.0.3"
 
+purgecss-with-wordpress@^2.1.0:
+  version "2.1.0"
+  resolved "https://registry.yarnpkg.com/purgecss-with-wordpress/-/purgecss-with-wordpress-2.1.0.tgz#6a811e0d74f100c06f3271bdb9ae219cced38a5b"
+  integrity sha512-/JUdUkQfzgUXFTb96/PDnY30SAp4WsMMWLjeEIWmTWpbXf0U4tT4ZVm0bM4rvLapBnNQUeyeeymwqVXEgfM7/g==
+
 purgecss@^1.1.0, purgecss@^1.4.0:
   version "1.4.0"
   resolved "https://registry.yarnpkg.com/purgecss/-/purgecss-1.4.0.tgz#79905624ec1c6c8e1f03044bca92dd8a598ba429"
