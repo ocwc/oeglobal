@@ -17,7 +17,7 @@
                 'name' => 'OE Awards',
                 'image' => '/wp-content/themes/oeglobal/resources/assets/images/logos/oeawards.svg',
                 'text' => 'Annual recognition to outstanding contributions in the Open Education community.',
-                'url' => 'https://www.oeconsortium.org/projects/open-education-awards-for-excellence/2019-winners-of-oe-awards/'
+                'url' => 'https://awards.oeglobal.org'
             ],
             [
                 'name' => 'OE Week',
