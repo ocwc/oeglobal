@@ -171,3 +171,4 @@ add_filter('document_title_parts', function (array $parts) {
     return $parts;
 }, 10, 1);
 
+add_filter( 'jetpack_just_in_time_msgs', '__return_false' );
