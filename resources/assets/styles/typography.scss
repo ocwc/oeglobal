@@ -71,20 +71,12 @@
 }
 
 @mixin anchor($size: 4px, $offset: 2px) {
-  background-image: linear-gradient(
-    to bottom,
-    transparent calc(100% - #{$size}),
-    rgba($latam-orange-cream, 0.5) $size
-  );
+  background-image: linear-gradient(to bottom, transparent calc(100% - #{$size}), rgba($latam-orange-cream, 0.5) $size);
   background-position: right 50% bottom #{$offset};
   transition: background-position 200ms;
 
   &:hover {
-    background-image: linear-gradient(
-      to bottom,
-      transparent calc(100% - #{$size}),
-      $latam-orange-cream $size
-    );
+    background-image: linear-gradient(to bottom, transparent calc(100% - #{$size}), $latam-orange-cream $size);
     background-position: right 50% bottom 0;
   }
 }
@@ -144,7 +136,7 @@ article {
   .a {
     @include anchor();
 
-    @apply font-serif break-words;
+    @apply break-words;
   }
 
   figcaption {
@@ -315,49 +307,49 @@ article {
         background-image: none;
       }
     }
-	}
+  }
 
-	.wp-block-latest-posts {
-		@apply list-none my-8 p-4 border-2 border-gray-800 bg-gray-900 font-bold;
+  .wp-block-latest-posts {
+    @apply list-none my-8 p-4 border-2 border-gray-800 bg-gray-900 font-bold;
 
-		@screen md {
-			@apply p-8;
-		}
+    @screen md {
+      @apply p-8;
+    }
 
-		li {
-			@apply list-none mb-4 ml-0;
+    li {
+      @apply list-none mb-4 ml-0;
 
-			time {
-				@apply font-sans font-normal;
-			}
+      time {
+        @apply font-sans font-normal;
+      }
 
-			.wp-block-latest-posts__post-excerpt {
-				@apply font-sans font-normal;
-			}
-		}
+      .wp-block-latest-posts__post-excerpt {
+        @apply font-sans font-normal;
+      }
+    }
 
-		li:nth-last-child() {
-			@apply mb-0;
-		}
+    li:nth-last-child() {
+      @apply mb-0;
+    }
 
-		&.has-dates {
-			li {
-				@apply mb-8;
+    &.has-dates {
+      li {
+        @apply mb-8;
 
-				&:nth-last-child() {
-					@apply mb-0;
-				}
-			}
-		}
-	}
+        &:nth-last-child() {
+          @apply mb-0;
+        }
+      }
+    }
+  }
 
-	.wp-block-columns {
-		.wp-block-column {
-			p {
-				@screen sm {
-					@apply text-base mb-3 leading-normal;
-				}
-			}
-		}
-	}
+  .wp-block-columns {
+    .wp-block-column {
+      p {
+        @screen sm {
+          @apply text-base mb-3 leading-normal;
+        }
+      }
+    }
+  }
 }

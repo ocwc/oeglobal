@@ -35,13 +35,14 @@ body.latam .contentheader-strip::after {
   left: 0;
   z-index: 10;
 
-  background-image: url("../images/patterns/pattern-pointy.svg"),
-    url("../images/patterns/pattern-circles.svg");
+  background-image: url("../images/patterns/pattern-pointy.svg"), url("../images/patterns/pattern-circles.svg");
   background-position: center top 12px, left bottom 20px;
   background-repeat: repeat-x;
 }
 
 .contentheader-strip__content {
+  @apply p-4;
+
   display: inline-block;
 
   @screen lg {
