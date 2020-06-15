@@ -2,18 +2,6 @@
   position: relative;
 }
 
-.oeg-projects::before {
-  position: absolute;
-  left: 0;
-  top: -70px;
-  z-index: -1;
-  content: "";
-  height: 171px;
-  width: 171px;
-  border-radius: 100%;
-  background-color: theme("colors.yellow-500");
-}
-
 .oeg-projects__intro {
   margin-top: 50px;
   margin-bottom: 33px;

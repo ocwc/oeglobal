@@ -4,12 +4,14 @@ namespace App\Controllers;
 
 use Sober\Controller\Controller;
 
-class FrontPage extends Controller {
-    public function latestNews() {
-        $custom_query = get_posts( [
+class FrontPage extends Controller
+{
+    public function latestNews()
+    {
+        $custom_query = get_posts([
             'posts_per_page' => '4',
             'cat'            => 'news'
-        ] );
+        ]);
 
         return array_map(function ($post) {
             return [
@@ -20,5 +22,25 @@ class FrontPage extends Controller {
                 'date' => get_the_date('M j, Y', $post),
             ];
         }, $custom_query);
+    }
+
+    public function getFeatured()
+    {
+        $rows = get_field('options-featured', 'options');
+        $rows = array_filter($rows, function ($item) {
+            return $item['enabled'];
+        });
+
+        return array_slice($rows, 0, 3);
+    }
+
+    public function getSpotlight()
+    {
+        $rows = get_field('options-spotlight', 'options');
+        $rows = array_filter($rows, function ($item) {
+            return $item['enabled'];
+        });
+
+        return array_slice($rows, 0, 3);
     }
 }

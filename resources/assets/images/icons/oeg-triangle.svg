@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="229px" height="204px" viewBox="0 0 229 204" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Triangle</title>
+    <g id="Home-Page-HD" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="oeg_desktop" transform="translate(-980.000000, -841.000000)" fill="#FF5547" fill-rule="nonzero">
+            <g id="spotlight-section" transform="translate(101.000000, 324.000000)">
+                <path d="M1012.51767,539.722448 L1126.39894,720.963279 C1126.9866,721.898544 1126.70482,723.133125 1125.76955,723.720792 C1125.45079,723.921087 1125.08196,724.027344 1124.70549,724.027344 L896.942948,724.027344 C895.838379,724.027344 894.942948,723.131913 894.942948,722.027344 C894.942948,721.650873 895.049205,721.282046 895.2495,720.963279 L1009.13077,539.722448 C1009.71844,538.787183 1010.95302,538.505398 1011.88828,539.093065 C1012.14269,539.25292 1012.35781,539.468041 1012.51767,539.722448 Z" id="Triangle" transform="translate(1010.824219, 630.527344) rotate(-191.000000) translate(-1010.824219, -630.527344) "></path>
+            </g>
+        </g>
+    </g>
+</svg>
