@@ -17,7 +17,7 @@ if (OEG_SITE === 'OEG') {
         'title' => 'Featured OEG Promotions'
     ]);
     $featured
-        ->addRepeater('items', [ 'min' => 1, 'layout' => 'block' ])
+        ->addRepeater('options-featured', [ 'min' => 1, 'layout' => 'block', 'label' => 'Items' ])
             ->addText('title')
             ->addImage('image', [ 'preview_size' => 'medium' ])
             ->addUrl('url')

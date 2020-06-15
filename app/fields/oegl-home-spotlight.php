@@ -9,7 +9,7 @@ if (OEG_SITE === 'OEG') {
         'title' => 'Members spotlight'
     ]);
     $spotlight
-        ->addRepeater('items', [ 'min' => 1, 'layout' => 'block' ])
+        ->addRepeater('options-spotlight', [ 'min' => 1, 'layout' => 'block', 'label' => 'Items' ])
             ->addText('title')
             ->addText('member')
             ->addText('description')
