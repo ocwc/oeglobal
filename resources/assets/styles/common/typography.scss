@@ -328,7 +328,7 @@ article {
       }
     }
 
-    li:nth-last-child() {
+    li:nth-last-child {
       @apply mb-0;
     }
 
@@ -336,7 +336,7 @@ article {
       li {
         @apply mb-8;
 
-        &:nth-last-child() {
+        &:nth-last-child {
           @apply mb-0;
         }
       }
