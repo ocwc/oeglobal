@@ -15,7 +15,7 @@ $gallery
         ->setInstructions('If you select link and url, the url will be used.')
         ->addText('attribution_name')
         ->addUrl('attribution_url')
-        ->endRepeater()
+    ->endRepeater()
     ->setLocation('block', '==', 'acf/latam-home-gallery');
 
 return $gallery;

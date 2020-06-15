@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="19px" height="19px" viewBox="0 0 19 19" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>icons/badge-sm</title>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="blocks/featured-page" transform="translate(-16.000000, -248.000000)">
+            <g id="Member-line" transform="translate(16.000000, 248.000000)">
+                <g id="icons/badge-sm">
+                    <g>
+                        <polygon id="Star" fill="#26D7B2" fill-rule="nonzero" points="9.5 17.575 6.56433855 18.5350369 4.75363409 16.0328122 1.81433855 15.0839599 1.82021863 11.9953122 0 9.5 1.82021863 7.00468777 1.81433855 3.9160401 4.75363409 2.96718777 6.56433855 0.464963095 9.5 1.425 12.4356614 0.464963095 14.2463659 2.96718777 17.1856614 3.9160401 17.1797814 7.00468777 19 9.5 17.1797814 11.9953122 17.1856614 15.0839599 14.2463659 16.0328122 12.4356614 18.5350369"></polygon>
+                        <polyline id="Path-3" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" points="5 9.67260742 7.13989258 12.9846191 14.8076172 7"></polyline>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
