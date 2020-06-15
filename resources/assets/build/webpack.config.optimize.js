@@ -61,6 +61,8 @@ module.exports = {
         ...whitelister("resources/assets/styles/components/buttons.scss"),
         ...whitelister("resources/assets/styles/components/mailchimp.scss"),
         ...whitelister("resources/assets/styles/components/gravityforms.scss"),
+        ...whitelister("resources/assets/styles/components/oeg-featured.scss"),
+        ...whitelister("resources/assets/styles/components/oeg-projects.scss"),
         /^wp/
       ]
     })
