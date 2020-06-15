@@ -26,4 +26,20 @@ if (OEG_SITE === 'OEG') {
 
         ->setLocation('options_page', '==', 'oeg-home-settings');
     return $featured;
+
+    $featured = new FieldsBuilder('oeg-home-members', [
+        'title' => 'Members spotlight'
+    ]);
+    $featured
+        ->addRepeater('items', [ 'min' => 1, 'layout' => 'block' ])
+        ->addText('title')
+        ->addText('member')
+        ->addImage('image', [ 'preview_size' => 'medium' ])
+        ->addUrl('url')
+        ->addTrueFalse('enabled')
+        ->endRepeater()
+
+        ->setLocation('options_page', '==', 'oeg-home-settings');
+    return $featured;
+
 }
