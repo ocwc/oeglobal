@@ -1483,9 +1483,9 @@ caniuse-db@^1.0.30000529, caniuse-db@^1.0.30000634, caniuse-db@^1.0.30000639:
   integrity sha512-zDWlPQagwZh2v4LLH75OYZZFV4W2u84RX/YiPSaFxcWhz5cj9ifT6BrFetBiqB0lzJm7BTaYEDWNvfdT4VR3Cw==
 
 caniuse-lite@^1.0.0, caniuse-lite@^1.0.30000792, caniuse-lite@^1.0.30000805, caniuse-lite@^1.0.30000817, caniuse-lite@^1.0.30000844, caniuse-lite@^1.0.30000980, caniuse-lite@^1.0.30000989:
-  version "1.0.30000998"
-  resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30000998.tgz#7227a8046841e7d01e156ae7227a504d065f6744"
-  integrity sha512-8Tj5sPZR9kMHeDD9SZXIVr5m9ofufLLCG2Y4QwQrH18GIwG+kCc+zYdlR036ZRkuKjVVetyxeAgGA1xF7XdmzQ==
+  version "1.0.30001053"
+  resolved "https://registry.npmjs.org/caniuse-lite/-/caniuse-lite-1.0.30001053.tgz"
+  integrity sha512-HtV4wwIZl6GA4Oznse8aR274XUOYGZnQLcf/P8vHgmlfqSNelwD+id8CyHOceqLqt9yfKmo7DUZTh1EuS9pukg==
 
 capture-stack-trace@^1.0.0:
   version "1.0.1"
@@ -5605,10 +5605,10 @@ jpegtran-bin@^3.0.0:
     bin-wrapper "^3.0.0"
     logalot "^2.0.0"
 
-jquery@^3.4:
-  version "3.4.1"
-  resolved "https://registry.yarnpkg.com/jquery/-/jquery-3.4.1.tgz#714f1f8d9dde4bdfa55764ba37ef214630d80ef2"
-  integrity sha512-36+AdBzCL+y6qjw5Tx7HgzeGCzC81MDDgaUP8ld2zhx58HdqXGoBd+tHdrBMiyjGQs0Hxs/MLZTu/eHNJJuWPw==
+jquery@^3.5:
+  version "3.5.0"
+  resolved "https://registry.yarnpkg.com/jquery/-/jquery-3.5.0.tgz#9980b97d9e4194611c36530e7dc46a58d7340fc9"
+  integrity sha512-Xb7SVYMvygPxbFMpTFQiHh1J7HClEaThguL15N/Gg37Lri/qKyhRGZYzHRyLH8Stq3Aow0LsHO2O2ci86fCrNQ==
 
 js-base64@^2.1.8, js-base64@^2.1.9:
   version "2.5.1"
@@ -8486,6 +8486,11 @@ purgecss-whitelister@^2.3.1:
     glob-all "^3.1.0"
     gonzales-pe "^4.2.4"
     scss-parser "1.0.3"
+
+purgecss-with-wordpress@^2.1.0:
+  version "2.1.0"
+  resolved "https://registry.yarnpkg.com/purgecss-with-wordpress/-/purgecss-with-wordpress-2.1.0.tgz#6a811e0d74f100c06f3271bdb9ae219cced38a5b"
+  integrity sha512-/JUdUkQfzgUXFTb96/PDnY30SAp4WsMMWLjeEIWmTWpbXf0U4tT4ZVm0bM4rvLapBnNQUeyeeymwqVXEgfM7/g==
 
 purgecss@^1.1.0, purgecss@^1.4.0:
   version "1.4.0"

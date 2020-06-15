@@ -1,0 +1,37 @@
+.gform_body input,
+.gform_body textarea {
+  border: 1px solid #dae1e7;
+}
+
+.gform_body [type="button"],
+.gform_body [type="submit"] {
+  @apply bg-red-600 my-3 px-4 pt-4 pb-3 text-white leading-none no-underline uppercase font-sans font-bold cursor-pointer;
+
+  text-shadow: none;
+  transition: 0.2s ease;
+
+  &:hover,
+  &:focus,
+  &:active {
+    @apply bg-red-800;
+  }
+}
+
+.gform_body [type="radio"],
+.gform_body [type="checkbox"] {
+  margin-top: -5px !important;
+  margin-right: 5px;
+}
+
+.gform_body .bulleted * {
+  //@apply text-xs;
+}
+
+#gform_page_1_1 {
+  margin-bottom: 200px;
+}
+
+#field_1_57 .gfield_radio li {
+  float: left;
+  margin-right: 15px;
+}

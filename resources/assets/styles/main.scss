@@ -22,7 +22,7 @@
 @tailwind utilities;
 
 @import "variables";
-@import "typography";
+@import "common/typography";
 @import "components/global";
 @import "components/buttons";
 @import "components/global-header";
@@ -34,6 +34,7 @@
 @import "components/sidebar-widgets";
 @import "components/mailchimp";
 @import "components/post-item";
+@import "components/gravityforms";
 
 /* OEG */
 @import "components/oeg-hero";
@@ -50,4 +51,4 @@
 @import "components/person-grid";
 @import "components/person-image";
 @import "components/content-header";
-@import "utilities";
+@import "common/utilities";

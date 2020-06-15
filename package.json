@@ -71,6 +71,7 @@
     "purgecss": "^1.1.0",
     "purgecss-webpack-plugin": "^1.4.0",
     "purgecss-whitelister": "^2.3.1",
+    "purgecss-with-wordpress": "^2.1.0",
     "resolve-url-loader": "~2.3.1",
     "rimraf": "~2.6",
     "sass-loader": "~6.0",
@@ -91,13 +92,11 @@
   },
   "dependencies": {
     "hoverintent": "^2.2.0",
-    "jquery": "^3.4"
+    "jquery": "^3.5"
   },
   "volta": {
     "node": "10.16.3",
     "yarn": "1.19.0"
   },
-  "prettier": {
-
-  }
+  "prettier": {}
 }
