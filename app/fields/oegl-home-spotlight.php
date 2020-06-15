@@ -12,6 +12,7 @@ if (OEG_SITE === 'OEG') {
         ->addRepeater('items', [ 'min' => 1, 'layout' => 'block' ])
             ->addText('title')
             ->addText('member')
+            ->addText('description')
             ->addImage('image', [ 'preview_size' => 'medium' ])
             ->addUrl('url')
             ->addTrueFalse('enabled')
