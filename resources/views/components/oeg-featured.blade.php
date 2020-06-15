@@ -1,4 +1,4 @@
-<div class="container md:mt-12 mb-10 md:mb-22">
+<div class="container md:mt-12 mb-0 md:mb-22">
   <div class="grid grid-rows-auto grid-cols-auto md:grid-rows-2 md:grid-cols-3 gap-2 md:gap-4">
     @foreach ($featured_items as $item)
       <a class="
@@ -20,7 +20,7 @@
   </div>
 </div>
 
-<div class="oeg-spotlight relative overflow-x-visible">
+<div class="oeg-spotlight relative overflow-hidden lg:overflow-visible pt-20">
   <div class="container mb-32 oeg-spotlight__container">
     <h2 class="w-full border-b border-gray-900 text-gray-900 text-xl font-sans pb-2 mb-6">Members spotlight</h2>
     <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
