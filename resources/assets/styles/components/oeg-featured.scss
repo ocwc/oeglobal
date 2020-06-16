@@ -21,8 +21,8 @@
 }
 
 .oeg-spotlight::before {
-  position: absolute;
   content: "";
+  position: absolute;
   left: 0;
   right: 0;
   top: 0;
@@ -41,7 +41,13 @@
   }
 
   @screen lg {
-    top: -180px;
+    top: -150px;
+    height: 200%;
+  }
+
+  @screen xl {
+    top: -300px;
+    height: 150%;
   }
 }
 
@@ -51,20 +57,21 @@
     content: "";
     border-radius: 100%;
     background-color: theme("colors.yellow-500");
-    left: -30px;
-    top: -70px;
+    left: -40px;
+    top: -110px;
     height: 105px;
     width: 105px;
 
     @screen md {
-      top: -120px;
+      top: -180px;
+      left: -70px;
       height: 171px;
       width: 171px;
     }
 
     @screen lg {
-      left: -80px;
-      top: -220px;
+      left: -100px;
+      top: -180px;
     }
 }
 
@@ -73,7 +80,7 @@
 }
 
 .oeg-spotlight__item:last-child::after {
-  content: "";
+  //content: "";
   width: 229px;
   height: 204px;
 

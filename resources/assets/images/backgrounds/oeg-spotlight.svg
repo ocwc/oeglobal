@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg width="1338px" height="506px" viewBox="0 0 1338 506" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <title>Rectangle</title>
-    <g id="Home-Page-HD" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <g id="oeg_desktop" transform="translate(0.000000, -240.000000)" fill="#1952B3" fill-rule="nonzero">
-            <path d="M0,240 L1338,240 L1338,672.332031 C1225.60677,727.777344 1082.64323,751.666667 909.109375,744 C648.808594,732.5 369.830747,620.8 295,620.8 C194.333333,620.8 96,653.866667 0,720 L0,240 Z" id="Rectangle"></path>
+<svg width="1338px" height="580px" viewBox="0 0 1338 580" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>oeg-spotlight</title>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="oeg-spotlight" fill="#1952B3" fill-rule="nonzero">
+            <path d="M0,0 L1338,0 L1338,506.332031 C1225.60677,561.777344 1082.64323,585.666667 909.109375,578 C648.808594,566.5 369.830747,454.8 295,454.8 C194.333333,454.8 96,487.866667 0,554 L0,0 Z" id="Rectangle"></path>
         </g>
     </g>
 </svg>

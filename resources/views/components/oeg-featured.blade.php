@@ -1,4 +1,4 @@
-<div class="container md:mt-12 mb-0 md:mb-20">
+<div class="container md:mt-12 mb-0">
   <div class="grid grid-rows-auto grid-cols-auto md:grid-rows-2 md:grid-cols-3 gap-2 md:gap-4">
     @foreach ($featured_items as $item)
       <a class="
@@ -20,10 +20,10 @@
   </div>
 </div>
 
-<div class="oeg-spotlight relative overflow-hidden lg:overflow-visible pt-20">
+<div class="oeg-spotlight relative overflow-hidden lg:overflow-visible pt-8 md:pt-20 lg:pt-20">
   <div class="container mb-32">
     <div class="oeg-spotlight__container relative">
-      <h2 class="w-full border-b border-gray-900 text-gray-900 text-xl font-sans pb-2 mb-6">Members spotlight</h2>
+      <h2 class="w-full border-b border-gray-900 text-gray-900 text-xl font-bold font-sans pb-2 mb-6">Members spotlight</h2>
       <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
         @foreach ($spotlight_items as $item)
           <a class="oeg-spotlight__item" href="{!! $item['url'] !!}">
@@ -34,7 +34,7 @@
             <h2 class="h2 mb-4">{!! $item['title'] !!}</h2>
             <span class="block mb-6">@svg('icons/check', 'h-auto inline-block')<span
                 class="ml-2">{!! $item['member'] !!}</span></span>
-            <span class="block">{!! $item['description'] !!}</span>
+            <span class="block font-serif">{!! $item['description'] !!}</span>
           </span>
           </a>
         @endforeach
