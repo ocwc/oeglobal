@@ -23,7 +23,10 @@
 <div class="oeg-spotlight relative overflow-hidden lg:overflow-visible pt-8 md:pt-20 lg:pt-20">
   <div class="container mb-32">
     <div class="oeg-spotlight__container relative">
-      <h2 class="w-full border-b border-gray-900 text-gray-900 text-xl font-bold font-sans pb-2 mb-6">Members spotlight</h2>
+      <div class="flex w-full border-b border-gray-900 pb-2 mb-6 justify-between items-end">
+        <h2 class="flex text-gray-900 text-xl font-bold font-sans">Members spotlight</h2>
+        <a class="flex btn oeg-inverted" href="https://connect.oeglobal.org/c/oeg-plaza/spotlight/14">View more</a>
+      </div>
       <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
         @foreach ($spotlight_items as $item)
           <a class="oeg-spotlight__item" href="{!! $item['url'] !!}">
