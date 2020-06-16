@@ -1,4 +1,6 @@
 <div class="container md:mt-12 mb-0">
+  <h2 class="text-black-200 border-b border-gray-400 text-xl font-bold font-sans pb-2 mb-6">Happening now!</h2>
+
   <div class="grid grid-rows-auto grid-cols-auto md:grid-rows-2 md:grid-cols-3 gap-2 md:gap-4">
     @foreach ($featured_items as $item)
       <a class="
