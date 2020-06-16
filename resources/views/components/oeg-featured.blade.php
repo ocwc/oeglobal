@@ -23,7 +23,7 @@
 </div>
 
 <div class="oeg-spotlight relative overflow-hidden lg:overflow-visible pt-8 md:pt-20 lg:pt-20">
-  <div class="container mb-32">
+  <div class="container">
     <div class="oeg-spotlight__container relative">
       <div class="flex w-full border-b border-gray-900 pb-2 mb-6 justify-between items-end">
         <h2 class="flex text-gray-900 text-xl font-bold font-sans">Members spotlight</h2>
@@ -44,6 +44,16 @@
           </a>
         @endforeach
       </div>
+    </div>
+  </div>
+  <div class="hidden xl:block">
+    <div class="container relative overflow-hidden xl:overflow-visible -mt-8 pb-40">
+      <div class="oeg-spotlight__triangle"></div>
+    </div>
+  </div>
+  <div class="block xl:hidden">
+    <div class="relative overflow-x-hidden overflow-y-visible -mt-12 pb-48">
+      <div class="oeg-spotlight__triangle"></div>
     </div>
   </div>
 </div>
