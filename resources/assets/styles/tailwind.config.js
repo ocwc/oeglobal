@@ -121,7 +121,8 @@ module.exports = {
     textStrokeWidth: ["responsive", "hover"],
     padding: ["responsive", "last"]
   },
-  plugins: [wordpressUtilities]
+  plugins: [wordpressUtilities],
+  purge: false
 };
 
 if (SITE === "latam") {
