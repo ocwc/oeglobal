@@ -64,12 +64,12 @@
 
 .menu-open .toggle-menu {
   background-color: theme("colors.menuHover");
-  color: theme("colors.main");
 }
 
 .toggle-menu {
   height: 80px;
   width: 80px;
+  color: theme("colors.main");
 }
 
 .toggle-menu svg {
