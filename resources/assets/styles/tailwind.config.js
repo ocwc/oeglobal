@@ -131,7 +131,7 @@ if (SITE === "latam") {
     module.exports.theme.extend.colors["gray-900"];
 } else {
   module.exports.theme.extend.colors.primary =
-    module.exports.theme.extend.colors.main;
+    module.exports.theme.extend.colors["blue-500"];
   module.exports.theme.extend.colors.menuHover =
     module.exports.theme.extend.colors["blue-900"];
 }

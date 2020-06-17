@@ -12,6 +12,6 @@
                 hidden lg:block flex">
       @include('partials.navigation')
     </nav>
-    <button class="js-toggle-menu toggle-menu flex justify-center lg:hidden">@svg('icons/menu', 'menu')</button>
+    <button class="js-toggle-menu toggle-menu flex items-center justify-center lg:hidden">@svg('icons/menu', 'menu')</button>
   </div>
 </header>
