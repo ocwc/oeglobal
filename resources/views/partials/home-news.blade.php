@@ -1,7 +1,7 @@
 <div class="home-news container mt-10">
   <div class="flex w-full border-b border-gray-400 pb-2 mb-6 justify-between items-end">
     <h2 class="text-xl font-bold font-sans">News and Updates</h2>
-    <a class="flex" href="https://oeglobal.org/category/news/">View more</a>
+    <a class="flex" href="/category/news/">View more</a>
   </div>
   <div class="flex flex-wrap -mx-4">
     <div class="my-4 px-4 w-full lg:w-2/3">
