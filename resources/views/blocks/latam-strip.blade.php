@@ -9,10 +9,10 @@
   'items' => array(
     (object) [
       'icon' => 'images/icons/drawing-latina.svg',
-      'title' => 'Estado del arte',
-      'description' => 'Siguiendo la trayectoria de la Educación Abierta en la región latinoamericana.',
+      'title' => 'Historias Extraordinarias',
+      'description' => 'Historias de colaboración, apoyo y solidaridad ante la crisis mundial del Covid-19.',
       'button_title' => 'Ver más…',
-      'button_url' => '/que-hacemos/estado-del-arte/'
+      'button_url' => 'https://splot.ca/extraordinary/oelatam-stories/'
     ],
     (object) [
       'icon' => 'images/icons/drawing-docente.svg',
