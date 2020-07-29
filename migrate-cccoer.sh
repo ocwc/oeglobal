@@ -8,4 +8,5 @@ wp option update page_on_front $home_id
 wp option update show_on_front page
 wp menu location assign 470 footer_navigation
 
+wp post create --post_type=page --post_title='Search' --page_template=views/template-search.blade.php --post_status=publish
 

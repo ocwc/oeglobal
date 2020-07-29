@@ -3,6 +3,7 @@
   'excerpt' => $excerpt_simple,
   'background_image' => $featured_image_large,
   'variant' => $variant,
-  'attribution' => $featured_image_attribution
+  'attribution' => $featured_image_attribution,
+  'is_search' => false
 ])
 @endcomponent

@@ -80,14 +80,6 @@ class App extends Controller {
         return $url;
     }
 
-    public function is_oeg() {
-        return OEG_SITE === 'OEG';
-    }
-
-    public function isLatam() {
-        return OEG_SITE === 'LATAM';
-    }
-
     public function site() {
         return strtolower(OEG_SITE);
     }
