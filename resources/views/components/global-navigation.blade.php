@@ -3,6 +3,8 @@
     <a class="brand" href="{{ home_url('/') }}" alt="Home">
       @if ($site === 'latam')
         @svg('logos/oelatam', 'nav-logo')
+      @elseif ($site === 'cccoer')
+        @svg('logos/cccoer', 'nav-logo')
       @else
         @svg('logos/oeglobal-color', 'nav-logo')
       @endif

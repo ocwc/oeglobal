@@ -1,19 +1,38 @@
 <footer class="bg-blue-300 text-blue-900">
   <div class="container">
-    <div class="flex flex-wrap lg:flex-no-wrap pb-6">
+    <div class="flex flex-wrap lg:flex-no-wrap items-start pb-6">
       @if ($site === 'oeg')
         <div class="flex flex-col items-center
                   w-full lg:w-1/4
                   p-4
                   mx-4 md:mx-0">
           <img src="@asset('images/logos/oeglobal-white.svg')" class="w-full h-auto max-h-20 mb-4 oeg-logo-shadow"
-               alt="" OE Global Logo" />
+               alt="OE Global Logo" />
           <p class="text-white text-center text-sm mt-4">
             <a href="/about-us/contact-us/">Contact</a>
             <span class="px-1">|</span>
             <a href="https://twitter.com/OpenEdGlobal">Twitter</a>
           </p>
         </div>
+      @elseif ($site === 'cccoer')
+        <div class="flex flex-col
+                  w-full lg:w-1/4
+
+                  mx-4 md:mx-0">
+          <div class="bg-white p-4">
+            @svg('logos/cccoer', 'w-full h-auto max-h-16 mb-4')
+            <p class="text-black-400 text-sm">CCCOER is a regional node of Open Education Global.</p>
+          </div>
+
+          <div class="flex flex-row items-center justify-center mt-4">
+            <a href="https://twitter.com/cccoer" target="_blank" rel="noopener">@svg('icons/twitter', 'w-auto h-auto
+              max-h-16 mb-4')</a>
+            <a href="https://www.youtube.com/playlist?list=PLze0jtuKTgpFV4M27-g6YojfSMXxIOeVd" target="_blank"
+               rel="noopener">@svg('icons/youtube', 'w-auto h-auto max-h-16 mb-4 ml-4')</a>
+          </div>
+        </div>
+
+
       @elseif ($site === 'latam')
         <div class="flex flex-col items-start bg-white
                   w-full lg:w-1/4
@@ -31,8 +50,8 @@
     </div>
     @if ($site !== 'oeg')
       <div class="flex items-center justify-center flex-col text-xs">
-        <a href="https://www.oeconsortium.org">@svg('logos/oec-inverted', 'w-auto h-24')</a>
-        <a class="mt-3 mb-4" href="https://www.oeconsortium.org">www.oeconsortium.org</a>
+        <a href="https://www.oeglobal.org">@svg('logos/oeglobal-inverted', 'w-auto h-40')</a>
+        <a class="mt-3 mb-4" href="https://www.oeglobal.org">www.oeglobal.org</a>
       </div>
     @endif
     <div class="flex flex-col lg:flex-row
@@ -44,6 +63,8 @@
           All content on oeglobal.org is licensed under a Creative Commons Attribution 4.0 License.
         @elseif ($site === 'latam')
           All content on oelatam.org is licensed under a Creative Commons Attribution 4.0 License.
+        @elseif ($site === 'cccoer')
+          All content on cccoer.org is licensed under a Creative Commons Attribution 4.0 License.
         @endif
       </div>
       <div class="flex lg:justify-end lg:items-end
