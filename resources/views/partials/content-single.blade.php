@@ -8,11 +8,11 @@
   </div>
 </article>
 
-<div class="flex flex-wrap mt-10">
-  <div class="w-1/2 prev-next-post prev">
-    @php(previous_post_link('%link', 'Previous'))
+<div class="flex flex-col md:flex-row mt-10 justify-between items-stretch">
+  <div class="w-full prev-next-post prev md:mr-2 mb-4 md:mb-0">
+    @php(previous_post_link('%link', '<span>⇠ Previous</span><span class="title">%title</span>'))
   </div>
-  <div class="w-1/2 text-right prev-next-post next">
-    @php(next_post_link('%link', 'Next'))
+  <div class="w-full text-right prev-next-post next md:ml-2">
+    @php(next_post_link('%link', '<span>Next ⇢</span><span class="title">%title</a>'))
   </div>
 </div>
