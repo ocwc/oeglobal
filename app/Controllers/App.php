@@ -83,4 +83,25 @@ class App extends Controller {
     public function site() {
         return strtolower(OEG_SITE);
     }
+
+    public static function TermsWithLinks($post) {
+        if ($post) {
+            $terms = wp_get_post_terms( $post->ID, 'category' );
+
+            return array_map( function( $term ) {
+                return [
+                    'name' => $term->name,
+                    'link' => get_term_link( $term )
+                ];
+            }, $terms );
+        }
+    }
+
+    public function FeaturedImageAttribution() {
+        return false;
+    }
+
+    public function Variant() {
+        return false;
+    }
 }

@@ -2,17 +2,21 @@
 
 @section('container')
   <main class="main">
-  @include('partials.breadcrumbs')
-  @include('partials.page-header')
+    @include('partials.breadcrumbs')
+    @include('partials.page-header')
 
-  @php $first = true @endphp
-  @while(have_posts()) @php the_post() @endphp
-    @if ($first)
+    @php $first = true @endphp
+    @while(have_posts()) @php the_post() @endphp
+    @if ($first && $site === 'oeglobal')
       @php $first = false @endphp
       @include('partials.content-full')
     @else
       @include('partials.content-excerpt')
     @endif
-  @endwhile
+    @endwhile
 
+    <div class="flex justify-center">
+      {!! get_the_posts_navigation() !!}
+    </div>
+  </main>
 @endsection

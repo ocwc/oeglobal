@@ -1,0 +1,24 @@
+.content-excerpt__categories a {
+  background-image: none;
+
+  @apply font-bold uppercase tracking-widest text-sm;
+}
+
+.content-excerpt .entry-title a {
+  background-image: none;
+
+  @apply text-2xl;
+
+  &:hover {
+    background-image: linear-gradient(to bottom, transparent calc(100% - 4px), $latam-orange-cream 4px);
+    background-position: right 50% bottom 0;
+  }
+}
+
+.content-excerpt .entry-summary * {
+  @apply text-sm font-serif;
+}
+
+.content-excerpt .entry-meta * {
+  @apply text-sm;
+}

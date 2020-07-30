@@ -43,7 +43,8 @@
         "mwdelaney/sage-acf-gutenberg-blocks": "dev-master",
         "log1x/navi": "^1.0",
         "stoutlogic/acf-builder": "^1.8",
-        "log1x/sage-directives": "^1.1.3"
+        "log1x/sage-directives": "^1.1.3",
+        "filp/whoops": "^2.7"
     },
     "require-dev": {
         "squizlabs/php_codesniffer": "^2.8.0",
