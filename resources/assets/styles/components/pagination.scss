@@ -1,0 +1,23 @@
+.wp-pagenavi {
+  @apply mt-4;
+}
+
+.wp-pagenavi a,
+.wp-pagenavi span {
+  @apply border-2 border-turq-800 rounded p-2 text-base mr-4;
+
+  &:last-child {
+    @apply mr-0;
+  }
+}
+
+.wp-pagenavi a {
+  &:hover,
+  &:active {
+    @apply bg-turq-800;
+  }
+}
+
+.wp-pagenavi span {
+  @apply bg-turq-800;
+}

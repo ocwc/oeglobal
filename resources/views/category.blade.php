@@ -16,7 +16,7 @@
     @endwhile
 
     <div class="flex justify-center">
-      {!! get_the_posts_navigation() !!}
+      {!!  wp_pagenavi() !!}
     </div>
   </main>
 @endsection
