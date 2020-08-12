@@ -49,7 +49,7 @@
     "require-dev": {
         "squizlabs/php_codesniffer": "^2.8.0",
         "composer/composer": "^1.9",
-        "symfony/var-dumper": "^4.3"
+        "symfony/var-dumper": "^5.1"
     },
     "scripts": {
         "test": [

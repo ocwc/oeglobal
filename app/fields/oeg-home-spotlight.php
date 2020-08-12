@@ -17,7 +17,7 @@ if (OEG_SITE === 'OEG') {
             ->addUrl('url')
             ->addTrueFalse('enabled')
         ->endRepeater()
-        ->setLocation('options_page', '==', 'oeg-home-settings');
+        ->setLocation('options_page', '==', 'theme-home-settings');
 
     return $spotlight;
 }

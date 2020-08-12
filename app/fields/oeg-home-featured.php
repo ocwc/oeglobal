@@ -8,7 +8,7 @@ if (OEG_SITE === 'OEG') {
     acf_add_options_page(array(
         'page_title' => 'Home Page',
         'menu_title' => 'Home Page',
-        'menu_slug'  => 'oeg-home-settings',
+        'menu_slug'  => 'theme-home-settings',
         'capability' => 'edit_posts',
         'redirect'   => false
     ));
@@ -24,7 +24,7 @@ if (OEG_SITE === 'OEG') {
             ->addTrueFalse('enabled')
         ->endRepeater()
 
-        ->setLocation('options_page', '==', 'oeg-home-settings');
+        ->setLocation('options_page', '==', 'theme-home-settings');
 
     return $featured;
 }

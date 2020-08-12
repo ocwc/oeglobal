@@ -2,6 +2,7 @@
 
 wp theme activate oeglobal/resources
 wp plugin activate breadcrumb-navxt wp-pagenavi
+wp plugin deactivate breadcrumb-navxt wp-pagenavi
 
 home_id=`wp post create --post_type=page --post_title='Home' --page_template=views/template-cccoer-home.blade.php --post_status=publish --porcelain`
 wp option update page_on_front $home_id

@@ -22,3 +22,7 @@
 .content-excerpt .entry-meta * {
   @apply text-base;
 }
+
+.content-featured .entry-title a {
+  @apply text-lg leading-tight;
+}

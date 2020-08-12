@@ -139,6 +139,14 @@ article {
     @apply break-words;
   }
 
+  a.no-transition {
+    transition: none;
+
+    &:hover {
+      background-position: center;
+    }
+  }
+
   figcaption {
     @apply figcaption;
   }
