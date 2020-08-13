@@ -15,7 +15,7 @@
   </div>
 
   <div class="bg-gray-900">
-    <div class="container flex justify-center">
+    <div class="container flex justify-centwer">
       <div class="w-3/4">
         @component('components/content-excerpt', [
             'link' => $get_featured['link'],

@@ -1,11 +1,13 @@
-<article class="container flex justify-center py-16">
+<article class="container flex justify-center py-16 relative">
+  @if($featured)
+    @svg('icons/megaphone', 'h-22 w-22 cccoer__featured__icon')
+  @endif
+
   <a href="{!! $link !!}"
      class="content content-excerpt
-              flex items-stretch justify-between flex-row
+              flex items-stretch justify-between flex-row overflow-hidden z-0 relative
               shadow-box hover:shadow-xl rounded bg-white relative no-transition">
-    @if($featured)
-      @svg('icons/megaphone', 'h-22 w-22 absolute cccoer__featured__icon')
-    @endif
+
 
     @if($image)
       <span href="{!! $link !!}"
