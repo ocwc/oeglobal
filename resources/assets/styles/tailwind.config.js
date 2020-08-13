@@ -110,6 +110,9 @@ module.exports = {
         "1/12": "8.333333333%",
         "1/3": "33.333333333%",
         "2/3": "66.6666667%"
+      },
+      boxShadow: {
+        'box': '0 0 1px 0 #CCCCCC, 1px 2px 13px -5px rgba(0,0,0,0.30);'
       }
     },
     container: {
@@ -119,7 +122,10 @@ module.exports = {
   },
   variants: {
     textStrokeWidth: ["responsive", "hover"],
-    padding: ["responsive", "last"]
+    padding: ["responsive", "last"],
+    textColor: ['responsive', 'hover', 'focus', 'active'],
+    backgroundColor: ['responsive', 'hover', 'focus', 'active'],
+    borderColor: ['responsive', 'hover', 'focus', 'active'],
   },
   plugins: [wordpressUtilities],
   purge: false

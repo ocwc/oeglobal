@@ -141,6 +141,8 @@ article {
 
   a.no-transition {
     transition: none;
+    background-position: center;
+    background-image: none !important;
 
     &:hover {
       background-position: center;
