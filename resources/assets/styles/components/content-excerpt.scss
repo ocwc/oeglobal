@@ -1,3 +1,14 @@
+.content-excerpt {
+  &:active {
+    @apply bg-blue-500 text-gray-900;
+  }
+}
+
+.content-excerpt__shadow {
+  filter: drop-shadow(5px 5px 5px #ccc);
+  background-clip: content-box;
+}
+
 .content-excerpt__categories a {
   background-image: none;
 
@@ -34,16 +45,4 @@
 
 .content-excerpt:active .hover-link {
   background-image: none;
-}
-
-.content-excerpt .content-excerpt__body {
-  @apply border-transparent border-2 border-l-0;
-}
-
-.content-excerpt:hover .content-excerpt__body {
-  @apply border-turq-500 border-2 border-l-0;
-}
-
-.content-excerpt:active .content-excerpt__body {
-  @apply bg-blue-500 text-gray-900 border-blue-500;
 }
