@@ -13,7 +13,7 @@
               z-10 relative no-transition overflow-hidden">
       @if($image)
         <span href="{!! $link !!}"
-              class="bg-cover bg-center h-64 md:h-auto md:w-1/2"
+              class="bg-cover bg-center h-64 md:h-auto md:w-1/2 lg:w-1/4"
               style="background-image: url('{!! $image !!}');">
         </span>
       @endif
