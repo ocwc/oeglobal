@@ -9,19 +9,19 @@
            bg-white content-excerpt__shadow">
     <a href="{!! $link !!}"
        class="content content-excerpt
-              flex items-stretch justify-between flex-row z-10 relative
-               no-transition overflow-hidden">
+              flex items-stretch justify-between flex-col md:flex-row
+              z-10 relative no-transition overflow-hidden">
       @if($image)
         <span href="{!! $link !!}"
-              class="bg-cover bg-center w-1/4"
+              class="bg-cover bg-center h-64 md:h-auto md:w-1/2"
               style="background-image: url('{!! $image !!}');">
         </span>
       @endif
 
       <div class="
       pl-8 px-6 pb-4 content-excerpt__body
-        @if($image)w-3/4
-        @else w-full
+        @if($image)md:w-3/4
+        @else md:w-full
         @endif
         ">
         <header class="pt-6">

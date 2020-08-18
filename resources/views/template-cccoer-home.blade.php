@@ -16,7 +16,7 @@
 
   <div class="bg-gray-900">
     <div class="container flex justify-center">
-      <div class="w-3/4 mt-8 mb-12">
+      <div class="w-5/6 lg:w-3/4 mt-8 mb-12">
         @component('components/content-excerpt', [
             'link' => $get_featured['link'],
             'image' =>  $get_featured['image']['sizes']['large'],
