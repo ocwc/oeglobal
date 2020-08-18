@@ -1,4 +1,4 @@
-<article class="container flex justify-center py-16 relative">
+<article class="container flex justify-center my-8 relative">
   @if($featured)
     @svg('icons/megaphone', 'h-22 w-22 cccoer__featured__icon')
   @endif
@@ -26,14 +26,14 @@
         ">
         <header class="pt-6">
           @if($terms)
-            <div class="">
+            <div class="content-excerpt__categories">
               @foreach ($terms as $term)
                 <span class="bg-none">{!! $term['name'] !!}</span>@if(!$loop->last), @endif
               @endforeach
             </div>
           @endif
           <div class="mt-2 mb-4">
-            <h2 class="entry-title font-sans text-left pb-1 leading-snug text-xl hover-link inline">
+            <h2 class="entry-title font-sans text-left pb-1 leading-snug text-2xl hover-link inline">
               {!! $title !!}
             </h2>
           </div>
