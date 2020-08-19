@@ -23,7 +23,7 @@
             'title' => $get_featured['title'],
             'description' => $get_featured['description'],
             'featured' => true,
-            'terms' => null,
+            'term_label' => null,
             'show_meta' => false,
           ])@endcomponent
       </div>
@@ -32,12 +32,16 @@
     @component('components/section-header', ['title' => 'Webinars', 'url' => '/webinar/'])@endcomponent
     <div class="container grid grid-cols-3 gap-4">
       @foreach($webinars as $webinar)
-        @component('components/featured', [
+        @component('components/content-excerpt', [
             'title' => $webinar['title'],
-            'excerpt' => $webinar['excerpt'],
+            'description' => $webinar['excerpt'],
             'webinar_date' => $webinar['date'],
             'url' => $webinar['url'],
-            'image' => $webinar['image']])@endcomponent
+            'image' => $webinar['image'],
+            'term_label' => 'Webinar',
+            'show_meta' => false,
+            'is_tall' => true,
+            ])@endcomponent
       @endforeach
     </div>
 

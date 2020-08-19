@@ -59,7 +59,7 @@ if (OEG_SITE === 'oeg') {
             return array_map( function( $post ) {
                 return [
                     'title'   => $post->post_title,
-                    'excerpt' => \Illuminate\Support\Str::words(get_the_excerpt( $post ), 34, ' [..]'),
+                    'excerpt' => \Illuminate\Support\Str::words(get_the_excerpt( $post ), 16, ' [..]'),
                     'url'     => get_permalink( $post ),
                     'author'  => get_the_author_meta( 'display_name', $post->post_author ),
                     'date'    => get_the_date( 'M j, Y', $post ),

@@ -76,6 +76,9 @@ module.exports = {
       minWidth: {
         "1/2": "50%"
       },
+      height: {
+        '128': '32rem'
+      },
       fontFamily: {
         sans: [
           "Montserrat",
