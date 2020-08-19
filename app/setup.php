@@ -165,38 +165,3 @@ add_action('init', function () {
 add_action( 'init', function() {
     add_post_type_support( 'page', 'excerpt' );
 } );
-
-add_action( 'init', function() {
-    register_extended_post_type( 'webinar', [
-        'taxonomies'      => array( 'post_tag' ),
-        'capability_type' => 'page',
-        'menu_icon'       => 'dashicons-format-video'
-    ] );
-
-    register_extended_taxonomy( 'webinar_category', 'webinar', [
-        'show_admin_column' => true,
-    ], [
-        'plural'          => 'Webinar Categories',
-        'singular' => 'Webinar Category'
-    ] );
-
-    register_extended_post_type( 'casestudy', [
-        'taxonomies'      => array( 'post_tag' ),
-        'capability_type'     => 'page',
-        'menu_icon'           => 'dashicons-portfolio',
-        'menu_position'       => 5,
-    ], [
-        'singular' => 'Case study',
-        'plural' => 'Case studies'
-    ]);
-
-    register_extended_post_type( 'studentstory', [
-        'taxonomies'      => array( 'post_tag' ),
-        'capability_type' => 'page',
-        'menu_icon'       => 'dashicons-welcome-learn-more',
-        'menu_position'   => 5,
-    ], [
-        'singular' => 'Student story',
-        'plural'   => 'Student stories'
-    ] );
-} );
