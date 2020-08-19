@@ -1,4 +1,4 @@
-<article class="container flex justify-center my-8 relative">
+<article class="flex justify-center my-8 relative">
   @if($featured ?? null)
     @svg('icons/megaphone', 'h-22 w-22 cccoer__featured__icon')
   @endif

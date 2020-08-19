@@ -30,13 +30,13 @@
     </div>
 
     @component('components/section-header', ['title' => 'Webinars', 'url' => '/webinar/'])@endcomponent
-    <div class="container grid grid-cols-3 gap-4">
+    <div class="container grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
       @foreach($webinars as $webinar)
         @component('components/content-excerpt', [
             'title' => $webinar['title'],
             'description' => $webinar['excerpt'],
             'webinar_date' => $webinar['date'],
-            'url' => $webinar['url'],
+            'link' => $webinar['url'],
             'image' => $webinar['image'],
             'term_label' => 'Webinar',
             'show_meta' => false,
