@@ -67,6 +67,26 @@ if (OEG_SITE === 'oeg') {
                 ];
             }, $custom_query );
         }
+
+        public function news() {
+            $custom_query = get_posts( [
+                'posts_per_page' => '3',
+                'cat'            => 'news'
+            ] );
+
+            return array_map( function( $post ) {
+                return [
+                    'title'   => $post->post_title,
+                    'excerpt' => \Illuminate\Support\Str::words(get_the_excerpt( $post ), 32, ' [..]'),
+                    'url'     => get_permalink( $post ),
+                    'author'  => get_the_author_meta( 'display_name', $post->post_author ),
+                    'date'    => get_the_date( 'M j, Y', $post ),
+                    'image'   => get_the_post_thumbnail_url( $post, 'large' ),
+                    'terms'   => App::TermsWithLinks($post),
+                    'post'    => $post
+                ];
+            }, $custom_query );
+        }
     }
 } else {
     class FrontPage extends Controller {

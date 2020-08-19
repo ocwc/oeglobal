@@ -45,6 +45,20 @@
       @endforeach
     </div>
 
+    @component('components/section-header', ['title' => 'Updates', 'url' => '/news/'])@endcomponent
+    <div class="container grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+      @foreach($news as $item)
+        @component('components/content-excerpt', [
+            'title' => $item['title'],
+            'description' => $item['excerpt'],
+            'link' => $item['url'],
+            'image' => $item['image'],
+            'terms' => $item['terms'],
+            'show_meta' => true,
+            'is_tall' => true,
+            'post' => $post
+            ])@endcomponent
+      @endforeach
   </div>
 
   @php(do_action('get_footer'))
