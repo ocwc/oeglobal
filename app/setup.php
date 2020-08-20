@@ -32,7 +32,16 @@ add_action('after_setup_theme', function () {
     add_theme_support('soil-nav-walker');
     add_theme_support('soil-nice-search');
     add_theme_support('soil-relative-urls');
-    add_theme_support('soil-google-analytics', 'UA-4248822-14');
+
+    if ( OEG_SITE === 'CCCOER' ) {
+        add_theme_support( 'soil-google-analytics', 'UA-4248822-11' );
+    } else if ( OEG_SITE === 'LATAM' ) {
+        add_theme_support( 'soil-google-analytics', 'UA-4248822-15' );
+    } else {
+        add_theme_support( 'soil-google-analytics', 'UA-4248822-14' );
+    }
+
+
 
     /**
      * Enable plugins to manage the document title
