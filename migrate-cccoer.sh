@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 wp theme activate oeglobal/resources
-wp plugin activate breadcrumb-navxt wp-pagenavi
+wp plugin activate breadcrumb-navxt wp-pagenavi soil
 wp plugin deactivate classic-editor jetpack twitter wp-rocket
 
 home_id=`wp post create --post_type=page --post_title='Home' --page_template=views/template-cccoer-home.blade.php --post_status=publish --porcelain`
