@@ -51,6 +51,14 @@
           </main>
         @endif
 
+        @if($meta_type ?? null)
+          <p class="byline author vcard text-sm mt-8 font-sans">
+            @if($meta_type === 'string')
+              {!! $meta_string !!}
+            @endif
+          </p>
+        @endif
+
         @if($show_meta ?? null)
           <div class="entry-meta">
             @include('partials/entry-meta')

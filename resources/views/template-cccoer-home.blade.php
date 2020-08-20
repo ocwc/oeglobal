@@ -54,7 +54,8 @@
             'link' => $item['url'],
             'image' => $item['image'],
             'terms' => $item['terms'],
-            'show_meta' => true,
+            'meta_type' => 'string',
+            'meta_string' => $item['date'],
             'is_tall' => true,
             'post' => $post
             ])@endcomponent
