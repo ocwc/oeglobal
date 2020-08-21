@@ -4,7 +4,7 @@ namespace App\Controllers;
 
 use Sober\Controller\Controller;
 
-if (OEG_SITE === 'oeg') {
+if ( OEG_SITE === 'oeg' ) {
     class FrontPage extends Controller {
         public function latestNews() {
             $custom_query = get_posts( [
@@ -41,11 +41,11 @@ if (OEG_SITE === 'oeg') {
             return array_slice( $rows, 0, 3 );
         }
     }
-} else if (OEG_SITE === 'CCCOER') {
+} else if ( OEG_SITE === 'CCCOER' ) {
     class FrontPage extends Controller {
         public function getFeatured() {
             $rows = get_field( 'options-featured', 'options' );
-            if ($rows) {
+            if ( $rows ) {
                 return $rows[0];
             }
         }
@@ -53,13 +53,13 @@ if (OEG_SITE === 'oeg') {
         public function webinars() {
             $custom_query = get_posts( [
                 'posts_per_page' => '3',
-                'post_type'            => 'webinar'
+                'post_type'      => 'webinar'
             ] );
 
             return array_map( function( $post ) {
                 return [
                     'title'   => $post->post_title,
-                    'excerpt' => \Illuminate\Support\Str::words(get_the_excerpt( $post ), 16, ' [..]'),
+                    'excerpt' => \Illuminate\Support\Str::words( get_the_excerpt( $post ), 16, ' [..]' ),
                     'url'     => get_permalink( $post ),
                     'author'  => get_the_author_meta( 'display_name', $post->post_author ),
                     'date'    => get_the_date( 'M j, Y', $post ),
@@ -71,19 +71,66 @@ if (OEG_SITE === 'oeg') {
         public function news() {
             $custom_query = get_posts( [
                 'posts_per_page' => '3',
-                'cat'            => 'news'
+                'cat'            => 'news',
             ] );
 
             return array_map( function( $post ) {
                 return [
                     'title'   => $post->post_title,
-                    'excerpt' => \Illuminate\Support\Str::words(get_the_excerpt( $post ), 32, ' [..]'),
+                    'excerpt' => \Illuminate\Support\Str::words( get_the_excerpt( $post ), 32, ' [..]' ),
                     'url'     => get_permalink( $post ),
                     'author'  => get_the_author_meta( 'display_name', $post->post_author ),
                     'date'    => get_the_date( 'M j, Y', $post ),
                     'image'   => get_the_post_thumbnail_url( $post, 'large' ),
-                    'terms'   => App::TermsWithLinks($post),
+                    'terms'   => App::TermsWithLinks( $post ),
                     'post'    => $post
+                ];
+            }, $custom_query );
+        }
+
+        public function caseStudies() {
+            $custom_query = get_posts( [
+                'post_type'      => 'casestudy',
+                'posts_per_page' => '3'
+            ] );
+
+            return array_map( function( $post ) {
+                return [
+                    'title' => \App\truncate($post->post_title, 45, ' &#8230;'),
+                    'url'   => get_permalink( $post ),
+                    'image' => get_the_post_thumbnail_url( $post, 'medium' ),
+                ];
+            }, $custom_query );
+        }
+
+        public function studentStories() {
+            $custom_query = get_posts( [
+                'post_type'      => 'casestudy', //'studentstory',
+                'posts_per_page' => '3',
+                'orderby'        => 'rand'
+            ] );
+
+            return array_map( function( $post ) {
+                return [
+                    'title' => \App\truncate($post->post_title, 45, ' &#8230;'),
+                    'url'   => get_permalink( $post ),
+                    'image' => get_the_post_thumbnail_url( $post, 'medium' ),
+                ];
+            }, $custom_query );
+        }
+
+        public function ediStories() {
+            $custom_query = get_posts( [
+                'post_type'      => 'casestudy', //'edi',
+                'posts_per_page' => '3',
+                'orderby'        => 'rand'
+            ] );
+
+            return array_map( function( $post ) {
+                return [
+                    'title' => \App\truncate($post->post_title, 45, ' &#8230;'),
+                    'url'   => get_permalink( $post ),
+                    'image' => get_the_post_thumbnail_url( $post, 'medium' ),
                 ];
             }, $custom_query );
         }

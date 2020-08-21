@@ -148,3 +148,13 @@ function get_field_partial($partial)
     $partial = str_replace('.', '/', $partial);
     return include(config('theme.dir')."/app/fields/{$partial}.php");
 }
+
+function truncate($str, $length = 125, $append = '...') {
+    if (strlen($str) > $length) {
+        $delim = "~\n~";
+        $str = substr($str, 0, strpos(wordwrap($str, $length, $delim), $delim)) . $append;
+    }
+
+    return $str;
+}
+

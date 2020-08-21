@@ -60,8 +60,35 @@
             'post' => $post
             ])@endcomponent
       @endforeach
+    </div>
   </div>
 
+  <div class="bg-white py-8 lg:py-0">
+    <div class="container flex justify-center">
+      <div class="lg:w-5/6">
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-4">
+          @component('components/stories-block', [
+              'title' => 'Student Stories',
+              'url' => '/student-stories/',
+              'items' => $student_stories,
+              'background' => '/wp-content/uploads/2020/08/studentstories.jpg',
+          ])@endcomponent
+          @component('components/stories-block', [
+              'title' => 'Equity & Openess',
+              'url' => '/edi/',
+              'items' => $edi_stories,  //$student_stories,
+              'background' => '/wp-content/uploads/2020/08/edi.jpg',
+          ])@endcomponent
+          @component('components/stories-block', [
+              'title' => 'Case Studies',
+              'url' => '/case-studies/',
+              'items' => $case_studies,
+              'background' => '/wp-content/uploads/2020/08/casestudies.jpg',
+          ])@endcomponent
+        </div>
+      </div>
+    </div>
+  </div>
   @php(do_action('get_footer'))
   @include('components.footer')
 @endsection
