@@ -101,7 +101,6 @@
       @foreach($tweets as $tweet)
         <div class="">
           {!! $tweet !!}
-          @php() do_shortcode( "[tweet id='$tweet']" ); @endphp
         </div>
       @endforeach
     </div>

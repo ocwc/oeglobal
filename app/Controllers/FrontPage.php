@@ -161,7 +161,6 @@ if ( OEG_SITE === 'oeg' ) {
                 }
                 set_transient( 'tweets', $htmls, 60 * 60 * 1 );
 
-                var_dump($htmls);
                 return $htmls;
             }
         }
