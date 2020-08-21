@@ -25,10 +25,10 @@
           </div>
 
           <div class="flex flex-row items-center justify-center mt-4">
-            <a href="https://twitter.com/cccoer" target="_blank" rel="noopener">@svg('icons/twitter', 'w-auto h-auto
-              max-h-16 mb-4')</a>
-            <a href="https://www.youtube.com/playlist?list=PLze0jtuKTgpFV4M27-g6YojfSMXxIOeVd" target="_blank"
-               rel="noopener">@svg('icons/youtube', 'w-auto h-auto max-h-16 mb-4 ml-4')</a>
+            <a class="text-white hover:text-turq-600" href="https://twitter.com/cccoer" target="_blank" rel="noopener">@svg('icons/twitter-inverted', 'w-auto h-auto
+              max-h-16 mb-4 fill-current')</a>
+            <a class="text-white hover:text-turq-600" href="https://www.youtube.com/playlist?list=PLze0jtuKTgpFV4M27-g6YojfSMXxIOeVd" target="_blank"
+               rel="noopener">@svg('icons/youtube-inverted', 'w-auto h-auto max-h-16 mb-4 ml-4 fill-current')</a>
           </div>
         </div>
 
@@ -59,15 +59,9 @@
                 small">
       <div class="w-full lg:w-8/12
                   pb-4 lg:pb-0">
-        @if ($site === 'oeg')
-          All content on oeglobal.org is licensed under a Creative Commons Attribution 4.0 License.
-        @elseif ($site === 'latam')
-          All content on oelatam.org is licensed under a Creative Commons Attribution 4.0 License.
-        @elseif ($site === 'cccoer')
-          All content on cccoer.org is licensed under a Creative Commons Attribution 4.0 License.
-        @endif
+        Content on this site is licensed under a <a class="underline" href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>, <br class="hidden md:block" />except where otherwise noted.
       </div>
-      <div class="flex lg:justify-end lg:items-end
+      <div class="flex lg:justify-end lg:items-start
                   w-full lg:w-1/3 lg:pl-10">
         <a class="mb-0! underline" href="https://www.oeconsortium.org/terms-of-use-and-privacy-policies/"
            target="_blank"

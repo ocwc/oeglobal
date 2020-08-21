@@ -3,6 +3,7 @@
 namespace App\Controllers;
 
 use Sober\Controller\Controller;
+use Abraham\TwitterOAuth\TwitterOAuth;
 
 if ( OEG_SITE === 'oeg' ) {
     class FrontPage extends Controller {
@@ -96,7 +97,7 @@ if ( OEG_SITE === 'oeg' ) {
 
             return array_map( function( $post ) {
                 return [
-                    'title' => \App\truncate($post->post_title, 45, ' &#8230;'),
+                    'title' => \App\truncate( $post->post_title, 45, ' &#8230;' ),
                     'url'   => get_permalink( $post ),
                     'image' => get_the_post_thumbnail_url( $post, 'medium' ),
                 ];
@@ -112,7 +113,7 @@ if ( OEG_SITE === 'oeg' ) {
 
             return array_map( function( $post ) {
                 return [
-                    'title' => \App\truncate($post->post_title, 45, ' &#8230;'),
+                    'title' => \App\truncate( $post->post_title, 45, ' &#8230;' ),
                     'url'   => get_permalink( $post ),
                     'image' => get_the_post_thumbnail_url( $post, 'medium' ),
                 ];
@@ -128,11 +129,36 @@ if ( OEG_SITE === 'oeg' ) {
 
             return array_map( function( $post ) {
                 return [
-                    'title' => \App\truncate($post->post_title, 45, ' &#8230;'),
+                    'title' => \App\truncate( $post->post_title, 45, ' &#8230;' ),
                     'url'   => get_permalink( $post ),
                     'image' => get_the_post_thumbnail_url( $post, 'medium' ),
                 ];
             }, $custom_query );
+        }
+
+        function tweets() {
+            if ( get_transient( 'tweets' ) !== false ) {
+                return get_transient( 'tweets' );
+            } else {
+                $connection = new TwitterOAuth( TWITTER_API_KEY, TWITTER_API_SECRET, TWITTER_ACCESS_TOKEN_KEY, TWITTER_ACCESS_TOKEN_SECRET );
+                $content    = $connection->get( "search/tweets",
+                    [
+                        "q"        => "cccoer",
+                        "since_id" => 702939861158768640,
+                        "count"    => 100
+                    ] );
+                $tweets     = array();
+                foreach ( $content->statuses as $tweet ) {
+                    if ( ! isset( $tweet->retweeted_status ) ) {
+                        $tweets[] = $tweet->id_str;
+                    }
+                }
+
+                $tweets = array_slice( $tweets, 0, 4 );
+                set_transient( 'tweets', $tweets, 60 * 60 * 1 );
+
+                return $tweets;
+            }
         }
     }
 } else {

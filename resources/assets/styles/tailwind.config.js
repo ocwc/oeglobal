@@ -105,6 +105,7 @@ module.exports = {
       fontSize: {
         "3xs": "0.5rem",
         "2xs": "0.625rem",
+        "small": "0.85rem",
         "3xl": "2rem"
       },
       textStrokeWidth: theme => theme("borderWidth"),
