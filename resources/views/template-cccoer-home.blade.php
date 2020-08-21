@@ -90,12 +90,21 @@
     </div>
   </div>
 
-  <div class="bg-gray-900">
+  <div class="bg-gray-900 pt-20 pb-16">
     @component('components/section-header', [
       'title' => 'Social Media',
       'twitter' => 'https://twitter.com/@cccoer',
       'youtube' => 'https://www.youtube.com/playlist?list=PLze0jtuKTgpFV4M27-g6YojfSMXxIOeVd'
       ])@endcomponent
+
+    <div class="grid grid-cols-1 lg:grid-cols-4 gap-4 container">
+      @foreach($tweets as $tweet)
+        <div class="">
+          {!! $tweet !!}
+          @php() do_shortcode( "[tweet id='$tweet']" ); @endphp
+        </div>
+      @endforeach
+    </div>
   </div>
   @php(do_action('get_footer'))
   @include('components.footer')

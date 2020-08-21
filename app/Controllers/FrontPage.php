@@ -136,7 +136,7 @@ if ( OEG_SITE === 'oeg' ) {
             }, $custom_query );
         }
 
-        function tweets() {
+        public function tweets() {
             if ( get_transient( 'tweets' ) !== false ) {
                 return get_transient( 'tweets' );
             } else {
@@ -155,9 +155,14 @@ if ( OEG_SITE === 'oeg' ) {
                 }
 
                 $tweets = array_slice( $tweets, 0, 4 );
-                set_transient( 'tweets', $tweets, 60 * 60 * 1 );
+                $htmls = [];
+                foreach ($tweets  as $status ) {
+                    $htmls[] = wp_oembed_get("https://twitter.com/ccccoer/status/$status");
+                }
+                set_transient( 'tweets', $htmls, 60 * 60 * 1 );
 
-                return $tweets;
+                var_dump($htmls);
+                return $htmls;
             }
         }
     }
