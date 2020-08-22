@@ -63,6 +63,8 @@ module.exports = {
         ...whitelister("resources/assets/styles/components/gravityforms.scss"),
         ...whitelister("resources/assets/styles/components/oeg-featured.scss"),
         ...whitelister("resources/assets/styles/components/oeg-projects.scss"),
+        ...whitelister("resources/assets/styles/components/cccoer-testimonial.scss"),
+        ...whitelister("node_modules/swiper/swiper-bundle.min.css"),
         /^wp/
       ]
     })
