@@ -51,6 +51,7 @@
 
 /* CCCOER */
 @import "components/cccoer-home";
+@import "components/cccoer-testimonial";
 
 /* Gutenberg blocks */
 @import "components/image-grid";
@@ -58,3 +59,7 @@
 @import "components/person-image";
 @import "components/content-header";
 @import "common/utilities";
+
+/* External dependencies */
+@import "~swiper/swiper";
+@import "~swiper/components/pagination/pagination";

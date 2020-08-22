@@ -92,7 +92,8 @@
   },
   "dependencies": {
     "hoverintent": "^2.2.0",
-    "jquery": "^3.5"
+    "jquery": "^3.5",
+    "swiper": "^6.1.2"
   },
   "volta": {
     "node": "10.16.3",

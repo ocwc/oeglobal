@@ -1,0 +1,23 @@
+.testimonial .swiper-slide {
+  @apply pb-10;
+}
+
+.testimonial .swiper-pagination-bullet {
+  width: 16px;
+  height: 16px;
+
+  @apply bg-gray-800;
+}
+
+.testimonial .swiper-pagination-bullet.swiper-pagination-bullet-active {
+  @apply bg-gray-600;
+}
+
+.testimonial__background {
+  min-height: 400px;
+
+  background-image: url("../images/icons/oval1.svg");
+  background-size: auto 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+}
