@@ -16,8 +16,16 @@
 .testimonial__background {
   min-height: 400px;
 
-  background-image: url("../images/icons/oval1.svg");
-  background-size: auto 100%;
+  background-image: url("../images/icons/oval0.svg");
+  background-size: 100% 90%;
   background-repeat: no-repeat;
   background-position: center;
+}
+
+.testimonial__background__index1 {
+  background-image: url("../images/icons/oval1.svg");
+}
+
+.testimonial__background__index2 {
+  background-image: url("../images/icons/oval2.svg");
 }

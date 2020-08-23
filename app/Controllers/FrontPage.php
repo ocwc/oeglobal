@@ -51,6 +51,10 @@ if ( OEG_SITE === 'oeg' ) {
             }
         }
 
+        public function testimonials() {
+            return get_field( 'options-testimonials', 'options' );
+        }
+
         public function webinars() {
             $custom_query = get_posts( [
                 'posts_per_page' => '3',

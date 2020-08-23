@@ -29,5 +29,17 @@ if (OEG_SITE === 'CCCOER') {
         ->addText( 'description' )
     ->setLocation( 'options_page', '==', 'theme-home-settings' );
 
+    $options
+        ->addRepeater( 'options-testimonials', [
+            'label' => 'Testimonials',
+            'min'    => 1,
+            'max'    => 6,
+            'layout' => 'block',
+        ] )
+        ->addTextarea( 'text' )
+        ->addText( 'name' )
+        ->addText( 'title' )
+        ->setLocation( 'options_page', '==', 'theme-home-settings' );
+
     return $options;
 }

@@ -106,22 +106,21 @@
     </div>
   </div>
 
-  <div class="bg-white pt-20 pb-10">
+  <div class="bg-white pt-20">
     <div class="container">
       <div class="swiper-container w-full h-full testimonial">
         <div class="swiper-wrapper">
-          <div class="swiper-slide">
-            @component('components/testimonial', [])
-                <p class="text-xl mb-4 italic">This is something I learned long ago - faculty are much more inclined to listen to
-                  their peers (i.e. other faculty) than someone else. Getting those faculty who use OER to be advocates
-                  is
-                  the best way to move something forward - in any institution.</p>
-                <p>Carlota Monteiro</p>
-                <p class="text-sm">English Instructor at Central Lakes College</p>
-            @endcomponent
-          </div>
-          <div class="swiper-slide">Slide 2</div>
-          <div class="swiper-slide">Slide 3</div>
+          @foreach($testimonials as $testimonial)
+            <div class="swiper-slide">
+              @component('components/testimonial', [
+                  'text' => $testimonial['text'],
+                  'name' => $testimonial['name'],
+                  'title' => $testimonial['title'],
+                  'index' => $loop->index % 3,
+              ])
+              @endcomponent
+            </div>
+          @endforeach
         </div>
         <!-- Add Pagination -->
         <div class="swiper-pagination mt-6"></div>
