@@ -107,7 +107,7 @@
   </div>
 
   <div class="bg-white pt-20">
-    <div class="container">
+{{--    <div class="container">--}}
       <div class="swiper-container w-full h-full testimonial">
         <div class="swiper-wrapper">
           @foreach($testimonials as $testimonial)
@@ -125,7 +125,7 @@
         <!-- Add Pagination -->
         <div class="swiper-pagination mt-6"></div>
       </div>
-    </div>
+{{--    </div>--}}
   </div>
 
   @php(do_action('get_footer'))

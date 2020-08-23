@@ -17,9 +17,13 @@
   min-height: 400px;
 
   background-image: url("../images/icons/oval0.svg");
-  background-size: 100% 90%;
+  background-size: auto 80%;
   background-repeat: no-repeat;
   background-position: center;
+
+  @screen lg {
+    background-size: 100% 90%;
+  }
 }
 
 .testimonial__background__index1 {
