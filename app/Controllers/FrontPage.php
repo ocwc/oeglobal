@@ -5,7 +5,7 @@ namespace App\Controllers;
 use Sober\Controller\Controller;
 use Abraham\TwitterOAuth\TwitterOAuth;
 
-if ( OEG_SITE === 'oeg' ) {
+if ( OEG_SITE === 'OEG' ) {
     class FrontPage extends Controller {
         public function latestNews() {
             $custom_query = get_posts( [
