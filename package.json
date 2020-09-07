@@ -93,11 +93,14 @@
   "dependencies": {
     "hoverintent": "^2.2.0",
     "jquery": "^3.5",
+    "scriptjs": "^2.5.9",
     "swiper": "^6.1.2"
   },
   "volta": {
     "node": "10.16.3",
     "yarn": "1.19.0"
   },
-  "prettier": {}
+  "prettier": {
+    "trailingComma": "es5"
+  }
 }

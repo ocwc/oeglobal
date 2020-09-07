@@ -10,6 +10,7 @@ wp option update show_on_front page
 wp menu location assign 470 footer_navigation
 
 wp post create --post_type=page --post_title='Search' --page_template=views/template-search.blade.php --post_status=publish
+wp post update 4499 --page_template=views/template-cccoer-members-list.blade.php
 
 wp option patch update pagenavi_options use_pagenavi_css 0
 wp option patch update pagenavi_options pages_text ''

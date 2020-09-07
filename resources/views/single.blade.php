@@ -26,7 +26,6 @@
           'title' => get_the_title($post),
           'link' => get_the_permalink($post),
           'image' => get_the_post_thumbnail_url( $post, 'large' ),
-          // 'terms' => wp_get_post_terms( $post->ID, 'category' ),
           'meta_type' => 'string',
           'meta_string' => get_the_date( 'M j, Y', $post ),
           'is_tall' => true,
