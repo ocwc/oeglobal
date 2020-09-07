@@ -6,7 +6,7 @@
   <div
     class="rounded border-2 overflow-hidden border-transparent
            hover:border-turq-500 active:border-transparent
-           bg-white content-excerpt__shadow flex">
+           bg-white content-excerpt__shadow flex w-full">
     <a href="{!! $link !!}"
        class="content content-excerpt
               flex items-stretch justify-between
