@@ -48,4 +48,13 @@ if ( OEG_SITE === 'CCCOER' ) {
             'plural'   => 'EDI posts'
         ] );
     } );
+
+    add_filter( 'coauthors_supported_post_types', function( $post_types ) {
+        $post_types[] = 'webinar';
+        $post_types[] = 'casestudy';
+        $post_types[] = 'edi';
+        $post_types[] = 'studentstory';
+
+        return $post_types;
+    } );
 }

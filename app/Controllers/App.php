@@ -39,12 +39,14 @@ class App extends Controller {
 
     public function featuredImageLarge() {
         global $post;
-        return get_the_post_thumbnail_url($post, 'large');
+
+        return get_the_post_thumbnail_url( $post, 'large' );
     }
 
     public function featuredImageSquare() {
         global $post;
-        return get_the_post_thumbnail_url($post, 'square');
+
+        return get_the_post_thumbnail_url( $post, 'square' );
     }
 
     public function title() {
@@ -68,8 +70,8 @@ class App extends Controller {
         return get_the_title();
     }
 
-    public static function extractBlockUrl($item) {
-        if ($item['link']) {
+    public static function extractBlockUrl( $item ) {
+        if ( $item['link'] ) {
             $url = $item['link'];
         } else if ( $item['url'] ) {
             $url = $item['url'];
@@ -81,11 +83,11 @@ class App extends Controller {
     }
 
     public function site() {
-        return strtolower(OEG_SITE);
+        return strtolower( OEG_SITE );
     }
 
-    public static function TermsWithLinks($post) {
-        if ($post) {
+    public static function TermsWithLinks( $post ) {
+        if ( $post ) {
             $terms = wp_get_post_terms( $post->ID, 'category' );
 
             return array_map( function( $term ) {
@@ -103,5 +105,24 @@ class App extends Controller {
 
     public function Variant() {
         return false;
+    }
+
+    public function coauthors() {
+        if ( function_exists( 'get_coauthors' ) ) {
+            $coauthors = get_coauthors();
+            $authors = [];
+            foreach ( $coauthors as $coauthor ) {
+                $authors[] = array(
+                    'id'            => $coauthor->ID,
+                    'display_name'  => $coauthor->display_name,
+                    'user_nicename' => $coauthor->user_nicename,
+                    'avatar'        => get_avatar_url( $coauthor->user_email )
+                );
+            }
+
+            return $authors;
+        }
+
+        return [];
     }
 }
