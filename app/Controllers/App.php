@@ -99,6 +99,19 @@ class App extends Controller {
         }
     }
 
+    public static function RelatedPosts($post) {
+        if ( function_exists( 'yarpp_get_related' ) ) {
+            $related = yarpp_get_related( [
+                'post_type' => ['post', 'webinar'],
+                'limit' => 3,
+                'recent' => '24 month'
+            ], $post->ID );
+            return $related;
+        }
+
+        return [];
+    }
+
     public function FeaturedImageAttribution() {
         return false;
     }
@@ -124,5 +137,9 @@ class App extends Controller {
         }
 
         return [];
+    }
+
+    public function PostType() {
+        return get_post_type();
     }
 }
