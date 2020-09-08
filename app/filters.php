@@ -162,7 +162,7 @@ add_filter( 'query_vars', function ( $query_vars ) {
 
 add_filter('document_title_parts', function (array $parts) {
     if (is_page_template('views/template-members-detail.blade.php') ) {
-        $member = Controllers\TemplateMembersDetail::member();
+        $member = (new Controllers\TemplateMembersDetail)->member();
         if ($member->name) {
             $parts['title'] = $member->name;
         }

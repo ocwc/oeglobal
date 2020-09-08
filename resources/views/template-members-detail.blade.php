@@ -8,7 +8,7 @@
   <main class="main">
     @while(have_posts()) @php the_post() @endphp
     @include('partials.breadcrumbs')
-    @component('components.content-header', [ 'title' => $member->name])@endcomponent
+    @component('components.content-header', [ 'title' => $member->name, 'variant' => 'basic'])@endcomponent
 
     <article @php(post_class('container'))>
       <div class="content lg:mb-6 lg:p-6 w-full lg:w-2/3 lg:ml-1/12">
@@ -18,12 +18,12 @@
           <div class="w-full lg:w-2/3 order-2 lg:order-1">
             {!! nl2br($member->description) !!}
           </div>
-          <div class="w-full lg:w-1/3 order-1 lg:order-2 pl-4">
+          <div class="w-full lg:w-1/3 order-1 lg:order-2 pl-4 mb-6">
             @if ( $member->logo_small || $member->logo_large)
               @if($member->logo_large)
-                <img src="{!! $member->logo_large; !!}" class="responsive-image" alt="Logo of {!! $member->name !!}"/>
+                <img src="{!! $member->logo_large; !!}" class="w-1/2 md:w-full h-auto" alt="Logo of {!! $member->name !!}"/>
               @else
-                <img src="{!! $member->logo_small; !!}" class="responsive-image" alt="Logo of {!! $member->name !!}"/>
+                <img src="{!! $member->logo_small; !!}" class="w-1/2 md:w-full h-auto" alt="Logo of {!! $member->name !!}"/>
               @endif
             @endif
           </div>
