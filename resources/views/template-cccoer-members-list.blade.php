@@ -58,7 +58,7 @@
         <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
           @foreach($members as $member)
             <div class="members-single-member text-center">
-              <a class="member-logo" href="/about/members/{!! $member->id !!}">
+              <a class="member-logo" href="/about/members/view/?member_id={!! $member->id !!}">
                 <img class=""
                      src="https://members.oeglobal.org/{!! $member->logo_large !!}"
                      alt="{!! $member->name !!} logo">
@@ -69,7 +69,7 @@
               </a>
 
               <a class="member-name pb-2 block text-center"
-                 href="/about/members/{!! $member->id !!}">{!! $member->name !!}</a>
+                 href="/about/members/view/?member_id={!! $member->id !!}">{!! $member->name !!}</a>
             </div>
           @endforeach
         </div>

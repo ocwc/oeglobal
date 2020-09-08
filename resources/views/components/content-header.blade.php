@@ -1,3 +1,8 @@
+@php($variant = $variant ?? null)
+@php($background_image = $background_image ?? null)
+@php($attribution = $attribution ?? null)
+@php($is_search = $is_search ?? null)
+@php($excerpt = $excerpt ?? null)
 @if ($variant === 'sublanding')
 <div class="contentheader-strip text-black2" @if($background_image)style="background-image: url({!! $background_image !!}" @endif>
   <div class="container flex flex-col justify-center">
@@ -33,13 +38,13 @@
           {!! $title !!}
         </h1>
 
-        @if ($excerpt)
+        @if ($excerpt ?? null)
         <div class="leading-relaxed z-20 relative">
           {!! $excerpt !!}
         </div>
         @endif
 
-        @if ($is_search)
+        @if ($is_search ?? null)
         {!! get_search_form(false) !!}
         @endif
       </div>
@@ -47,7 +52,7 @@
   </div>
 </div>
 
-@if ($attribution)
+@if ($attribution ?? null)
 <div class="contentheader-attribution font-sans text-xs text-gray2 my-2">
   {!! $attribution !!}
 </div>

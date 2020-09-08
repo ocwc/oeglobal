@@ -11,6 +11,7 @@ wp menu location assign 470 footer_navigation
 
 wp post create --post_type=page --post_title='Search' --page_template=views/template-search.blade.php --post_status=publish
 wp post update 4499 --page_template=views/template-cccoer-members-list.blade.php
+wp post create --post_type=page --post_title='Member Information' --post_name='view' --page_template=views/template-members-detail.blade.php --post_status=publish --post_parent=4499
 
 wp option patch update pagenavi_options use_pagenavi_css 0
 wp option patch update pagenavi_options pages_text ''

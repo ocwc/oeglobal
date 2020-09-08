@@ -19,8 +19,12 @@
             {!! nl2br($member->description) !!}
           </div>
           <div class="w-full lg:w-1/3 order-1 lg:order-2 pl-4">
-            @if ( $member->logo_small )
-              <img src="{!! $member->logo_small; !!}" class="responsive-image"/>
+            @if ( $member->logo_small || $member->logo_large)
+              @if($member->logo_large)
+                <img src="{!! $member->logo_large; !!}" class="responsive-image" alt="Logo of {!! $member->name !!}"/>
+              @else
+                <img src="{!! $member->logo_small; !!}" class="responsive-image" alt="Logo of {!! $member->name !!}"/>
+              @endif
             @endif
           </div>
 
