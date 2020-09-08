@@ -2,7 +2,7 @@
 
 wp theme activate oeglobal/resources
 wp plugin activate breadcrumb-navxt wp-pagenavi soil yet-another-related-posts-plugin
-wp plugin deactivate classic-editor jetpack twitter wp-rocket
+wp plugin deactivate classic-editor jetpack twitter wp-rocket google-analytics-for-wordpress
 
 home_id=`wp post create --post_type=page --post_title='Home' --page_template=views/template-cccoer-home.blade.php --post_status=publish --porcelain`
 wp option update page_on_front $home_id

@@ -1,0 +1,12 @@
+.search-field::after {
+  content: "";
+  position: absolute;
+
+  top: calc(50% + 4px);
+  right: 6px;
+  width: 24px;
+  height: 24px;
+
+  background-image: url("../images/icons/magnify.svg");
+  background-size: cover;
+}

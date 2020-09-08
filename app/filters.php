@@ -156,6 +156,9 @@ add_filter( 'get_the_archive_title', function ( $title ) {
 
 add_filter( 'query_vars', function ( $query_vars ) {
     $query_vars[] = 'member_id';
+    $query_vars[] = 'webinar_year';
+    $query_vars[] = 'webinar_category';
+    $query_vars[] = 'webinar_q';
 
     return $query_vars;
 } );
