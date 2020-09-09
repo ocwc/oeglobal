@@ -11,12 +11,12 @@
       <li class="rounded border-2 overflow-hidden border-transparent
            hover:border-turq-500 active:border-transparent
            bg-white content-excerpt__shadow flex
-           mb-4 text-base font-bold text-black-300 h-20">
+           mb-4 text-base font-bold text-black-300 min-h-32">
         <a
           class="flex w-full"
           href="{!! $item['url'] !!}">
-            <span class="w-1/4 bg-cover bg-center" style="background-image: url('{!! $item['image'] !!}');"></span>
-            <span class="w-3/4 px-3 pt-2 pb-6 bg-gray-900 flex-auto">{!! $item['title'] !!}</span>
+            <span class="w-1/3 bg-cover bg-center" style="background-image: url('{!! $item['image'] !!}');"></span>
+            <span class="w-2/3 px-3 pt-2 pb-6 bg-gray-900 flex-auto">{!! $item['title'] !!}</span>
         </a>
       </li>
     @endforeach

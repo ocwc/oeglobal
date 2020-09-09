@@ -62,25 +62,26 @@ module.exports = {
         "fuchsia-900": "#f7d4f2",
         latam: {
           orange: "#FF922D",
-          "orange-cream": "#FFC794"
-        }
+          "orange-cream": "#FFC794",
+        },
       },
       lineHeight: {
         tight: 1.2,
-        relaxed: 1.65
+        relaxed: 1.65,
       },
       maxHeight: {
         "16": "4rem",
-        "20": "5rem"
+        "20": "5rem",
       },
       minHeight: {
         "16": "4rem",
+        "32": "8rem",
       },
       minWidth: {
-        "1/2": "50%"
+        "1/2": "50%",
       },
       height: {
-        '128': '32rem'
+        "128": "32rem",
       },
       fontFamily: {
         sans: [
@@ -96,47 +97,47 @@ module.exports = {
           '"Apple Color Emoji"',
           '"Segoe UI Emoji"',
           '"Segoe UI Symbol"',
-          '"Noto Color Emoji"'
-        ]
+          '"Noto Color Emoji"',
+        ],
       },
       letterSpacing: {
-        widest: "1px"
+        widest: "1px",
       },
       fontSize: {
         "3xs": "0.5rem",
         "2xs": "0.625rem",
-        "small": "0.85rem",
-        "3xl": "2rem"
+        small: "0.85rem",
+        "3xl": "2rem",
       },
       textStrokeWidth: theme => theme("borderWidth"),
       spacing: {
         "9": "1.75rem",
-        "22": "5.5rem"
+        "22": "5.5rem",
       },
       margin: {
         "1/12": "8.333333333%",
         "1/3": "33.333333333%",
-        "2/3": "66.6666667%"
+        "2/3": "66.6666667%",
       },
       boxShadow: {
-        'box': '0 0 1px 0 #CCCCCC, 1px 2px 13px -5px rgba(0,0,0,0.30);'
-      }
+        box: "0 0 1px 0 #CCCCCC, 1px 2px 13px -5px rgba(0,0,0,0.30);",
+      },
     },
     container: {
       center: true,
-      padding: "1rem"
-    }
+      padding: "1rem",
+    },
   },
   variants: {
     textStrokeWidth: ["responsive", "hover"],
     padding: ["responsive", "last"],
-    textColor: ['responsive', 'hover', 'focus', 'active'],
-    backgroundColor: ['responsive', 'hover', 'focus', 'active'],
-    borderColor: ['responsive', 'hover', 'focus', 'active'],
-    width: ['responsive'],
+    textColor: ["responsive", "hover", "focus", "active"],
+    backgroundColor: ["responsive", "hover", "focus", "active"],
+    borderColor: ["responsive", "hover", "focus", "active"],
+    width: ["responsive"],
   },
   plugins: [wordpressUtilities],
-  purge: false
+  purge: false,
 };
 
 if (SITE === "latam") {

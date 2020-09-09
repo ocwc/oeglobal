@@ -101,7 +101,7 @@ if ( OEG_SITE === 'OEG' ) {
 
             return array_map( function( $post ) {
                 return [
-                    'title' => \App\truncate( $post->post_title, 45, ' &#8230;' ),
+                    'title' => get_the_title($post),
                     'url'   => get_permalink( $post ),
                     'image' => get_the_post_thumbnail_url( $post, 'medium' ),
                 ];
@@ -117,7 +117,7 @@ if ( OEG_SITE === 'OEG' ) {
 
             return array_map( function( $post ) {
                 return [
-                    'title' => \App\truncate( $post->post_title, 45, ' &#8230;' ),
+                    'title' => get_the_title($post),
                     'url'   => get_permalink( $post ),
                     'image' => get_the_post_thumbnail_url( $post, 'medium' ),
                 ];
@@ -133,7 +133,7 @@ if ( OEG_SITE === 'OEG' ) {
 
             return array_map( function( $post ) {
                 return [
-                    'title' => \App\truncate( $post->post_title, 45, ' &#8230;' ),
+                    'title' => get_the_title($post),
                     'url'   => get_permalink( $post ),
                     'image' => get_the_post_thumbnail_url( $post, 'medium' ),
                 ];
