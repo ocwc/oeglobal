@@ -10,9 +10,9 @@ class Single extends Controller {
         if ($image) {
             return $image[0];
         } else {
-            $image = get_field('featured_image', get_the_category()[0]);
+            $image = get_field('featured_image', get_the_category());
             if ( $image) {
-                return $image['sizes']['large'];
+                return $image[0]['sizes']['large'];
             }
         }
     }
