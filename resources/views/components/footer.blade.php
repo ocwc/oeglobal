@@ -70,7 +70,7 @@
       </div>
       <div class="flex lg:justify-end lg:items-start
                   w-full lg:w-1/3 lg:pl-10">
-        <a class="mb-0! underline" href="https://www.oeconsortium.org/terms-of-use-and-privacy-policies/"
+        <a class="mb-0! underline" href="https://www.oeglobal.org/terms-of-use-and-privacy-policy/"
            target="_blank"
            rel="noopener">Terms of Use and Privacy Policies.</a>
       </div>
