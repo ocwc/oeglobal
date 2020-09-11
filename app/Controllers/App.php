@@ -6,7 +6,6 @@ use Sober\Controller\Controller;
 use Log1x\Navi\Navi;
 use function App\sage;
 
-
 class App extends Controller {
     protected $acf = true;
 
@@ -16,17 +15,13 @@ class App extends Controller {
 
     public function navigation() {
         if ( has_nav_menu( 'primary_navigation' ) ) {
-            $navigation = ( new Navi() )->build( 'primary_navigation' )->toArray();
-
-            return $navigation;
+            return ( new Navi() )->build( 'primary_navigation' )->toArray();
         }
     }
 
     public function navigationFooter() {
         if ( has_nav_menu( 'footer_navigation' ) ) {
-            $navigation = ( new Navi() )->build( 'footer_navigation' )->toArray();
-
-            return $navigation;
+            return ( new Navi() )->build( 'footer_navigation' )->toArray();
         }
     }
 
@@ -73,7 +68,7 @@ class App extends Controller {
     public static function extractBlockUrl( $item ) {
         if ( $item['link'] ) {
             $url = $item['link'];
-        } else if ( $item['url'] ) {
+        } elseif ( $item['url'] ) {
             $url = $item['url'];
         } else {
             $url = null;
@@ -99,13 +94,14 @@ class App extends Controller {
         }
     }
 
-    public static function RelatedPosts($post) {
+    public static function RelatedPosts( $post ) {
         if ( function_exists( 'yarpp_get_related' ) ) {
             $related = yarpp_get_related( [
-                'post_type' => ['post', 'webinar'],
-                'limit' => 3,
-                'recent' => '24 month'
+                'post_type' => [ 'post', 'webinar' ],
+                'limit'     => 3,
+                'recent'    => '24 month'
             ], $post->ID );
+
             return $related;
         }
 
@@ -123,7 +119,7 @@ class App extends Controller {
     public function coauthors() {
         if ( function_exists( 'get_coauthors' ) ) {
             $coauthors = get_coauthors();
-            $authors = [];
+            $authors   = [];
             foreach ( $coauthors as $coauthor ) {
                 $authors[] = array(
                     'id'            => $coauthor->ID,
