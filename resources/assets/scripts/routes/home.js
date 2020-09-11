@@ -1,5 +1,5 @@
-import Swiper, { Pagination, Autoplay } from 'swiper';
-Swiper.use([ Pagination, Autoplay]);
+import Swiper, { Pagination, Autoplay } from "swiper";
+Swiper.use([Pagination, Autoplay]);
 
 export default {
   init() {
@@ -8,10 +8,10 @@ export default {
   finalize() {
     // JavaScript to be fired on the home page, after the init JS
 
-    if ($('.swiper-container')) {
-      new Swiper('.swiper-container', {
+    if ($(".swiper-container")) {
+      new Swiper(".swiper-container", {
         pagination: {
-          el: '.swiper-pagination',
+          el: ".swiper-pagination",
           clickable: true,
         },
         autoplay: {
