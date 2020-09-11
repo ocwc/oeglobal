@@ -43,6 +43,13 @@
             abierta
             OE GLOBAL.</p>
         </div>
+      @elseif ($site === 'awards')
+        <div class="flex flex-col items-start bg-white
+                  w-full lg:w-1/4
+                  p-4
+                  mx-4 md:mx-0 rounded">
+          @svg('logos/oeawards', 'w-full h-auto')
+        </div>
       @endif
       <div class="w-full lg:w-1/12 pb-8"></div>
 
