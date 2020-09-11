@@ -5,6 +5,8 @@
         @svg('logos/oelatam', 'nav-logo')
       @elseif ($site === 'cccoer')
         @svg('logos/cccoer', 'nav-logo')
+      @elseif ($site === 'awards')
+        @svg('logos/oeawards', 'nav-logo')
       @else
         @svg('logos/oeglobal-color', 'nav-logo')
       @endif
