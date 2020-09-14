@@ -1,4 +1,4 @@
-<header class="header shadow-md z-50">
+<header class="header shadow-md z-50 bg-white">
   @component('components.global-header', [
     'site' => $site
 ])@endcomponent

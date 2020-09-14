@@ -4,9 +4,10 @@
   @endif
 
   <div
-    class="rounded border-2 overflow-hidden border-transparent
+    class="rounded overflow-hidden border-transparent
            hover:border-turq-500 active:border-transparent
-           bg-white content-excerpt__shadow flex w-full">
+           bg-white flex w-full
+           @if($shadow ?? true) content-excerpt__shadow border-2 @endif">
     <a href="{!! $link !!}"
        class="content content-excerpt
               flex items-stretch justify-between

@@ -1,3 +1,7 @@
+body.home.awards {
+  @apply bg-blue-200;
+}
+
 .awards-hero {
   height: 748px;
 }
@@ -9,4 +13,14 @@
 .bg-awards-blobs {
   background: url("../images/backgrounds/awards-blobs.svg") no-repeat right center;
   background-size: cover;
+}
+
+.awards__navigation {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.awards-home__content {
+  margin-top: -320px;
 }
