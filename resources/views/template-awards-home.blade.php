@@ -22,14 +22,14 @@
     <div class="awards-home__content">
       <div class="awards__navigation bg-blue-200 pt-3">
         <div class="container flex justify-between">
-          <div class="flex gap-4">
-            <button class="awards__navigation__button js-awards-button-individual">
+          <div class="flex gap-4 flex-col lg:flex-row w-full lg:w-auto">
+            <button class="awards__navigation__button js-awards-button-individual inline-flex">
               @svg('icons/sparkles', 'h-6 mr-2 inline-block') Individual
-            </button><button class="awards__navigation__button js-awards-button-tools">
+            </button><button class="awards__navigation__button js-awards-button-tools inline-flex">
               @svg('icons/speakerphone', 'h-6 mr-2 inline-block') Resources, Tools and Practices</button>
           </div>
           <a
-            class="awards__navigation__button js-awards-button-tools js-awards-home-years"
+            class="awards__navigation__button js-awards-button-tools js-awards-home-years hidden lg:inline-flex"
             href="#">
             @svg('icons/awards-calendar', 'h-6 mr-2 inline-block') Previous Years
           </a>

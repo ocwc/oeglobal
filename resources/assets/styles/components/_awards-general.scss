@@ -22,11 +22,15 @@ body.home.awards {
 }
 
 .awards-home__content {
-  margin-top: -320px;
+  margin-top: -100px;
+
+  @screen lg {
+    margin-top: -320px;
+  }
 }
 
 .awards__navigation__button {
-  @apply rounded-t text-white bg-blue-200 py-2 px-5 border-b-2 border-blue-750 font-semibold inline-flex items-center;
+  @apply rounded-t text-white bg-blue-200 py-2 px-5 border-b-2 border-blue-750 font-semibold items-center;
 
   &.active,
   &:hover,
