@@ -10,6 +10,7 @@ import common from "./routes/common";
 import home from "./routes/home";
 import aboutUs from "./routes/about";
 import templateCccoerMembersList from "./routes/cccoer-members";
+import templateAwardsHome from "./routes/home-awards";
 
 /** Populate Router instance with DOM routes */
 const routes = new Router({
@@ -21,6 +22,7 @@ const routes = new Router({
   aboutUs,
   //CCCOER
   templateCccoerMembersList,
+  templateAwardsHome,
 });
 
 // Load Events

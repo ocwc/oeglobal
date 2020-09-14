@@ -23,29 +23,22 @@
       <div class="awards__navigation bg-blue-200 pt-3">
         <div class="container flex justify-between">
           <div class="flex gap-4">
-            <a
-              class="rounded-t bg-blue-300 text-yellow-500 py-2 px-5 border-b-2 border-yellow-500 font-semibold inline-flex items-center"
-              href="#">
+            <button class="awards__navigation__button js-awards-button-individual">
               @svg('icons/sparkles', 'h-6 mr-2 inline-block') Individual
-            </a><a
-              class="rounded-t text-white bg-blue-200 py-2 px-5 border-b-2 border-blue-750 font-semibold inline-flex items-center"
-              href="#">
-              @svg('icons/speakerphone', 'h-6 mr-2 inline-block') Individual
-
-              Resources, Tools and Practices</a>
+            </button><button class="awards__navigation__button js-awards-button-tools">
+              @svg('icons/speakerphone', 'h-6 mr-2 inline-block') Resources, Tools and Practices</button>
           </div>
           <a
-            class="rounded-t text-white bg-blue-200 py-2 px-5 border-b-2 border-blue-750 font-semibold inline-flex items-center js-awards-home-years"
+            class="awards__navigation__button js-awards-button-tools js-awards-home-years"
             href="#">
-            @svg('icons/awards-calendar', 'h-6 mr-2 inline-block') Individual
-            Previous Years
+            @svg('icons/awards-calendar', 'h-6 mr-2 inline-block') Previous Years
           </a>
         </div>
       </div>
 
-      <div class="container mt-12 mb-8">
+      <div class="container mt-12 mb-8" id="individual-awards">
         <h2 class="text-2xl font-bold text-white">Individual Awards</h2>
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 js-awards-individual">
           @foreach ($individual_awards as $award)
             @component('components/content-excerpt', [
             'title' =>  $award['title'],
@@ -61,9 +54,9 @@
         </div>
       </div>
 
-      <div class="container">
+      <div class="container" id="tools-awards">
         <h2 class="text-2xl font-bold text-white">Resources, Tools and Practices Awards</h2>
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 js-awards-tools">
           @foreach ($tools_awards as $award)
             @component('components/content-excerpt', [
             'title' =>  $award['title'],
