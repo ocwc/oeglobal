@@ -49,6 +49,8 @@
             'show_meta' => false,
             'is_tall' => true,
             'shadow' => false,
+            'meta_type' => 'string',
+            'meta_string' => $award['country'],
             ])@endcomponent
           @endforeach
         </div>
@@ -67,6 +69,8 @@
             'show_meta' => false,
             'is_tall' => true,
             'shadow' => false,
+                        'meta_type' => 'string',
+            'meta_string' => $award['country'],
             ])@endcomponent
           @endforeach
         </div>

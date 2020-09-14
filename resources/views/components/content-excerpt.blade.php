@@ -31,7 +31,7 @@
           @endif
       @endif
         ">
-        <header class="pt-6">
+        <header class="pt-6 @if (!$description ?? null) flex-grow @endif">
           @if($terms ?? null)
             <div class="content-excerpt__categories">
               @foreach ($terms as $term)

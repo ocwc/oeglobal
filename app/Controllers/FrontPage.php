@@ -198,10 +198,11 @@ if ( OEG_SITE === 'OEG' ) {
 
             return array_map( function( $post ) {
                 return [
-                    'title' => get_the_title( $post ),
-                    'url'   => get_permalink( $post ),
-                    'image' => get_the_post_thumbnail_url( $post, 'medium' ),
-                    'terms' => wp_get_object_terms( $post->ID, 'award_category' ),
+                    'title'   => get_the_title( $post ),
+                    'url'     => get_permalink( $post ),
+                    'image'   => get_the_post_thumbnail_url( $post, 'medium' ),
+                    'terms'   => wp_get_object_terms( $post->ID, 'award_category' ),
+                    'country' => get_field( 'country', $post->ID )
                 ];
             }, $custom_query );
         }
@@ -234,10 +235,11 @@ if ( OEG_SITE === 'OEG' ) {
 
             return array_map( function( $post ) {
                 return [
-                    'title'    => get_the_title( $post ),
-                    'url'      => get_permalink( $post ),
-                    'image'    => get_the_post_thumbnail_url( $post, 'medium' ),
-                    'terms'    => wp_get_object_terms( $post->ID, 'award_category' ),
+                    'title'   => get_the_title( $post ),
+                    'url'     => get_permalink( $post ),
+                    'image'   => get_the_post_thumbnail_url( $post, 'medium' ),
+                    'terms'   => wp_get_object_terms( $post->ID, 'award_category' ),
+                    'country' => get_field( 'country', $post->ID )
                 ];
             }, $custom_query );
         }
