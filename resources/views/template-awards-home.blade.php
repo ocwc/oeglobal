@@ -70,7 +70,7 @@
             'is_tall' => true,
             'shadow' => false,
                         'meta_type' => 'string',
-            'meta_string' => $award['country'],
+            'meta_string' => $award['institution'] . ", " . $award['country'],
             ])@endcomponent
           @endforeach
         </div>
