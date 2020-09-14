@@ -60,29 +60,43 @@ if ( OEG_SITE === 'CCCOER' ) {
 } elseif ( OEG_SITE === 'AWARDS' ) {
     add_action( 'init', function() {
         register_extended_post_type( 'award', [
-            'taxonomies'      => array( 'award_category', 'award_tag' ),
+            'taxonomies'      => array( 'award_year', 'award_category' ),
             'capability_type' => 'page',
             'menu_icon'       => 'dashicons-awards',
+            'show_in_rest'    => true,
             'rewrite'         => array(
                 'permastruct' => '/%award_category%/%award_tag%/%award%'
             ),
+            'admin_filters'      => [
+                'year' => [
+                    'title' => 'Year',
+                    'taxonomy' => 'award_year'
+                ],
+                'category' => [
+                    'title' => 'Category',
+                    'taxonomy' => 'award_category'
+                ]
+            ]
+        ] );
+
+        register_extended_taxonomy( 'award_year', 'award', [
+            'show_admin_column' => true,
+            'show_in_rest'      => true,
+            'show_ui'           => true,
+        ], [
+            'plural'   => 'Years',
+            'singular' => 'Year',
+            'slug'     => 'year',
         ] );
 
         register_extended_taxonomy( 'award_category', 'award', [
             'show_admin_column' => true,
+            'hierarchical'      => true,
+            'show_in_rest'      => true,
         ], [
-            'plural'   => 'Award Categories',
-            'singular' => 'Award Category',
-            'slug' => 'year',
-        ] );
-
-        register_extended_taxonomy( 'award_tag', 'award', [
-            'show_admin_column' => true,
-            'hierarchical'      => false,
-        ], [
-            'plural'   => 'Award Tags',
-            'singular' => 'Award Tag',
-            'slug' => 'type',
+            'plural'   => 'Categories',
+            'singular' => 'Category',
+            'slug'     => 'type',
         ] );
     } );
 
@@ -91,11 +105,11 @@ if ( OEG_SITE === 'CCCOER' ) {
     function my_static_breadcrumb_adder( $breadcrumb_trail ) {
         if ( in_array( 'post-award', $breadcrumb_trail->breadcrumbs[0]->get_types() ) ) {
             $award_post_id = $breadcrumb_trail->breadcrumbs[0]->get_id();
-            $terms = wp_get_object_terms($award_post_id, 'award_category');
-            if ($terms) {
-                $term = $terms[0];
-                $new_breadcrumb = new bcn_breadcrumb($term->name, NULL, array('awards_category'), get_term_link($term), $term->term_id, true);
-                array_splice($breadcrumb_trail->breadcrumbs, -2, 0, array($new_breadcrumb));
+            $terms         = wp_get_object_terms( $award_post_id, 'award_category' );
+            if ( $terms ) {
+                $term           = $terms[0];
+                $new_breadcrumb = new bcn_breadcrumb( $term->name, null, array( 'awards_category' ), get_term_link( $term ), $term->term_id, true );
+                array_splice( $breadcrumb_trail->breadcrumbs, - 2, 0, array( $new_breadcrumb ) );
             }
         }
     }
