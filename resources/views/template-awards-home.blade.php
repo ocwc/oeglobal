@@ -20,19 +20,29 @@
     </div>
 
     <div class="awards-home__content">
-      <div class="awards__navigation bg-blue-200 pt-3">
-        <div class="container flex justify-between">
+      <div class="awards__navigation bg-blue-200 pt-3 border-b-2 border-blue-750">
+        <div class="container flex justify-between -mb-2px">
           <div class="flex gap-4 flex-col lg:flex-row w-full lg:w-auto">
             <button class="awards__navigation__button js-awards-button-individual inline-flex">
               @svg('icons/sparkles', 'h-6 mr-2 inline-block') Individual
-            </button><button class="awards__navigation__button js-awards-button-tools inline-flex">
-              @svg('icons/speakerphone', 'h-6 mr-2 inline-block') Resources, Tools and Practices</button>
+            </button>
+            <button class="awards__navigation__button js-awards-button-tools inline-flex">
+              @svg('icons/speakerphone', 'h-6 mr-2 inline-block') Resources, Tools and Practices
+            </button>
           </div>
-          <a
-            class="awards__navigation__button js-awards-button-tools js-awards-home-years hidden lg:inline-flex"
-            href="#">
-            @svg('icons/awards-calendar', 'h-6 mr-2 inline-block') Previous Years
-          </a>
+          <div class="relative justify-self-end">
+            <button
+              class="awards__navigation__button js-awards-button-dropdown js-awards-home-years hidden lg:inline-flex relative">
+              @svg('icons/awards-calendar', 'h-6 mr-2 inline-block') Previous Years
+            </button>
+            <ul
+              class="absolute bg-white rounded w-full text-center font-semibold mt-1 hidden js-awards-button-dropdown-target">
+              @foreach(range(2011, 2019) as $year)
+                <li class="hover:bg-blue-300 hover:text-yellow-500"><a class="w-full block py-2"
+                                                                       href="/year/{!! $year !!}/">{!! $year !!}</a></li>
+              @endforeach
+            </ul>
+          </div>
         </div>
       </div>
 

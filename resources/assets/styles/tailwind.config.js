@@ -113,6 +113,7 @@ module.exports = {
       },
       textStrokeWidth: theme => theme("borderWidth"),
       spacing: {
+        "2px": "2px",
         "9": "1.75rem",
         "17": "4.25rem",
         "18": "4.5rem",

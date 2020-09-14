@@ -17,6 +17,12 @@ export default {
       );
     });
 
+    $(".js-awards-button-dropdown").on("click", function() {
+      $(".js-awards-button-dropdown-target")
+        .toggleClass("hidden")
+        .toggleClass("lg:block");
+    });
+
     $buttonTools.on("click", function() {
       $("html,body").animate(
         {
