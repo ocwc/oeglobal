@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1440px" height="748px" viewBox="0 0 1440 748" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>hero blobs</title>
+    <defs>
+        <rect id="path-1" x="0" y="0" width="1440" height="748"></rect>
+        <linearGradient x1="8.8968385%" y1="35.7227926%" x2="67.1505679%" y2="65.9102881%" id="linearGradient-3">
+            <stop stop-color="#0D59F2" offset="0%"></stop>
+            <stop stop-color="#3B80F7" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="8.8968385%" y1="35.7086737%" x2="67.1505679%" y2="65.926022%" id="linearGradient-4">
+            <stop stop-color="#0D59F2" offset="0%"></stop>
+            <stop stop-color="#3B80F7" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="8.8968385%" y1="35.7162947%" x2="67.1505679%" y2="65.9175293%" id="linearGradient-5">
+            <stop stop-color="#0D59F2" offset="0%"></stop>
+            <stop stop-color="#3B80F7" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="10.1050967%" y1="55.4593781%" x2="88.3975074%" y2="47.2756168%" id="linearGradient-6">
+            <stop stop-color="#2F5CAE" offset="0%"></stop>
+            <stop stop-color="#3C78CD" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="8.8968385%" y1="42.1920903%" x2="67.1505679%" y2="58.7010078%" id="linearGradient-7">
+            <stop stop-color="#0D59F2" offset="0%"></stop>
+            <stop stop-color="#3B80F7" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Winners-main" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Home" transform="translate(0.000000, -100.000000)">
+            <g id="hero-blobs" transform="translate(0.000000, 100.000000)">
+                <mask id="mask-2" fill="white">
+                    <use xlink:href="#path-1"></use>
+                </mask>
+                <use id="Rectangle" fill="#1C2B5A" fill-rule="nonzero" xlink:href="#path-1"></use>
+                <path d="M191.311454,-41.5898878 C291.578613,-150.114664 548.916902,-210.466373 627.713898,83.2531197 C706.510893,376.972612 753.569267,458.5898 1088.32708,478.863237 C1423.08489,499.136675 1563.66302,961.0898 1247.0927,1029.01167 C930.522392,1096.93355 139.264579,1059.3398 87.7020794,667.738237 C36.1395794,276.136675 91.0442957,66.9348889 191.311454,-41.5898878 Z" id="Path-2" fill="url(#linearGradient-3)" fill-rule="nonzero" opacity="0.401994978" style="mix-blend-mode: screen;" mask="url(#mask-2)" transform="translate(746.241091, 462.643406) rotate(26.000000) translate(-746.241091, -462.643406) "></path>
+                <path d="M943.358941,-330.76558 C1035.5335,-430.580599 1272.10192,-486.088725 1344.53918,-215.941965 C1416.97644,54.2047955 1460.23672,129.271719 1767.9761,147.918093 C2075.71549,166.564467 2204.9475,591.443112 1913.92769,653.913854 C1622.90789,716.384595 895.512789,681.807967 848.111917,321.634754 C800.711046,-38.5384596 851.184382,-230.950561 943.358941,-330.76558 Z" id="Path-2" fill="url(#linearGradient-4)" fill-rule="nonzero" opacity="0.401994978" style="mix-blend-mode: screen;" mask="url(#mask-2)" transform="translate(1453.500000, 133.000000) rotate(-201.000000) translate(-1453.500000, -133.000000) "></path>
+                <path d="M-226.913112,418.41134 C-147.969705,332.947014 54.6406183,285.419453 116.679908,516.726431 C178.719198,748.03341 215.769698,812.307745 479.334784,828.273276 C742.899871,844.238806 853.581338,1208.03142 604.335827,1261.52056 C355.090317,1315.0097 -267.891212,1285.40426 -308.487949,977.014189 C-349.084686,668.624121 -305.85652,503.875665 -226.913112,418.41134 Z" id="Path-2" fill="url(#linearGradient-5)" fill-rule="nonzero" opacity="0.401994978" style="mix-blend-mode: screen;" mask="url(#mask-2)" transform="translate(210.000000, 815.500000) rotate(-163.000000) translate(-210.000000, -815.500000) "></path>
+                <text id="2020" fill="url(#linearGradient-6)" fill-rule="nonzero" style="mix-blend-mode: lighten;" mask="url(#mask-2)" font-family="Montserrat-Black, Montserrat" font-size="372.8" font-weight="700" letter-spacing="7.76666641">
+                    <tspan x="452" y="430">2020</tspan>
+                </text>
+                <path d="M136.078292,212 C272.350803,212 452,120.628616 452,36.9370918 C452,-46.7544323 335.443147,-144 199.170636,-144 C62.8981252,-144 -98,-65.5036663 -98,18.1878578 C-98,101.879382 -0.19421952,212 136.078292,212 Z" id="Oval" fill="url(#linearGradient-7)" fill-rule="nonzero" opacity="0.401994978" style="mix-blend-mode: screen;" mask="url(#mask-2)"></path>
+                <path d="M844.670829,96.1522997 C944.937988,-12.372477 1202.27628,-72.7241854 1281.07327,220.995307 C1359.87027,514.7148 1406.92864,596.331987 1741.68645,616.605425 C2076.44427,636.878862 2217.02239,1098.83199 1900.45208,1166.75386 C1583.88177,1234.67574 792.623954,1197.08199 741.061454,805.480425 C689.498954,413.878862 744.403671,204.677076 844.670829,96.1522997 Z" id="Path-2" fill="url(#linearGradient-3)" fill-rule="nonzero" opacity="0.401994978" style="mix-blend-mode: screen;" mask="url(#mask-2)" transform="translate(1399.600466, 600.385594) rotate(-39.000000) translate(-1399.600466, -600.385594) "></path>
+            </g>
+        </g>
+    </g>
+</svg>

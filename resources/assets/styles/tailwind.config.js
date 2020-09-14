@@ -108,10 +108,14 @@ module.exports = {
         "2xs": "0.625rem",
         small: "0.85rem",
         "3xl": "2rem",
+        "4xl": "2.5rem",
       },
       textStrokeWidth: theme => theme("borderWidth"),
       spacing: {
         "9": "1.75rem",
+        "17": "4.25rem",
+        "18": "4.5rem",
+        "19": "4.75rem",
         "22": "5.5rem",
       },
       margin: {

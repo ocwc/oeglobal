@@ -10,7 +10,7 @@
     <a href="{!! $link !!}"
        class="content content-excerpt
               flex items-stretch justify-between
-              z-10 relative no-transition overflow-hidden
+              z-10 relative no-transition overflow-hidden w-full
               flex-col @if(!$is_tall ?? null) md:flex-row @endif
          ">
       @if($image ?? null)
@@ -34,7 +34,13 @@
           @if($terms ?? null)
             <div class="content-excerpt__categories">
               @foreach ($terms as $term)
-                <span class="bg-none">{!! $term['name'] !!}</span>@if(!$loop->last), @endif
+                <span class="bg-none">
+                @if($term instanceof WP_Term)
+                    {!! $term->name !!}
+                @else
+                    {!! $term['name'] !!}
+                @endif
+                </span>@if(!$loop->last), @endif
               @endforeach
             </div>
           @endif

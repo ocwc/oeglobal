@@ -101,7 +101,7 @@ if ( OEG_SITE === 'OEG' ) {
 
             return array_map( function( $post ) {
                 return [
-                    'title' => get_the_title($post),
+                    'title' => get_the_title( $post ),
                     'url'   => get_permalink( $post ),
                     'image' => get_the_post_thumbnail_url( $post, 'medium' ),
                 ];
@@ -117,7 +117,7 @@ if ( OEG_SITE === 'OEG' ) {
 
             return array_map( function( $post ) {
                 return [
-                    'title' => get_the_title($post),
+                    'title' => get_the_title( $post ),
                     'url'   => get_permalink( $post ),
                     'image' => get_the_post_thumbnail_url( $post, 'medium' ),
                 ];
@@ -133,7 +133,7 @@ if ( OEG_SITE === 'OEG' ) {
 
             return array_map( function( $post ) {
                 return [
-                    'title' => get_the_title($post),
+                    'title' => get_the_title( $post ),
                     'url'   => get_permalink( $post ),
                     'image' => get_the_post_thumbnail_url( $post, 'medium' ),
                 ];
@@ -159,14 +159,87 @@ if ( OEG_SITE === 'OEG' ) {
                 }
 
                 $tweets = array_slice( $tweets, 0, 4 );
-                $htmls = [];
-                foreach ($tweets  as $status ) {
-                    $htmls[] = wp_oembed_get("https://twitter.com/ccccoer/status/$status");
+                $htmls  = [];
+                foreach ( $tweets as $status ) {
+                    $htmls[] = wp_oembed_get( "https://twitter.com/ccccoer/status/$status" );
                 }
                 set_transient( 'tweets', $htmls, 60 * 60 * 1 );
 
                 return $htmls;
             }
+        }
+    }
+} else if ( OEG_SITE === 'AWARDS' ) {
+    class FrontPage extends Controller {
+        public function individualAwards() {
+            $custom_query = get_posts( [
+                'post_type'      => 'award',
+                'posts_per_page' => '-1',
+                'tax_query'      => [
+                    'relation' => 'AND',
+                    [
+                        'taxonomy' => 'award_year',
+                        'field'    => 'slug',
+                        'terms'    => '2020'
+                    ],
+                    [
+                        'taxonomy' => 'award_category',
+                        'field'    => 'slug',
+                        'terms'    => [
+                            'leadership-award',
+                            'educator-award',
+                            'support-specialist-award',
+                            'student-award',
+                            'emerging-leader-award'
+                        ]
+                    ]
+                ]
+            ] );
+
+            return array_map( function( $post ) {
+                return [
+                    'title' => get_the_title( $post ),
+                    'url'   => get_permalink( $post ),
+                    'image' => get_the_post_thumbnail_url( $post, 'medium' ),
+                    'terms' => wp_get_object_terms( $post->ID, 'award_category' ),
+                ];
+            }, $custom_query );
+        }
+
+        public function toolsAwards() {
+            $custom_query = get_posts( [
+                'post_type'      => 'award',
+                'posts_per_page' => '-1',
+                'tax_query'      => [
+                    'relation' => 'AND',
+                    [
+                        'taxonomy' => 'award_year',
+                        'field'    => 'slug',
+                        'terms'    => '2020'
+                    ],
+                    [
+                        'taxonomy' => 'award_category',
+                        'field'    => 'slug',
+                        'terms'    => [
+                            'leadership-award',
+                            'educator-award',
+                            'support-specialist-award',
+                            'student-award',
+                            'emerging-leader-award'
+                        ],
+                        'operator' => 'NOT IN',
+                    ]
+                ]
+            ] );
+
+            return array_map( function( $post ) {
+                return [
+                    'title'    => get_the_title( $post ),
+                    'url'      => get_permalink( $post ),
+                    'image'    => get_the_post_thumbnail_url( $post, 'medium' ),
+                    'terms'    => wp_get_object_terms( $post->ID, 'award_category' ),
+                ];
+            }, $custom_query );
         }
     }
 } else {
