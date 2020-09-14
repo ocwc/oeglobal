@@ -10,7 +10,8 @@ class Single extends Controller {
         if ($image) {
             return $image[0];
         } else {
-            $image = get_field('featured_image', get_the_category());
+            $cat = get_the_category()[0];
+            $image = get_field('featured_image', 'cat_' . $cat->term_id);
             if ( $image) {
                 return $image[0]['sizes']['large'];
             }

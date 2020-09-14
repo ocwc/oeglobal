@@ -65,7 +65,7 @@ if ( OEG_SITE === 'CCCOER' ) {
             'menu_icon'       => 'dashicons-awards',
             'show_in_rest'    => true,
             'rewrite'         => array(
-                'permastruct' => '/%award_category%/%award_tag%/%award%'
+                'permastruct' => '/awards/%award_year%/%award_category%/%award%'
             ),
             'admin_filters'      => [
                 'year' => [
@@ -109,7 +109,7 @@ if ( OEG_SITE === 'CCCOER' ) {
             if ( $terms ) {
                 $term           = $terms[0];
                 $new_breadcrumb = new bcn_breadcrumb( $term->name, null, array( 'awards_category' ), get_term_link( $term ), $term->term_id, true );
-                array_splice( $breadcrumb_trail->breadcrumbs, - 2, 0, array( $new_breadcrumb ) );
+                array_splice( $breadcrumb_trail->breadcrumbs, - 3, 0, array( $new_breadcrumb ) );
             }
         }
     }
