@@ -1,4 +1,4 @@
-@component('components.content-header', [
+@component('components.content-header-image', [
   'title' => $title,
   'excerpt' => $excerpt_simple,
   'background_image' => $featured_image_large,

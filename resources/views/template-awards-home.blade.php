@@ -7,15 +7,6 @@
 @section('content')
   @include('partials.header')
 
-  @component('components.content-header', [
-  'title' => 'Webinars',
-  'excerpt' => $excerpt_simple,
-  'variant' => $variant,
-  'attribution' => $featured_image_attribution,
-  'is_search' => false,
-])
-  @endcomponent
-
   <div class="awards-hero bg-awards-blobs h-64">
     <div class="container pt-19">
       <div class="w-full lg:w-7/12 text-white px-6 py-4 awards-hero__text flex flex-col lg:ml-32">
@@ -30,12 +21,12 @@
   <div class="awards-home__content">
     <div class="awards__navigation bg-blue-200 pt-3 border-b-2 border-blue-750">
       <div class="container flex justify-between -mb-2px">
-        <div class="flex gap-4 flex-col lg:flex-row w-full lg:w-auto">
+        <div class="flex gap-4 flex-row w-full lg:w-auto">
           <button class="awards__navigation__button js-awards-button-individual inline-flex">
             @svg('icons/sparkles', 'h-6 mr-2 inline-block') Individual
           </button>
           <button class="awards__navigation__button js-awards-button-tools inline-flex">
-            @svg('icons/speakerphone', 'h-6 mr-2 inline-block') Resources, Tools and Practices
+            @svg('icons/speakerphone', 'h-6 mr-2 inline-block') Resources<span class="hidden lg:inline">, Tools and Practices</span>
           </button>
         </div>
         <div class="relative justify-self-end">
@@ -54,7 +45,7 @@
       </div>
     </div>
 
-    <div class="container mt-12 mb-8" id="individual-awards">
+    <div class="container mt-12 mb-8 pt-6 md:pt-0" id="individual-awards">
       <h2 class="text-2xl font-bold text-white">Individual Awards</h2>
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 js-awards-individual">
         @foreach ($individual_awards as $award)
