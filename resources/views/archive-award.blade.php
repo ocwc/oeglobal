@@ -22,13 +22,13 @@
             @component('components/content-excerpt', [
             'title' =>  get_the_title(),
             'link' => get_permalink(),
-            'terms' => App::TermsWithLinks($post),
+            'terms' => array_merge([0 => ['name' => get_field('year')]], App::TermsWithLinks($post, 'award_category')),
             'image' => get_the_post_thumbnail_url($post, 'large'),
             'show_meta' => false,
             'is_tall' => true,
             'shadow' => true,
             'meta_type' => 'string',
-            'meta_string' => get_field('country'),
+            'meta_string' => get_field('institution') ? get_field('institution') . ', ' . get_field('country') : get_field('country'),
             ])@endcomponent
 
             @endwhile

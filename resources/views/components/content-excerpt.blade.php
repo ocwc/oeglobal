@@ -35,13 +35,8 @@
           @if($terms ?? null)
             <div class="content-excerpt__categories">
               @foreach ($terms as $term)
-                <span class="bg-none">
-                @if($term instanceof WP_Term)
-                    {!! $term->name !!}
-                @else
-                    {!! $term['name'] !!}
-                @endif
-                </span>@if(!$loop->last), @endif
+                {{-- needs to on one line, due to extra space before comma otherwise --}}
+                <span class="bg-none">@if($term instanceof WP_Term){!! $term->name !!}@else{!! $term['name'] !!}@endif</span>@if(!$loop->last), @endif
               @endforeach
             </div>
           @endif

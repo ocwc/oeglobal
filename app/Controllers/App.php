@@ -81,9 +81,9 @@ class App extends Controller {
         return strtolower( OEG_SITE );
     }
 
-    public static function TermsWithLinks( $post ) {
+    public static function TermsWithLinks( $post, $taxonomy = 'category' ) {
         if ( $post ) {
-            $terms = wp_get_post_terms( $post->ID, 'category' );
+            $terms = wp_get_post_terms( $post->ID, $taxonomy );
 
             return array_map( function( $term ) {
                 return [
@@ -92,6 +92,8 @@ class App extends Controller {
                 ];
             }, $terms );
         }
+
+        return [];
     }
 
     public static function RelatedPosts( $post ) {
