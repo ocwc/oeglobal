@@ -35,6 +35,7 @@
           ])@endcomponent
           @if($cats)
             @php($cat = $cats[0])
+            @if($cat->description)
             <div class="bg-gray-900 p-4 py-8 rounded flex flex-col justify-center">
               @php($img = get_field('featured_icon', $cat))
               @if($img)
@@ -46,6 +47,7 @@
                 {!! $cat->description !!}
               </p>
             </div>
+            @endif
           @endif
         </div>
       </div>

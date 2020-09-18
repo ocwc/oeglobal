@@ -177,10 +177,12 @@ add_action( 'init', function() {
     add_post_type_support( 'page', 'excerpt' );
 } );
 
-add_action( 'pre_get_posts', function($query) {
+add_action( 'pre_get_posts', function( $query ) {
     if ( is_admin() ) {
         return $query;
     }
+
+    //CCCOER
     if ( $query->is_archive() && $query->is_main_query() && is_post_type_archive( 'webinar' ) ) {
         $query->set( 'posts_per_page', 8 );
 
@@ -222,6 +224,12 @@ add_action( 'pre_get_posts', function($query) {
         $query->set( 'posts_per_page', 100 );
     } elseif ( $query->is_archive() && $query->is_main_query() && is_post_type_archive( 'casestudy' ) ) {
         $query->set( 'posts_per_page', 100 );
+
+    } // AWARDS
+    elseif ( $query->is_archive() && $query->is_main_query() && is_post_type_archive( 'award' ) ) {
+        $query->set( 'posts_per_page', 21 );
+        $query->set( 'orderby', 'meta_value' );
+        $query->set( 'meta_key', 'year' );
     }
 
     return $query;

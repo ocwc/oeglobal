@@ -10,7 +10,8 @@ if (OEG_SITE === 'AWARDS') {
     ] );
     $awards
         ->addText( 'institution' )
-        ->addText('country')
+        ->addText('country', [ 'required', true ])
+        ->addText('year', [ 'required', true ])
         ->setLocation( 'post_type', '==', 'award' );
 
     return $awards;
