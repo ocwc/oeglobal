@@ -11,6 +11,7 @@ $cat->addImage( 'featured_image', [ 'preview_size' => 'medium' ] )
         'media_upload' => 0,
         'toolbar'      => 'basic',
     ] )
-    ->setLocation( 'taxonomy', '==', 'category' );
+    ->setLocation( 'taxonomy', '==', 'category' )
+        ->or( 'taxonomy', '==', 'award_year' );
 
 return $cat;
