@@ -25,20 +25,20 @@ module.exports = {
         plugins: [
           { removeUnknownsAndDefaults: false },
           { cleanupIDs: false },
-          { removeViewBox: false }
-        ]
+          { removeViewBox: false },
+        ],
       },
       plugins: [imageminMozjpeg({ quality: 75 })],
-      disable: config.enabled.watcher
+      disable: config.enabled.watcher,
     }),
     new UglifyJsPlugin({
       uglifyOptions: {
         ecma: 5,
         compress: {
           warnings: true,
-          drop_console: true
-        }
-      }
+          drop_console: true,
+        },
+      },
     }),
     new PurgecssPlugin({
       paths: glob.sync([
@@ -46,13 +46,13 @@ module.exports = {
         "resources/views/**/*.php",
         "resources/assets/scripts/**/*.js",
         "node_modules/lightgallery/dist/js/*.js",
-        "node_modules/lightgallery/dist/css/*.css"
+        "node_modules/lightgallery/dist/css/*.css",
       ]),
       extractors: [
         {
           extractor: TailwindExtractor,
-          extensions: ["html", "js", "php"]
-        }
+          extensions: ["html", "js", "php"],
+        },
       ],
       whitelist: [
         require("purgecss-with-wordpress").whitelist,
@@ -63,10 +63,15 @@ module.exports = {
         ...whitelister("resources/assets/styles/components/gravityforms.scss"),
         ...whitelister("resources/assets/styles/components/oeg-featured.scss"),
         ...whitelister("resources/assets/styles/components/oeg-projects.scss"),
-        ...whitelister("resources/assets/styles/components/cccoer-testimonial.scss"),
+        ...whitelister(
+          "resources/assets/styles/components/cccoer-testimonial.scss"
+        ),
+        ...whitelister(
+          "resources/assets/styles/components/cccoer-buttons.scss"
+        ),
         ...whitelister("node_modules/swiper/swiper-bundle.min.css"),
-        /^wp/
-      ]
-    })
-  ]
+        /^wp/,
+      ],
+    }),
+  ],
 };
