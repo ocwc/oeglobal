@@ -22,7 +22,8 @@ if ( OEG_SITE === 'CCCOER' ) {
             'menu_position'   => 5,
         ], [
             'singular' => 'Case study',
-            'plural'   => 'Case studies'
+            'plural'   => 'Case studies',
+            'slug'     => 'case-studies',
         ] );
 
         register_extended_post_type( 'studentstory', [
@@ -34,7 +35,8 @@ if ( OEG_SITE === 'CCCOER' ) {
             'rest_base'       => 'studentstory',
         ], [
             'singular' => 'Student story',
-            'plural'   => 'Student stories'
+            'plural'   => 'Student stories',
+            'slug'     => 'student-stories'
         ] );
 
         register_extended_post_type( 'edi', [
@@ -45,7 +47,8 @@ if ( OEG_SITE === 'CCCOER' ) {
             'rest_base'       => 'edi',
         ], [
             'singular' => 'EDI post',
-            'plural'   => 'EDI posts'
+            'plural'   => 'EDI posts',
+            'slug'     => 'edi'
         ] );
     } );
 
@@ -67,13 +70,13 @@ if ( OEG_SITE === 'CCCOER' ) {
             'rewrite'         => array(
                 'permastruct' => '/awards/%award_year%/%award_category%/%award%'
             ),
-            'admin_filters'      => [
-                'year' => [
-                    'title' => 'Year',
+            'admin_filters'   => [
+                'year'     => [
+                    'title'    => 'Year',
                     'taxonomy' => 'award_year'
                 ],
                 'category' => [
-                    'title' => 'Category',
+                    'title'    => 'Category',
                     'taxonomy' => 'award_category'
                 ]
             ]
@@ -107,7 +110,7 @@ if ( OEG_SITE === 'CCCOER' ) {
             $award_post_id = $breadcrumb_trail->breadcrumbs[0]->get_id();
             $terms         = wp_get_object_terms( $award_post_id, 'award_category' );
             if ( $terms ) {
-                $term           = $terms[0];
+                $term = $terms[0];
 //                $new_breadcrumb = new bcn_breadcrumb( $term->name, null, array( 'awards_category' ), get_term_link( $term ), $term->term_id, true );
                 $new_breadcrumb = new bcn_breadcrumb( $term->name, null, array( 'awards_category' ), get_term_link( $term ), $term->term_id, true );
                 array_splice( $breadcrumb_trail->breadcrumbs, - 3, 0, array( $new_breadcrumb ) );
