@@ -9,6 +9,28 @@
       <div class="flex flex-wrap -mx-2">
         <div class="my-2 px-2 w-full lg:w-2/3">
           @include('partials.post-header')
+
+          <article @php(post_class('mt-8 md:px-8'))>
+            <div class="mb-4">
+              <?php if (get_post_type() === 'webinar') {
+                  $cats = wp_get_post_terms($post->ID, 'webinar_category');
+                } else {
+                  $cats = wp_get_post_terms($post->ID, 'category');
+                }
+              ?>
+              @foreach($cats as $term)
+                <span class="uppercase font-bold text-sm tracking-widest">{!! $term->name !!}</span>@if(!$loop->last)
+                  , @endif
+              @endforeach
+            </div>
+
+            <h1 class="h1">{!! get_the_title() !!}</h1>
+
+            <div class="content mt-10 lg:mb-6 w-full entry-content">
+              @php(the_content())
+            </div>
+          </article>
+
           @include('partials.content-single')
         </div>
         <div class="my-2 px-2 w-full lg:w-1/3">

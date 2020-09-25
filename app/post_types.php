@@ -6,6 +6,8 @@ if ( OEG_SITE === 'CCCOER' ) {
             'taxonomies'      => array( 'post_tag' ),
             'capability_type' => 'page',
             'menu_icon'       => 'dashicons-format-video'
+        ], [
+            'slug' => 'webinar'
         ] );
 
         register_extended_taxonomy( 'webinar_category', 'webinar', [

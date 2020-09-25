@@ -1,0 +1,88 @@
+/* Legacy buttons for
+  https://www.cccoer.org/learn/helpful-resources/
+ */
+
+$red: #ff7370;
+$yellow: #ffdc7a;
+$green: #26d7b2;
+$highlightGreen: $green;
+$highlightBlue: #1795cf;
+$higlightYellow: $yellow;
+$highlightRed: $red;
+$highlightOrange: #ffbe62;
+$highlightDarkGreen: #417505;
+$highlightCyan: #3ac4ae;
+
+.button-flat {
+  position: relative;
+  float: left;
+  color: $white;
+  font-size: 18px;
+
+  padding: 20px 15px;
+  width: 30%;
+  margin-right: 15px;
+  margin-bottom: 20px;
+  background-position: unset;
+  background-image: none;
+
+  &:hover,
+  &:focus,
+  &:active {
+    color: $white !important;
+    background-position: unset;
+    background-image: none;
+    transition: none;
+  }
+
+  &::after {
+    content: " ";
+    position: absolute;
+    right: 10px;
+    top: 25px;
+
+    background-image: url("data:image/svg+xml,%3Csvg width='15' height='23' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M2.972 0L.286 2.683l8.816 8.818-8.816 8.814L2.972 23l11.501-11.499z' fill='%23FFF' fill-rule='evenodd'/%3E%3C/svg%3E"), linear-gradient(transparent, transparent);
+    width: 15px;
+    height: 23px;
+  }
+
+  @apply font-sans;
+}
+
+@mixin button-flat-color($color) {
+  background-color: $color;
+
+  &:hover,
+  &:focus,
+  &:active {
+    background-color: darken($color, 10%);
+  }
+}
+
+.button-flat-blue {
+  @include button-flat-color($highlightBlue);
+}
+
+.button-flat-green {
+  @include button-flat-color($highlightGreen);
+}
+
+.button-flat-orange {
+  @include button-flat-color($highlightOrange);
+}
+
+.button-flat-darkgreen {
+  @include button-flat-color($highlightDarkGreen);
+}
+
+.button-flat-red {
+  @include button-flat-color($highlightRed);
+}
+
+.button-flat-cyan {
+  @include button-flat-color($highlightCyan);
+}
+
+.button-flat-lightgreen {
+  @include button-flat-color($green);
+}
