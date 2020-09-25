@@ -22,3 +22,4 @@ wp option patch update pagenavi_options next_text 'Next ⇢'
 
 wp post update $(wp post list --post_type='studentstory' --format=ids) --post_status=publish
 wp post update $(wp post list --post_type='edi' --format=ids) --post_status=publish
+wp search-replace 'style="float: right; margin-left: 0px;"' ''
