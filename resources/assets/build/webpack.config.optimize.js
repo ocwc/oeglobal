@@ -71,6 +71,7 @@ module.exports = {
         ),
         ...whitelister("node_modules/swiper/swiper-bundle.min.css"),
         /^wp/,
+        "clearfix",
       ],
     }),
   ],
