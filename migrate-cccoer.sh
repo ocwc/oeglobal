@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+cd ../..
+
 wp theme activate oeglobal/resources
 wp plugin activate breadcrumb-navxt wp-pagenavi soil yet-another-related-posts-plugin
 wp plugin deactivate classic-editor jetpack twitter wp-rocket google-analytics-for-wordpress
@@ -18,3 +20,5 @@ wp option patch update pagenavi_options pages_text ''
 wp option patch update pagenavi_options prev_text '⇠ Previous'
 wp option patch update pagenavi_options next_text 'Next ⇢'
 
+wp post update $(wp post list --post_type='studentstory' --format=ids) --post_status=publish
+wp post update $(wp post list --post_type='edi' --format=ids) --post_status=publish

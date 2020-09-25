@@ -110,7 +110,7 @@ if ( OEG_SITE === 'OEG' ) {
 
         public function studentStories() {
             $custom_query = get_posts( [
-                'post_type'      => 'casestudy', //'studentstory',
+                'post_type'      => 'studentstory',
                 'posts_per_page' => '3',
                 'orderby'        => 'rand'
             ] );
@@ -126,7 +126,7 @@ if ( OEG_SITE === 'OEG' ) {
 
         public function ediStories() {
             $custom_query = get_posts( [
-                'post_type'      => 'casestudy', //'edi',
+                'post_type'      => 'edi',
                 'posts_per_page' => '3',
                 'orderby'        => 'rand'
             ] );
