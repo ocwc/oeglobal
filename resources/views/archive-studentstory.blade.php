@@ -7,7 +7,7 @@
       @component('components.content-header', [
         'title' => 'Student stories',
         'variant' => 'basic',
-        'is_search' => false
+        'is_search' => false,
       ])
       @endcomponent
     </div>

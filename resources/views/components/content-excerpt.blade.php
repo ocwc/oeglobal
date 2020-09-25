@@ -1,3 +1,6 @@
+@php($is_tall = $is_tall ?? null)
+@php($featured = $featured ?? null)
+@php($terms = $terms ?? null)
 <article class="flex justify-center my-8 relative">
   @if($featured ?? null)
     @svg('icons/megaphone', 'h-22 w-22 cccoer__featured__icon')

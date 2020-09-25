@@ -14,7 +14,7 @@
     <span class="font-semibold text-base text-gray-500">{{ get_the_author_meta('display_name') }}</span>
   @endif
 
-  <time class="updated mt-4 text-base text-gray-500 @if (count($coauthors) > 1) block @else inline @endif"
+  <time class="updated mt-4 text-base text-gray-500 @if ($coauthors && count($coauthors) > 1) block @else inline @endif"
         datetime="{{ get_post_time('c', true) }}">
     {{ __('on', 'sage') }} {{ get_the_date() }}
   </time>
