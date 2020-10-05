@@ -3,15 +3,35 @@ const { observe } = require("appear-event");
 export default {
   init() {
     let elIndividual = $(".js-awards-individual").get(0);
-    let elTools = $(".js-awards-tools").get(0);
+    let elAssets = $(".js-awards-assets").get(0);
+    let elPractices = $(".js-awards-practices").get(0);
 
     let $buttonIndividual = $(".js-awards-button-individual");
-    let $buttonTools = $(".js-awards-button-tools");
+    let $buttonAssets = $(".js-awards-button-assets");
+    let $buttonPractices = $(".js-awards-button-practices");
 
     $buttonIndividual.on("click", function() {
       $("html,body").animate(
         {
           scrollTop: $("#individual-awards").offset().top - 100,
+        },
+        "slow"
+      );
+    });
+
+    $buttonAssets.on("click", function() {
+      $("html,body").animate(
+        {
+          scrollTop: $("#assets-awards").offset().top - 100,
+        },
+        "slow"
+      );
+    });
+
+    $buttonPractices.on("click", function() {
+      $("html,body").animate(
+        {
+          scrollTop: $("#practices-awards").offset().top - 100,
         },
         "slow"
       );
@@ -23,31 +43,34 @@ export default {
         .toggleClass("lg:block");
     });
 
-    $buttonTools.on("click", function() {
-      $("html,body").animate(
-        {
-          scrollTop: $("#tools-awards").offset().top - 100,
-        },
-        "slow"
-      );
-    });
-
     observe(elIndividual);
     elIndividual.addEventListener("appear", () => {
       $buttonIndividual.addClass("active");
-      $buttonTools.removeClass("active");
+      $buttonPractices.removeClass("active");
+      $buttonAssets.removeClass("active");
     });
     elIndividual.addEventListener("disappear", () => {
       $buttonIndividual.removeClass("active");
     });
 
-    observe(elTools);
-    elTools.addEventListener("appear", () => {
-      $buttonTools.addClass("active");
+    observe(elAssets);
+    elAssets.addEventListener("appear", () => {
+      $buttonAssets.addClass("active");
+      $buttonPractices.removeClass("active");
       $buttonIndividual.removeClass("active");
     });
-    elTools.addEventListener("disappear", () => {
-      $buttonTools.removeClass("active");
+    elAssets.addEventListener("disappear", () => {
+      $buttonAssets.removeClass("active");
+    });
+
+    observe(elPractices);
+    elPractices.addEventListener("appear", () => {
+      $buttonPractices.addClass("active");
+      $buttonAssets.removeClass("active");
+      $buttonIndividual.removeClass("active");
+    });
+    elPractices.addEventListener("disappear", () => {
+      $buttonPractices.removeClass("active");
     });
   },
 };

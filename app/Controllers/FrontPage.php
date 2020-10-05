@@ -171,6 +171,18 @@ if ( OEG_SITE === 'OEG' ) {
     }
 } else if ( OEG_SITE === 'AWARDS' ) {
     class FrontPage extends Controller {
+        static function mapAwards($custom_query) {
+            return array_map( function( $post ) {
+                return [
+                    'title'   => get_the_title( $post ),
+                    'url'     => get_permalink( $post ),
+                    'image'   => get_the_post_thumbnail_url( $post, 'medium' ),
+                    'terms'   => wp_get_object_terms( $post->ID, 'award_category' ),
+                    'country' => get_field( 'country', $post->ID ),
+                    'institution' => get_field( 'institution', $post->ID ),
+                ];
+            }, $custom_query );
+        }
         public function individualAwards() {
             $custom_query = get_posts( [
                 'post_type'      => 'award',
@@ -186,28 +198,16 @@ if ( OEG_SITE === 'OEG' ) {
                         'taxonomy' => 'award_category',
                         'field'    => 'slug',
                         'terms'    => [
-                            'leadership-award',
-                            'educator-award',
-                            'support-specialist-award',
-                            'student-award',
-                            'emerging-leader-award'
+                            'individual'
                         ]
                     ]
                 ]
             ] );
 
-            return array_map( function( $post ) {
-                return [
-                    'title'   => get_the_title( $post ),
-                    'url'     => get_permalink( $post ),
-                    'image'   => get_the_post_thumbnail_url( $post, 'medium' ),
-                    'terms'   => wp_get_object_terms( $post->ID, 'award_category' ),
-                    'country' => get_field( 'country', $post->ID )
-                ];
-            }, $custom_query );
+            return $this->mapAwards($custom_query);
         }
 
-        public function toolsAwards() {
+        public function assetsAwards() {
             $custom_query = get_posts( [
                 'post_type'      => 'award',
                 'posts_per_page' => '-1',
@@ -222,27 +222,37 @@ if ( OEG_SITE === 'OEG' ) {
                         'taxonomy' => 'award_category',
                         'field'    => 'slug',
                         'terms'    => [
-                            'leadership-award',
-                            'educator-award',
-                            'support-specialist-award',
-                            'student-award',
-                            'emerging-leader-award'
-                        ],
-                        'operator' => 'NOT IN',
+                            'open-assets'
+                        ]
                     ]
                 ]
             ] );
 
-            return array_map( function( $post ) {
-                return [
-                    'title'       => get_the_title( $post ),
-                    'url'         => get_permalink( $post ),
-                    'image'       => get_the_post_thumbnail_url( $post, 'medium' ),
-                    'terms'       => wp_get_object_terms( $post->ID, 'award_category' ),
-                    'country'     => get_field( 'country', $post->ID ),
-                    'institution' => get_field( 'institution', $post->ID )
-                ];
-            }, $custom_query );
+            return $this->mapAwards($custom_query);
+        }
+
+        public function practicesAwards() {
+            $custom_query = get_posts( [
+                'post_type'      => 'award',
+                'posts_per_page' => '-1',
+                'tax_query'      => [
+                    'relation' => 'AND',
+                    [
+                        'taxonomy' => 'award_year',
+                        'field'    => 'slug',
+                        'terms'    => '2020'
+                    ],
+                    [
+                        'taxonomy' => 'award_category',
+                        'field'    => 'slug',
+                        'terms'    => [
+                            'open-practices'
+                        ]
+                    ]
+                ]
+            ] );
+
+            return $this->mapAwards($custom_query);
         }
     }
 } else {
