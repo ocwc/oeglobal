@@ -2,7 +2,7 @@
 
 @section('container')
   <main class="main relative">
-    <div class="bg-awards-blobs absolute top-0 w-full h-192 z-0 bg-center"></div>
+    <div class="bg-awards absolute top-0 w-full h-192 z-0 bg-center"></div>
     <div class="relative z-10">
       @while(have_posts()) @php the_post() @endphp
       @php($cats = wp_get_object_terms($post->ID, 'award_category'))

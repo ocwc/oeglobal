@@ -9,11 +9,16 @@
 
   <div class="awards-hero bg-awards-blobs h-64">
     <div class="container pt-19">
-      <div class="w-full lg:w-7/12 text-white px-6 py-4 awards-hero__text flex flex-col lg:ml-32">
-        <h1 class="text-4xl font-bold mb-4">Open Education Awards for Excellence</h1>
-        <p class="leading-relaxed">The Open Education Awards for Excellence provide annual recognition to outstanding
-          contributions in the Open Education community, recognizing exemplary leaders, distinctive Open Educational
-          Resources, and Open Projects &amp; Initiatives.</p>
+      <div class="w-full lg:w-7/12 text-white px-6 py-4 awards-hero__text flex flex-row items-stretch lg:ml-32 gap-4">
+        <div class="">
+          @svg('icons/awards-trophy', 'h-full inline-block')
+        </div>
+        <div class="flex flex-col">
+          <h1 class="text-4xl font-bold mb-4 leading-tight">Open Education Awards for Excellence</h1>
+          <p class="leading-relaxed">The Open Education Awards for Excellence provide annual recognition to outstanding
+            contributions in the Open Education community, recognizing exemplary leaders, distinctive Open Educational
+            Resources, and Open Projects &amp; Initiatives.</p>
+        </div>
       </div>
     </div>
   </div>
