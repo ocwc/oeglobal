@@ -142,6 +142,7 @@ module.exports = {
     backgroundColor: ["responsive", "hover", "focus", "active"],
     borderColor: ["responsive", "hover", "focus", "active"],
     width: ["responsive"],
+    container: ["responsive"],
   },
   plugins: [wordpressUtilities],
   purge: false,
