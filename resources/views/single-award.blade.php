@@ -18,7 +18,7 @@
             <article @php(post_class('mt-8 md:px-8'))>
               <div class="mb-4">
                 @foreach($cats as $term)
-                  <span class="uppercase font-bold text-sm tracking-widest">{!! $term->name !!}</span>@if(!$loop->last)
+                  <span class="uppercase font-bold text-sm tracking-widest">{!! $term->name !!} Award</span>@if(!$loop->last)
                     , @endif
                 @endforeach
               </div>

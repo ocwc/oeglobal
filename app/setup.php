@@ -226,11 +226,18 @@ add_action( 'pre_get_posts', function( $query ) {
         $query->set( 'posts_per_page', 100 );
 
     } // AWARDS
-    elseif ( $query->is_archive() && $query->is_main_query() && is_post_type_archive( 'award' ) ) {
+    elseif ( ($query->is_archive() || $query->is_tax()) &&
+             $query->is_main_query() &&
+             ( is_post_type_archive( 'award' )
+               || is_tax( 'award_category' )
+             )
+    ) {
         $query->set( 'posts_per_page', 21 );
         $query->set( 'orderby', 'meta_value' );
         $query->set( 'meta_key', 'year' );
     }
+
+
 
     return $query;
 } );

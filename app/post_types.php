@@ -113,8 +113,12 @@ if ( OEG_SITE === 'CCCOER' ) {
             $terms         = wp_get_object_terms( $award_post_id, 'award_category' );
             if ( $terms ) {
                 $term = $terms[0];
+                $parents = get_ancestors($term->term_id, 'award_category');
+                if ($parents) {
+                    $term = get_term(end($parents), 'award_category');
+                }
 //                $new_breadcrumb = new bcn_breadcrumb( $term->name, null, array( 'awards_category' ), get_term_link( $term ), $term->term_id, true );
-                $new_breadcrumb = new bcn_breadcrumb( $term->name, null, array( 'awards_category' ), get_term_link( $term ), $term->term_id, true );
+                $new_breadcrumb = new bcn_breadcrumb( $term->name . ' Award', null, array( 'awards_category' ), get_term_link( $term ), $term->term_id, true );
                 array_splice( $breadcrumb_trail->breadcrumbs, - 3, 0, array( $new_breadcrumb ) );
             }
         }

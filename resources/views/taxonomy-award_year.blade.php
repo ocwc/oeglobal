@@ -29,10 +29,10 @@
     </div>
   </div>
 
-  <div class="container" id="tools-awards">
-    <h2 class="text-2xl font-bold">Resources, Tools and Practices Awards</h2>
+  <div class="container mb-8" id="tools-awards">
+    <h2 class="text-2xl font-bold">Open Assets Awards</h2>
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 js-awards-tools">
-      @foreach ($tools_awards as $award)
+      @foreach ($assets_awards as $award)
         @component('components/content-excerpt', [
         'title' =>  $award['title'],
         'link' => $award['url'],
@@ -48,5 +48,26 @@
       @endforeach
     </div>
   </div>
+
+  <div class="container" id="practices-awards">
+    <h2 class="text-2xl font-bold">Open Practices Awards</h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 js-awards-practices">
+      @foreach ($assets_awards as $award)
+        @component('components/content-excerpt', [
+        'title' =>  $award['title'],
+        'link' => $award['url'],
+        'terms' => $award['terms'],
+        'image' => $award['image'],
+        'term_label' => 'Webinar',
+        'show_meta' => false,
+        'is_tall' => true,
+        'shadow' => true,
+        'meta_type' => 'string',
+        'meta_string' => (key_exists('institution', $award) ? $award['institution'] . ", " : '') . $award['country'],
+        ])@endcomponent
+      @endforeach
+    </div>
+  </div>
+
   </div>
 @endsection

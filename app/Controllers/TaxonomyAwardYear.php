@@ -9,19 +9,6 @@ class TaxonomyAwardYear extends Controller
 {
     protected $template = 'taxonomy-award_year';
 
-    protected $individual_awards = [
-        'leadership-award',
-        'educator-award',
-        'support-specialist-award',
-        'student-award',
-        'emerging-leader-award',
-        'student',
-        'practitioner',
-        'leadership',
-        'presidents-award',
-        'oer-curation',
-    ];
-
     static function mapAwards($custom_query) {
         return array_map( function( $post ) {
             return [
@@ -49,7 +36,7 @@ class TaxonomyAwardYear extends Controller
                 [
                     'taxonomy' => 'award_category',
                     'field'    => 'slug',
-                    'terms'    => $this->individual_awards,
+                    'terms'    => 'individual',
                 ]
             ]
         ] );
@@ -57,7 +44,7 @@ class TaxonomyAwardYear extends Controller
         return $this->mapAwards($custom_query);
     }
 
-    public function toolsAwards() {
+    public function assetsAwards() {
         $term = get_queried_object();
         $custom_query = get_posts( [
             'post_type'      => 'award',
@@ -72,8 +59,30 @@ class TaxonomyAwardYear extends Controller
                 [
                     'taxonomy' => 'award_category',
                     'field'    => 'slug',
-                    'terms'    => $this->individual_awards,
-                    'operator' => 'NOT IN',
+                    'terms'    => 'open-assets',
+                ]
+            ]
+        ] );
+
+        return $this->mapAwards($custom_query);
+    }
+
+    public function practicesAwards() {
+        $term = get_queried_object();
+        $custom_query = get_posts( [
+            'post_type'      => 'award',
+            'posts_per_page' => '-1',
+            'tax_query'      => [
+                'relation' => 'AND',
+                [
+                    'taxonomy' => 'award_year',
+                    'field'    => 'slug',
+                    'terms'    => $term->slug
+                ],
+                [
+                    'taxonomy' => 'award_category',
+                    'field'    => 'slug',
+                    'terms'    => 'open-practices',
                 ]
             ]
         ] );

@@ -67,7 +67,7 @@
       </div>
     </div>
 
-    <div class="container" id="assets-awards">
+    <div class="container mb-8" id="assets-awards">
       <h2 class="text-2xl font-bold text-white">Open Assets Awards</h2>
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 js-awards-assets">
         @foreach ($assets_awards as $award)
