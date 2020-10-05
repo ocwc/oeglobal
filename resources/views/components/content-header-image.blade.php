@@ -1,4 +1,4 @@
-<div class="w-full h-64 lg:h-128 bg-cover bg-center"
+<div class="w-full h-64 md:h-128 bg-cover bg-center"
      @if($background_image)style="background-image: url({!! $background_image !!}" @endif
 ></div>
 @if ($attribution ?? null)

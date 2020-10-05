@@ -10,12 +10,12 @@
       <div class="text-white">
         @include('partials.breadcrumbs')
       </div>
-      <div class="container mb-8">
-        <div class="flex flex-wrap -mx-2">
+      <div class="md:container mb-8">
+        <div class="flex flex-wrap">
           <div class="my-2 w-full lg:w-2/3 bg-white">
             @include('partials.post-header')
 
-            <article @php(post_class('mt-8 md:px-8'))>
+            <article @php(post_class('mt-8 px-8'))>
               <div class="mb-4">
                 @foreach($cats as $term)
                   <span class="uppercase font-bold text-sm tracking-widest">{!! $term->name !!} Award</span>@if(!$loop->last)
@@ -31,7 +31,7 @@
             </article>
 
           </div>
-          <div class="my-2 pl-4 w-full lg:w-1/3">
+          <div class="my-2 md:pl-4 w-full lg:w-1/3">
             @component('components.content-share', [
                 'title' => get_the_title(),
                 'site' => get_bloginfo('name'),
@@ -46,7 +46,7 @@
                     <img src="{!! $img['url'] !!}" alt="" class="mb-4 h-32">
                   @endif
 
-                  <h2 class="font-bold text-xl mb-4">{!! $cat->name !!}</h2>
+                  <h2 class="font-bold text-xl mb-4">About {!! $cat->name !!} Award</h2>
                   <p>
                     {!! $cat->description !!}
                   </p>
