@@ -3,7 +3,9 @@ body.home.awards {
 }
 
 .awards-hero {
-  height: 748px;
+  @screen lg {
+    height: 748px;
+  }
 }
 
 .awards-hero__text {
@@ -27,7 +29,9 @@ body.home.awards {
 }
 
 .awards-home__content {
-  margin-top: -100px;
+  @screen md {
+    margin-top: -100px;
+  }
 
   @screen lg {
     margin-top: -320px;
