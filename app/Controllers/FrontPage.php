@@ -201,7 +201,9 @@ if ( OEG_SITE === 'OEG' ) {
                             'individual'
                         ]
                     ]
-                ]
+                ],
+                'orderby' => 'term_order',
+                'order' => 'ASC'
             ] );
 
             return $this->mapAwards($custom_query);
@@ -225,7 +227,9 @@ if ( OEG_SITE === 'OEG' ) {
                             'open-assets'
                         ]
                     ]
-                ]
+                ],
+                'orderby' => 'term_order',
+                'order' => 'ASC'
             ] );
 
             return $this->mapAwards($custom_query);
@@ -249,7 +253,9 @@ if ( OEG_SITE === 'OEG' ) {
                             'open-practices'
                         ]
                     ]
-                ]
+                ],
+                'orderby' => 'term_order',
+                'order' => 'ASC'
             ] );
 
             return $this->mapAwards($custom_query);

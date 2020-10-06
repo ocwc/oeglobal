@@ -5,11 +5,10 @@ namespace App\Controllers;
 use Sober\Controller\Controller;
 use App\Controllers\Category;
 
-class TaxonomyAwardYear extends Controller
-{
+class TaxonomyAwardYear extends Controller {
     protected $template = 'taxonomy-award_year';
 
-    static function mapAwards($custom_query) {
+    static function mapAwards( $custom_query ) {
         return array_map( function( $post ) {
             return [
                 'title'   => get_the_title( $post ),
@@ -22,7 +21,7 @@ class TaxonomyAwardYear extends Controller
     }
 
     public function individualAwards() {
-        $term = get_queried_object();
+        $term         = get_queried_object();
         $custom_query = get_posts( [
             'post_type'      => 'award',
             'posts_per_page' => '-1',
@@ -38,14 +37,16 @@ class TaxonomyAwardYear extends Controller
                     'field'    => 'slug',
                     'terms'    => 'individual',
                 ]
-            ]
+            ],
+            'orderby'        => 'term_order',
+            'order'          => 'ASC'
         ] );
 
-        return $this->mapAwards($custom_query);
+        return $this->mapAwards( $custom_query );
     }
 
     public function assetsAwards() {
-        $term = get_queried_object();
+        $term         = get_queried_object();
         $custom_query = get_posts( [
             'post_type'      => 'award',
             'posts_per_page' => '-1',
@@ -61,14 +62,16 @@ class TaxonomyAwardYear extends Controller
                     'field'    => 'slug',
                     'terms'    => 'open-assets',
                 ]
-            ]
+            ],
+            'orderby'        => 'term_order',
+            'order'          => 'ASC'
         ] );
 
-        return $this->mapAwards($custom_query);
+        return $this->mapAwards( $custom_query );
     }
 
     public function practicesAwards() {
-        $term = get_queried_object();
+        $term         = get_queried_object();
         $custom_query = get_posts( [
             'post_type'      => 'award',
             'posts_per_page' => '-1',
@@ -84,10 +87,13 @@ class TaxonomyAwardYear extends Controller
                     'field'    => 'slug',
                     'terms'    => 'open-practices',
                 ]
-            ]
+            ],
+            'orderby'        => 'term_order',
+            'order'          => 'ASC'
+
         ] );
 
-        return $this->mapAwards($custom_query);
+        return $this->mapAwards( $custom_query );
     }
 
     public function year() {
@@ -95,17 +101,17 @@ class TaxonomyAwardYear extends Controller
     }
 
     public function FeaturedImageLarge() {
-        $image = get_field('featured_image', get_queried_object());
-        if ( $image) {
+        $image = get_field( 'featured_image', get_queried_object() );
+        if ( $image ) {
             return $image['sizes']['large'];
         }
     }
 
     public function FeaturedImageAttribution() {
-        if (get_field('featured_image_attribution')) {
-            return get_field('featured_image_attribution');
+        if ( get_field( 'featured_image_attribution' ) ) {
+            return get_field( 'featured_image_attribution' );
         } else {
-            return get_field('featured_image_attribution', get_queried_object());
+            return get_field( 'featured_image_attribution', get_queried_object() );
         }
     }
 }
