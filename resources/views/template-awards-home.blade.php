@@ -31,7 +31,7 @@
             @svg('icons/sparkles', 'h-6 mr-2 inline-block') Individual
           </button>
           <button class="awards__navigation__button js-awards-button-assets inline-flex">
-            @svg('icons/book', 'h-6 mr-2 inline-block') Open Assets
+            @svg('icons/puzzle', 'h-6 mr-2 inline-block') Open Assets
           </button>
           <button class="awards__navigation__button js-awards-button-practices inline-flex">
             @svg('icons/speakerphone', 'h-6 mr-2 inline-block') Open Practices
