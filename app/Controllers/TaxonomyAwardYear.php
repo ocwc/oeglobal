@@ -13,7 +13,7 @@ class TaxonomyAwardYear extends Controller {
             return [
                 'title'   => get_the_title( $post ),
                 'url'     => get_permalink( $post ),
-                'image'   => get_the_post_thumbnail_url( $post, 'medium' ),
+                'image'   => get_the_post_thumbnail_url( $post, 'large' ),
                 'terms'   => wp_get_object_terms( $post->ID, 'award_category' ),
                 'country' => get_field( 'country', $post->ID )
             ];

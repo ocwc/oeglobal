@@ -27,7 +27,7 @@
       @endif
 
       <div class="
-      pl-8 px-6 pb-4 content-excerpt__body flex flex-col flex-grow
+      px-6 pb-4 content-excerpt__body flex flex-col flex-grow
         @if(!$is_tall ?? null)
       @if($image)md:w-3/4
           @else md:w-full

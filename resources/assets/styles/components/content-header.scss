@@ -3,14 +3,20 @@
   position: relative;
   min-height: 336px;
   background-color: theme("colors.blue-300");
-  background-size: cover;
   background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
   color: theme("colors.blue-900");
 
   body.latam & {
     @screen lg {
       min-height: 500px;
     }
+  }
+
+  @screen xl {
+    background-size: 1248px auto;
   }
 }
 
@@ -109,3 +115,4 @@ body.latam .contentheader-strip::after {
     position: initial;
   }
 }
+

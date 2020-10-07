@@ -12,7 +12,7 @@
       </div>
       <div class="md:container mb-8">
         <div class="flex flex-wrap">
-          <div class="my-2 w-full lg:w-2/3 bg-white">
+          <div class="my-2 w-full lg:w-2/3 bg-white rounded-t overflow-hidden">
             @include('partials.post-header')
 
             <article @php(post_class('mt-8 px-8'))>
