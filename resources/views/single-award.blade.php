@@ -18,14 +18,31 @@
             <article @php(post_class('mt-8 px-8'))>
               <div class="mb-4">
                 @foreach($cats as $term)
-                  <span class="uppercase font-bold text-sm tracking-widest">{!! $term->name !!} Award</span>@if(!$loop->last)
+                  <span
+                    class="uppercase font-bold text-sm tracking-widest">{!! $term->name !!} Award</span>@if(!$loop->last)
                     , @endif
                 @endforeach
               </div>
 
-              <h1 class="h1">{!! get_the_title() !!}</h1>
 
-              <div class="content mt-10 lg:mb-6 w-full entry-content">
+              <h2 class="h3 mt-8">{!! get_field('institution') !!}
+                (@if (get_field('region')){!! get_field('region') !!}
+                , @endif {!! get_field('country') !!})</h2>
+
+              <div class="flex lg:justify-between gap-8 content flex-col lg:flex-row">
+                <div class="flex-auto">
+                  <h1 class="h1">{!! get_the_title() !!}</h1>
+                </div>
+                <div class="flex-grow -mt-12 lg:mt-0">
+                  @if(get_field('link'))<a href="{!! get_field('link') !!}"
+                                           class="btn simple whitespace-no-wrap"
+                                           target="_blank"
+                                           rel="noopener nofollower">Visit Project @svg('icons/link', 'h-6 ml-2')</a>
+                  @endif
+                </div>
+              </div>
+
+              <div class="content mt-4 lg:mb-6 w-full entry-content">
                 @php(the_content())
               </div>
             </article>

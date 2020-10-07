@@ -35,14 +35,13 @@
 }
 
 .btn.simple {
-  @apply font-bold px-4 py-3 inline-flex text-black-200;
+  @apply font-bold px-4 py-3 inline-flex text-black-200 border-none;
 
-  background: none;
-  border: 2px solid theme("colors.primary");
+  background: $white;
   position: relative;
 
   &:hover {
-    @apply bg-black-300;
+    @apply bg-gray-900;
   }
 }
 
