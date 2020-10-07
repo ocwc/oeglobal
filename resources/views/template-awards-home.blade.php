@@ -30,11 +30,11 @@
           <button class="awards__navigation__button js-awards-button-individual inline-flex">
             @svg('icons/sparkles', 'h-6 mr-2 inline-block') Individual
           </button>
-          <button class="awards__navigation__button js-awards-button-assets inline-flex">
-            @svg('icons/puzzle', 'h-6 mr-2 inline-block') Open Assets
-          </button>
           <button class="awards__navigation__button js-awards-button-practices inline-flex">
             @svg('icons/speakerphone', 'h-6 mr-2 inline-block') Open Practices
+          </button>
+          <button class="awards__navigation__button js-awards-button-assets inline-flex">
+            @svg('icons/puzzle', 'h-6 mr-2 inline-block') Open Assets
           </button>
         </div>
         <div class="relative justify-self-end">
@@ -72,10 +72,10 @@
       </div>
     </div>
 
-    <div class="container mb-8" id="assets-awards">
-      <h2 class="text-2xl font-bold text-white">Open Assets Awards</h2>
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 js-awards-assets">
-        @foreach ($assets_awards as $award)
+    <div class="container" id="practices-awards">
+      <h2 class="text-2xl font-bold text-white">Open Practices Awards</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 js-awards-practices">
+        @foreach ($practices_awards as $award)
           @component('components/content-excerpt', [
           'title' =>  $award['title'],
           'link' => $award['url'],
@@ -91,10 +91,10 @@
       </div>
     </div>
 
-    <div class="container" id="practices-awards">
-      <h2 class="text-2xl font-bold text-white">Open Practices Awards</h2>
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 js-awards-practices">
-        @foreach ($practices_awards as $award)
+    <div class="container mb-8" id="assets-awards">
+      <h2 class="text-2xl font-bold text-white">Open Assets Awards</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 js-awards-assets">
+        @foreach ($assets_awards as $award)
           @component('components/content-excerpt', [
           'title' =>  $award['title'],
           'link' => $award['url'],
