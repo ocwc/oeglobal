@@ -25,15 +25,14 @@
               </div>
 
 
-              <h2 class="h3 mt-8">{!! get_field('institution') !!}
-                (@if (get_field('region')){!! get_field('region') !!}
-                , @endif {!! get_field('country') !!})</h2>
-
               <div class="flex lg:justify-between gap-8 content flex-col lg:flex-row">
                 <div class="flex-auto">
                   <h1 class="h1">{!! get_the_title() !!}</h1>
+                  <h2 class="h3 -mt-2">{!! get_field('institution') !!}
+                    (@if (get_field('region')){!! get_field('region') !!}
+                    , @endif{!! get_field('country') !!})</h2>
                 </div>
-                <div class="flex-grow -mt-12 lg:mt-0">
+                <div class="flex-grow -mt-6 lg:mt-0">
                   @if(get_field('link'))<a href="{!! get_field('link') !!}"
                                            class="btn simple whitespace-no-wrap"
                                            target="_blank"
