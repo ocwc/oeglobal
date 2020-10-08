@@ -9,7 +9,8 @@
 
   <div class="awards-hero bg-awards-blobs pb-10 md:pb-0">
     <div class="container pt-19">
-      <div class="w-full lg:w-7/12 text-white px-6 py-4 awards-hero__text flex flex-col md:flex-row items-stretch lg:ml-32 gap-4">
+      <div
+        class="w-full lg:w-7/12 text-white px-6 py-4 awards-hero__text flex flex-col md:flex-row items-stretch lg:ml-32 gap-4">
         <div>
           @svg('icons/awards-trophy', 'h-30 md:h-full inline-block')
         </div>
@@ -107,6 +108,23 @@
           'meta_string' => $award['institution'] . ", " . $award['country'],
           ])@endcomponent
         @endforeach
+      </div>
+    </div>
+  </div>
+
+
+  <div class="bg-awards-bottom">
+    <div class="container flex justify-center items-center flex-col mt-40 pb-10">
+      <span class="uppercase text-white font-sans text-sm mb-12 font-semibold">OE AWARDS 2020 are Sponsored by</span>
+      <div class="grid grid-cols-2 gap-8 justify-items-center lg:w-2/3">
+        <a href="https://feedbackfruits.com/" class="block h-16 md:h-24 flex justify-center bg-white p-2 rounded"><img
+            src="@asset('images/logos/logo-feedbackfruits.png')" alt="Feedback Fruits" class="h-full w-auto"/></a>
+        <a href="https://www.grasple.com/" class="block h-16 md:h-24 flex justify-center rounded"><img
+            src="@asset('images/logos/logo-grasple.svg')" alt="Grasple" class="h-full w-auto"/></a>
+        <a href="https://libretexts.org/" class="block h-16 md:h-24 flex justify-center bg-white p-2 rounded"><img
+            src="@asset('images/logos/logo-libretexts.png')" alt="LibreTexts" class="h-full w-auto"/></a>
+        <a href="https://www.achievingthedream.org/" class="block h-16 md:h-24 flex justify-center bg-white p-2 rounded"><img
+            src="@asset('images/logos/logo-atd.png')" alt="Achieving the Dream" class="h-full w-auto"/></a>
       </div>
     </div>
   </div>

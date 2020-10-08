@@ -146,6 +146,10 @@ module.exports = {
   },
   plugins: [wordpressUtilities],
   purge: false,
+  future: {
+    removeDeprecatedGapUtilities: true,
+    purgeLayersByDefault: true,
+  },
 };
 
 if (SITE === "latam") {

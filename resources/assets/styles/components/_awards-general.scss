@@ -22,6 +22,12 @@ body.home.awards {
   background-size: cover;
 }
 
+.bg-awards-bottom {
+  background: url("../images/backgrounds/awards-bottom-bg.svg") repeat-x center bottom, linear-gradient(180deg, rgba(28, 43, 90, 0) 0%, #0d1530 100%);
+  background-size: contain;
+  margin-bottom: -80px;
+}
+
 .awards__navigation {
   position: sticky;
   top: 0;
