@@ -117,14 +117,14 @@
     <div class="container flex justify-center items-center flex-col mt-40 pb-10">
       <span class="uppercase text-white font-sans text-sm mb-12 font-semibold">OE AWARDS 2020 are Sponsored by</span>
       <div class="grid grid-cols-2 gap-8 justify-items-center lg:w-2/3">
-        <a href="https://feedbackfruits.com/" class="block h-16 md:h-24 flex justify-center bg-white p-2 rounded"><img
-            src="@asset('images/logos/logo-feedbackfruits.png')" alt="Feedback Fruits" class="h-full w-auto"/></a>
-        <a href="https://www.grasple.com/" class="block h-16 md:h-24 flex justify-center rounded"><img
+        <a href="https://feedbackfruits.com/" class="block h-24 flex justify-center items-center bg-white p-2 rounded"><img
+            src="@asset('images/logos/logo-feedbackfruits.png')" alt="Feedback Fruits" class="max-h-full h-auto"/></a>
+        <a href="https://www.grasple.com/" class="block h-24 flex justify-center rounded"><img
             src="@asset('images/logos/logo-grasple.svg')" alt="Grasple" class="h-full w-auto"/></a>
-        <a href="https://libretexts.org/" class="block h-16 md:h-24 flex justify-center bg-white p-2 rounded"><img
-            src="@asset('images/logos/logo-libretexts.png')" alt="LibreTexts" class="h-full w-auto"/></a>
-        <a href="https://www.achievingthedream.org/" class="block h-16 md:h-24 flex justify-center bg-white p-2 rounded"><img
-            src="@asset('images/logos/logo-atd.png')" alt="Achieving the Dream" class="h-full w-auto"/></a>
+        <a href="https://libretexts.org/" class="block h-24 flex justify-center items-center bg-white p-2 rounded"><img
+            src="@asset('images/logos/logo-libretexts.png')" alt="LibreTexts" class="h-auto max-h-full"/></a>
+        <a href="https://www.achievingthedream.org/" class="block h-24 flex justify-center items-center bg-white p-2 rounded"><img
+            src="@asset('images/logos/logo-atd.png')" alt="Achieving the Dream" class="h-auto max-h-full"/></a>
       </div>
     </div>
   </div>
