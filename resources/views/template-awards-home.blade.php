@@ -114,8 +114,8 @@
 
 
   <div class="bg-awards-bottom">
-    <div class="container flex justify-center items-center flex-col mt-40 pb-10">
-      <span class="uppercase text-white font-sans text-sm mb-12 font-semibold">OE AWARDS 2020 are Sponsored by</span>
+    <div class="container flex justify-center items-center flex-col mt-40 pb-16">
+      <span class="uppercase text-white font-sans text-sm mb-12 font-bold tracking-widest">OE AWARDS 2020 are Sponsored by</span>
       <div class="grid grid-cols-2 gap-8 justify-items-center lg:w-2/3">
         <a href="https://feedbackfruits.com/" class="block h-24 flex justify-center items-center bg-white p-2 rounded"><img
             src="@asset('images/logos/logo-feedbackfruits.png')" alt="Feedback Fruits" class="max-h-full h-auto"/></a>
