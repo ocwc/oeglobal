@@ -64,6 +64,7 @@ module.exports = {
         ...whitelister("resources/assets/styles/components/oeg-featured.scss"),
         ...whitelister("resources/assets/styles/components/oeg-projects.scss"),
         ...whitelister("resources/assets/styles/components/pagination.scss"),
+        ...whitelister("resources/assets/styles/components/navigation.scss"),
         ...whitelister(
           "resources/assets/styles/components/cccoer-testimonial.scss"
         ),
