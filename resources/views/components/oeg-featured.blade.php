@@ -1,12 +1,22 @@
 <div class="container px-0 md:px-4 mt-6 md:mt-12 mb-0">
   <h2 class="text-black-200 border-b border-gray-400 text-xl font-bold font-sans pb-2 mb-6 mx-4 md:mx-0 md:pl-0">Happening now!</h2>
 
-  <div class="grid grid-rows-auto grid-cols-auto md:grid-rows-2 md:grid-cols-3 gap-2 md:gap-4">
+  <div class="grid grid-rows-auto grid-cols-auto
+        @if (count($featured_items) >= 3)
+        md:grid-rows-2 md:grid-cols-3 gap-2 md:gap-4
+        @else
+          md:grid-rows-1 md:grid-cols-2 gap-2 md:gap-4
+        @endif
+        ">
     @foreach ($featured_items as $item)
     <a class="
         oeg-featured {!! 'oeg-featured-' . $loop->iteration !!}
-        @if($loop->iteration === 1)md:row-span-2 md:col-span-2
-        @else col-auto row-auto
+        @if (count($featured_items) >= 3)
+          @if($loop->iteration === 1)md:row-span-2 md:col-span-2
+          @else col-auto row-auto
+          @endif
+        @else
+
         @endif
         flex items-end" style="background-image: url('{!! $item['image']['sizes']['large'] !!}');" href="{!! $item['url'] !!}">
       <span class="oeg-featured__title">
@@ -23,7 +33,7 @@
     <div class="oeg-spotlight__container relative">
       <div class="flex w-full border-b bg-blue-400 border-gray-900 pb-2 mb-6 justify-between items-end">
         <h2 class="text-gray-900 text-xl font-bold font-sans">Members spotlight</h2>
-        <a class="text-gray-900" 
+        <a class="text-gray-900"
           href="https://connect.oeglobal.org/c/oeg-plaza/spotlight/14">
           View more
         </a>
@@ -31,7 +41,7 @@
       <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
         @foreach ($spotlight_items as $item)
         <a class="oeg-spotlight__item" href="{!! $item['url'] !!}">
-          <span class="oeg-spotlight__image block" 
+          <span class="oeg-spotlight__image block"
                 style="background-image: url('{!! $item['image']['sizes']['medium'] !!}');"></span>
 
           <span class="block px-4 py-6">
