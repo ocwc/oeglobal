@@ -8,6 +8,12 @@
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
   {{--  <link rel="manifest" href="/site.webmanifest">--}}
   <meta name="theme-color" content="#ffffff">
-  <meta property="og:image" content="https://www.oeglobal.org/wp-content/uploads/2020/09/oeglobal.png">
+
+  @if(OEG_SITE === 'AWARDS')
+    <meta property="og:image" content="https://awards.oeglobal.org/wp-content/uploads/2020/10/open-graph.png">
+  @else
+    <meta property="og:image" content="https://www.oeglobal.org/wp-content/uploads/2020/09/oeglobal.png">
+  @endif
+
   @php(wp_head())
 </head>
