@@ -88,3 +88,14 @@ $highlightCyan: #3ac4ae;
 .button-flat-lightgreen {
   @include button-flat-color($green);
 }
+
+body.cccoer .button {
+  @apply font-bold px-4 py-3 inline-flex text-white border-none bg-blue-600;
+
+  position: relative;
+  background-image: none;
+
+  &:hover {
+    @apply bg-gray-900 text-black;
+  }
+}

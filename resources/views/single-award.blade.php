@@ -32,7 +32,7 @@
                     (@if (get_field('region')){!! get_field('region') !!}
                     , @endif{!! get_field('country') !!})</h2>
                 </div>
-                <div class="flex-grow -mt-6 lg:mt-0">
+                <div class="flex-grow -mt-6 md:mt-0">
                   @if(get_field('link'))<a href="{!! get_field('link') !!}"
                                            class="btn simple whitespace-no-wrap"
                                            target="_blank"
