@@ -37,12 +37,11 @@ add_action( 'after_setup_theme', function() {
         add_theme_support( 'soil-google-analytics', 'UA-4248822-11' );
     } else if ( OEG_SITE === 'LATAM' ) {
         add_theme_support( 'soil-google-analytics', 'UA-4248822-15' );
-    if ( OEG_SITE === 'AWARDS' ) {
+    } else if ( OEG_SITE === 'AWARDS' ) {
         add_theme_support( 'soil-google-analytics', 'UA-4248822-16' );
     } else {
         add_theme_support( 'soil-google-analytics', 'UA-4248822-14' );
     }
-
 
     /**
      * Enable plugins to manage the document title
