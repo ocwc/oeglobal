@@ -92,7 +92,6 @@ add_action( 'after_setup_theme', function() {
      *  Translation support
      */
     load_theme_textdomain( 'sage', get_template_directory() . '/lang' );
-
 }, 20 );
 
 /**

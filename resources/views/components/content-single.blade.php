@@ -1,4 +1,5 @@
 @php()global $post; global $coauthors;@endphp
+@php($show_slideshare = $show_slideshare ?? false)
 <article @php(post_class())>
   @if($show_meta ?? false)
     <header>
@@ -8,6 +9,11 @@
 
   <div class="content lg:mb-6 w-full entry-content">
     @php(the_content())
+
+    @if( get_field('webinar_slideshare') )
+      <h2 class="h2"><strong>Slides</strong></h2>
+      {!! wp_oembed_get(get_field('webinar_slideshare')) !!}
+    @endif
   </div>
 </article>
 

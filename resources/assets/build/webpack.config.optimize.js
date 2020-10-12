@@ -56,22 +56,23 @@ module.exports = {
       ],
       whitelist: [
         require("purgecss-with-wordpress").whitelist,
+        ...whitelister("node_modules/swiper/swiper-bundle.min.css"),
         ...whitelister("resources/assets/styles/common/typography.scss"),
         ...whitelister("resources/assets/styles/common/utilities.scss"),
         ...whitelister("resources/assets/styles/components/buttons.scss"),
-        ...whitelister("resources/assets/styles/components/mailchimp.scss"),
-        ...whitelister("resources/assets/styles/components/gravityforms.scss"),
-        ...whitelister("resources/assets/styles/components/oeg-featured.scss"),
-        ...whitelister("resources/assets/styles/components/oeg-projects.scss"),
-        ...whitelister("resources/assets/styles/components/pagination.scss"),
-        ...whitelister("resources/assets/styles/components/navigation.scss"),
-        ...whitelister(
-          "resources/assets/styles/components/cccoer-testimonial.scss"
-        ),
         ...whitelister(
           "resources/assets/styles/components/cccoer-buttons.scss"
         ),
-        ...whitelister("node_modules/swiper/swiper-bundle.min.css"),
+        ...whitelister(
+          "resources/assets/styles/components/cccoer-testimonial.scss"
+        ),
+        ...whitelister("resources/assets/styles/components/embeds.scss"),
+        ...whitelister("resources/assets/styles/components/gravityforms.scss"),
+        ...whitelister("resources/assets/styles/components/mailchimp.scss"),
+        ...whitelister("resources/assets/styles/components/navigation.scss"),
+        ...whitelister("resources/assets/styles/components/oeg-featured.scss"),
+        ...whitelister("resources/assets/styles/components/oeg-projects.scss"),
+        ...whitelister("resources/assets/styles/components/pagination.scss"),
         /^wp/,
         "clearfix",
       ],
