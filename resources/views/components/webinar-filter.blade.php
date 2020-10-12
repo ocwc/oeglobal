@@ -8,7 +8,6 @@
     <label for="webinar_year" class="text-lg block font-bold mb-2">Year</label>
     <select name="webinar_year" id="webinar_year" class="w-full h-10 bg-gray-900 px-2">
       <option value selected>- Year</option>
-      <option value="2012" <?= $webinar_year === '2012' ? 'selected' : '' ?>>2012</option>
       <option value="2013" <?= $webinar_year === '2013' ? 'selected' : '' ?>>2013</option>
       <option value="2014" <?= $webinar_year === '2014' ? 'selected' : '' ?>>2014</option>
       <option value="2015" <?= $webinar_year === '2015' ? 'selected' : '' ?>>2015</option>
