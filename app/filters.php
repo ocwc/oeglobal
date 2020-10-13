@@ -178,15 +178,17 @@ add_filter( 'jetpack_just_in_time_msgs', '__return_false' );
 
 
 add_filter( 'oembed_dataparse', function( $return, $data, $url ) {
-
     $mod = '';
 
-    if ( ( $data->type == 'video' ) &&
-         ( isset( $data->width ) ) && ( isset( $data->height ) ) &&
-         ( round( $data->height / $data->width, 2 ) == round( 3 / 4, 2 ) )
-    ) {
-        $mod = 'embed-responsive--4-3';
+    if ( ( $data->type == 'video' ) ) {
+        if ( ( isset( $data->width ) ) && ( isset( $data->height ) ) &&
+             ( round( $data->height / $data->width, 2 ) == round( 3 / 4, 2 ) )
+        ) {
+            $mod = 'embed-responsive--4-3';
+        }
+
+        return '<div class="embed-container ' . $mod . '">' . $return . '</div>';
     }
 
-    return '<div class="embed-container ' . $mod . '">' . $return . '</div>';
+    return $return;
 }, 99, 4 );
