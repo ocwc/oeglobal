@@ -40,6 +40,9 @@
             @if($disabled) disabled @else href="#{!! $letter !!}" @endif>{!! $letter; !!}</a>
         @endforeach
       </div>
+      <div class="container mt-6">
+        <small class="">Colleges are listed by state</small>
+      </div>
     </div>
 
     <div class="container">
