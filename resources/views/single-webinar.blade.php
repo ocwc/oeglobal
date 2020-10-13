@@ -10,11 +10,10 @@
         <div class="my-2 px-2 w-full lg:w-2/3">
           @if ( get_field('webinar_youtube') )
             {!! wp_oembed_get( get_field( 'webinar_youtube' ) ) !!}
-          @else
-            @include('partials.post-header')
+            <div class="mb-8"></div>
           @endif
 
-          <article @php(post_class('mt-8 md:px-8'))>
+          <article @php(post_class('md:px-8'))>
             <div class="mb-4">
               <?php if ( get_post_type() === 'webinar' ) {
                 $cats = wp_get_post_terms( $post->ID, 'webinar_category' );
