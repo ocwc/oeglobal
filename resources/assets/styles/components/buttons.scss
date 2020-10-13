@@ -15,6 +15,10 @@
   &:hover {
     background-color: lighten(#ff5547, 10%);
   }
+
+  &[disabled] {
+    @apply cursor-not-allowed;
+  }
 }
 
 .btn.oeg-inverted {
@@ -22,6 +26,10 @@
 
   &:hover {
     @apply bg-gray-900;
+  }
+
+  &[disabled] {
+    @apply cursor-not-allowed;
   }
 }
 
