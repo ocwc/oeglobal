@@ -15,14 +15,31 @@
           ])
           @endcomponent
 
+
+          <div class="content alignleft pr-6">
+            @php($image_id = get_field( 'authors_image', false, false) )
+            @if ( $image_id )
+              <img src="{!! wp_get_attachment_image_src($image_id, 'large')[0] !!}" alt="" class="w-32 h-auto" />
+            @endif
+          </div>
+
+          <article class="content lg:mb-6 w-full entry-content">
+            {!! get_field( 'casestudy_overview' ) !!}
+
+            Published on <?php the_date( 'F d, Y' ); ?>
+          </article>
+
           @component('components/content-single', [
               'post' => $post,
               'show_meta' => false
             ])@endcomponent
         </div>
-        <div class="my-2 px-2 w-full lg:w-1/3">
-          @include('partials.sidebar')
-        </div>
+        <div class="my-2 md:pl-4 w-full lg:w-1/3">
+          @component('components.content-share', [
+              'title' => get_the_title(),
+              'site' => get_bloginfo('name'),
+              'url' => get_the_permalink()
+          ])@endcomponent
       </div>
     </div>
     @endwhile

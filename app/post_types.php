@@ -22,6 +22,7 @@ if ( OEG_SITE === 'CCCOER' ) {
             'capability_type' => 'page',
             'menu_icon'       => 'dashicons-portfolio',
             'menu_position'   => 5,
+            'show_in_rest'    => true,
         ], [
             'singular' => 'Case study',
             'plural'   => 'Case studies',
