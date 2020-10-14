@@ -27,15 +27,15 @@
   <div class="awards-home__content">
     <div class="awards__navigation bg-blue-200 pt-3 border-b-2 border-blue-750">
       <div class="container flex justify-between -mb-2px">
-        <div class="flex gap-4 flex-col md:flex-row w-full lg:w-auto">
+        <div class="flex gap-0 md:gap-4 flex-row w-full lg:w-auto justify-between">
           <button class="awards__navigation__button js-awards-button-individual inline-flex">
-            @svg('icons/sparkles', 'h-6 mr-2 inline-block') Individual
+            @svg('icons/sparkles', 'h-6 mr-2 hidden md:inline-block') Individual
           </button>
           <button class="awards__navigation__button js-awards-button-practices inline-flex">
-            @svg('icons/speakerphone', 'h-6 mr-2 inline-block') Open Practices
+            @svg('icons/speakerphone', 'h-6 mr-2 hidden md:inline-block') Open Practices
           </button>
           <button class="awards__navigation__button js-awards-button-assets inline-flex">
-            @svg('icons/puzzle', 'h-6 mr-2 inline-block') Open Assets
+            @svg('icons/puzzle', 'h-6 mr-2 hidden md:inline-block') Open Assets
           </button>
         </div>
         <div class="relative justify-self-end">

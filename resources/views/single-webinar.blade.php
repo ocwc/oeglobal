@@ -28,18 +28,14 @@
             </div>
 
             <h1 class="h1">{!! get_the_title() !!}</h1>
-
-            <div class="content mt-10 lg:mb-6 w-full entry-content">
-              @php(the_content())
-
-            </div>
           </article>
 
-          @component('components/content-single', [
-            'post' => $post,
-            'show_meta' => true,
-            'show_slideshare' => true,
-          ])@endcomponent
+            @component('components/content-single', [
+              'post' => $post,
+              'show_meta' => true,
+              'show_slideshare' => true,
+            ])@endcomponent
+
         </div>
         <div class="my-2 px-2 w-full lg:w-1/3">
           @include('partials.sidebar')

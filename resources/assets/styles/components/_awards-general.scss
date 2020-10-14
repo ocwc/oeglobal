@@ -45,7 +45,11 @@ body.home.awards {
 }
 
 .awards__navigation__button {
-  @apply rounded-t text-white bg-blue-200 py-2 px-5 border-b-2 border-blue-750 font-semibold items-center;
+  @apply rounded-t text-white bg-blue-200 border-b-2 border-blue-750 font-semibold items-center text-sm px-2 py-2;
+
+  @screen md {
+    @apply px-5 text-base;
+  }
 
   &.active,
   &:hover,
