@@ -30,9 +30,9 @@
   </div>
 
   <div class="container mb-8" id="tools-awards">
-    <h2 class="text-2xl font-bold">Open Assets Awards</h2>
+    <h2 class="text-2xl font-bold">Open Practices Awards</h2>
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 js-awards-tools">
-      @foreach ($assets_awards as $award)
+      @foreach ($practices_awards as $award)
         @component('components/content-excerpt', [
         'title' =>  $award['title'],
         'link' => $award['url'],
@@ -50,7 +50,7 @@
   </div>
 
   <div class="container" id="practices-awards">
-    <h2 class="text-2xl font-bold">Open Practices Awards</h2>
+    <h2 class="text-2xl font-bold">Open Assets Awards</h2>
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 js-awards-practices">
       @foreach ($assets_awards as $award)
         @component('components/content-excerpt', [
