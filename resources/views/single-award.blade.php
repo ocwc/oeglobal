@@ -29,8 +29,7 @@
                 <div class="flex-auto">
                   <h1 class="h1">{!! get_the_title() !!}</h1>
                   <h2 class="h3 -mt-2">{!! get_field('institution') !!}
-                    (@if (get_field('region')){!! get_field('region') !!}
-                    , @endif{!! get_field('country') !!})</h2>
+                    (@if (get_field('region')){!! get_field('region') !!}, @endif{!! get_field('country') !!})</h2>
                 </div>
                 <div class="flex-grow -mt-6 md:mt-0">
                   @if(get_field('link'))<a href="{!! get_field('link') !!}"
