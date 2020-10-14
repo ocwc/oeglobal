@@ -14,6 +14,7 @@ wp menu location assign 470 footer_navigation
 wp post create --post_type=page --post_title='Search' --page_template=views/template-search.blade.php --post_status=publish
 wp post update 4499 --page_template=views/template-cccoer-members-list.blade.php
 wp post update 4911 --page_template=views/template-archive.blade.php
+wp post update 4516 --page_template=views/views/template-cccoer-people.blade.php
 wp post create --post_type=page --post_title='Member Information' --post_name='view' --page_template=views/template-members-detail.blade.php --post_status=publish --post_parent=4499
 
 wp option patch update pagenavi_options use_pagenavi_css 0
@@ -24,3 +25,5 @@ wp option patch update pagenavi_options next_text 'Next ⇢'
 wp post update $(wp post list --post_type='studentstory' --format=ids) --post_status=publish
 wp post update $(wp post list --post_type='edi' --format=ids) --post_status=publish
 wp search-replace 'style="float: right; margin-left: 0px;"' ''
+
+wp media regenerate --yes

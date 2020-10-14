@@ -66,9 +66,9 @@ class App extends Controller {
     }
 
     public static function extractBlockUrl( $item ) {
-        if ( $item['link'] ) {
+        if ( key_exists('link', $item) ) {
             $url = $item['link'];
-        } elseif ( $item['url'] ) {
+        } elseif ( key_exists('url', $item) ) {
             $url = $item['url'];
         } else {
             $url = null;
