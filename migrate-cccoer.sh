@@ -26,4 +26,4 @@ wp post update $(wp post list --post_type='studentstory' --format=ids) --post_st
 wp post update $(wp post list --post_type='edi' --format=ids) --post_status=publish
 wp search-replace 'style="float: right; margin-left: 0px;"' ''
 
-wp media regenerate --yes
+wp media regenerate --yes || true
