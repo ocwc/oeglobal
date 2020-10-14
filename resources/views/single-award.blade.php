@@ -15,7 +15,7 @@
           <div class="my-2 w-full lg:w-2/3 bg-white rounded-t overflow-hidden">
             @include('partials.post-header')
 
-            <article @php(post_class('mt-8 px-8'))>
+            <article @php(post_class('mt-8 px-4 md:px-8'))>
               <div class="mb-4">
                 @foreach($cats as $term)
                   <span
