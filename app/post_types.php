@@ -68,6 +68,14 @@ if ( OEG_SITE === 'CCCOER' ) {
             'plural'   => 'EDI posts',
             'slug'     => 'edi'
         ] );
+
+        register_extended_post_type('retrospective', [
+            'capability_type' => 'page',
+            'menu_icon' => 'dashicons-format-quote',
+            'show_in_rest'    => true,
+        ], [
+            'slug'     => 'retrospective'
+        ]);
     } );
 
     add_filter( 'coauthors_supported_post_types', function( $post_types ) {
