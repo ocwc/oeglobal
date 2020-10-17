@@ -40,7 +40,7 @@
               'site' => get_bloginfo('name'),
               'url' => get_the_permalink()
           ])@endcomponent
-      </div>
+        </div>
     </div>
     @endwhile
 
