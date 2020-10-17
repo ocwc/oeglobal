@@ -6,7 +6,7 @@ use StoutLogic\AcfBuilder\FieldsBuilder;
 
 if ( OEG_SITE === 'CCCOER' ) {
     $fields = new FieldsBuilder( 'webinar', [
-        'title' => 'Webinar',
+        'title' => 'Webinar Settings',
     ] );
 
     $fields

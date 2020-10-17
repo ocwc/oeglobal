@@ -6,6 +6,7 @@ if ( OEG_SITE === 'CCCOER' ) {
             'taxonomies'      => array( 'post_tag' ),
             'capability_type' => 'page',
             'menu_icon'       => 'dashicons-format-video',
+            'show_in_rest'    => true,
             'admin_cols'      => array(
                 'title',
                 'Webinar Category' => [
