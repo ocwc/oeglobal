@@ -10,7 +10,7 @@
         <div class="my-2 px-2 w-full lg:w-2/3">
           @include('partials.post-header')
 
-          <article @php(post_class('mt-8 px-4 md:px-8'))>
+          <article @php(post_class('px-4 md:px-8'))>
             <div class="mb-4">
               <?php if (get_post_type() === 'webinar') {
                   $cats = wp_get_post_terms($post->ID, 'webinar_category');
