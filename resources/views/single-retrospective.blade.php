@@ -8,6 +8,13 @@
     <div class="container mb-8">
       <div class="flex flex-wrap -mx-2">
         <div class="my-2 px-2 w-full lg:w-2/3">
+          @component('components.content-header', [
+            'title' => get_the_title(),
+            'variant' => 'basic',
+            'is_search' => false
+          ])
+          @endcomponent
+
           @component('components/content-single', [
               'post' => $post,
               'show_meta' => false
