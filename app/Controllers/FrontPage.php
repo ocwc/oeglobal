@@ -62,12 +62,14 @@ if ( OEG_SITE === 'OEG' ) {
             ] );
 
             return array_map( function( $post ) {
+                $post_date    = get_the_date( 'M j, Y', $post );
+                $webinar_date = get_field('webinar_date', $post);
                 return [
                     'title'   => $post->post_title,
                     'excerpt' => \Illuminate\Support\Str::words( get_the_excerpt( $post ), 16, ' [..]' ),
                     'url'     => get_permalink( $post ),
                     'author'  => get_the_author_meta( 'display_name', $post->post_author ),
-                    'date'    => get_the_date( 'M j, Y', $post ),
+                    'date'    => $webinar_date ? $webinar_date : $post_date,
                     'image'   => get_the_post_thumbnail_url( $post, 'large' )
                 ];
             }, $custom_query );
@@ -171,18 +173,19 @@ if ( OEG_SITE === 'OEG' ) {
     }
 } else if ( OEG_SITE === 'AWARDS' ) {
     class FrontPage extends Controller {
-        static function mapAwards($custom_query) {
+        static function mapAwards( $custom_query ) {
             return array_map( function( $post ) {
                 return [
-                    'title'   => get_the_title( $post ),
-                    'url'     => get_permalink( $post ),
-                    'image'   => get_the_post_thumbnail_url( $post, 'medium' ),
-                    'terms'   => wp_get_object_terms( $post->ID, 'award_category' ),
-                    'country' => get_field( 'country', $post->ID ),
+                    'title'       => get_the_title( $post ),
+                    'url'         => get_permalink( $post ),
+                    'image'       => get_the_post_thumbnail_url( $post, 'medium' ),
+                    'terms'       => wp_get_object_terms( $post->ID, 'award_category' ),
+                    'country'     => get_field( 'country', $post->ID ),
                     'institution' => get_field( 'institution', $post->ID ),
                 ];
             }, $custom_query );
         }
+
         public function individualAwards() {
             $custom_query = get_posts( [
                 'post_type'      => 'award',
@@ -202,11 +205,11 @@ if ( OEG_SITE === 'OEG' ) {
                         ]
                     ]
                 ],
-                'orderby' => 'term_order',
-                'order' => 'ASC'
+                'orderby'        => 'term_order',
+                'order'          => 'ASC'
             ] );
 
-            return $this->mapAwards($custom_query);
+            return $this->mapAwards( $custom_query );
         }
 
         public function assetsAwards() {
@@ -228,11 +231,11 @@ if ( OEG_SITE === 'OEG' ) {
                         ]
                     ]
                 ],
-                'orderby' => 'term_order',
-                'order' => 'ASC'
+                'orderby'        => 'term_order',
+                'order'          => 'ASC'
             ] );
 
-            return $this->mapAwards($custom_query);
+            return $this->mapAwards( $custom_query );
         }
 
         public function practicesAwards() {
@@ -254,11 +257,11 @@ if ( OEG_SITE === 'OEG' ) {
                         ]
                     ]
                 ],
-                'orderby' => 'term_order',
-                'order' => 'ASC'
+                'orderby'        => 'term_order',
+                'order'          => 'ASC'
             ] );
 
-            return $this->mapAwards($custom_query);
+            return $this->mapAwards( $custom_query );
         }
     }
 } else {

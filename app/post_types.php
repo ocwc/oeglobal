@@ -5,7 +5,21 @@ if ( OEG_SITE === 'CCCOER' ) {
         register_extended_post_type( 'webinar', [
             'taxonomies'      => array( 'post_tag' ),
             'capability_type' => 'page',
-            'menu_icon'       => 'dashicons-format-video'
+            'menu_icon'       => 'dashicons-format-video',
+            'admin_cols'      => array(
+                'title',
+                'Webinar Category' => [
+                    'taxonomy' => 'webinar_category'
+                ],
+                'author',
+                'status' => [
+                    'title' => 'Status',
+                    'meta_key' => 'webinar_status'
+                ],
+                'date' => [
+                    'default' => 'DESC'
+                ]
+            )
         ], [
             'slug' => 'webinar'
         ] );
@@ -113,10 +127,10 @@ if ( OEG_SITE === 'CCCOER' ) {
             $award_post_id = $breadcrumb_trail->breadcrumbs[0]->get_id();
             $terms         = wp_get_object_terms( $award_post_id, 'award_category' );
             if ( $terms ) {
-                $term = $terms[0];
-                $parents = get_ancestors($term->term_id, 'award_category');
-                if ($parents) {
-                    $term = get_term(end($parents), 'award_category');
+                $term    = $terms[0];
+                $parents = get_ancestors( $term->term_id, 'award_category' );
+                if ( $parents ) {
+                    $term = get_term( end( $parents ), 'award_category' );
                 }
 //                $new_breadcrumb = new bcn_breadcrumb( $term->name, null, array( 'awards_category' ), get_term_link( $term ), $term->term_id, true );
                 $new_breadcrumb = new bcn_breadcrumb( $term->name . ' Award', null, array( 'awards_category' ), get_term_link( $term ), $term->term_id, true );

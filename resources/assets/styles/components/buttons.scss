@@ -61,7 +61,9 @@
 }
 
 .prev-next-post {
-  max-width: 50%;
+  @screen md {
+    max-width: 50%;
+  }
 }
 
 .prev-next-post a {

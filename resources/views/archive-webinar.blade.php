@@ -22,13 +22,17 @@
         @if(have_posts())
           <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
             @while(have_posts()) @php the_post() @endphp
-            @php($post = get_post())
+            @php
+              $post = get_post();
+              $post_date    = get_the_date( 'M j, Y', $post );
+              $webinar_date = get_field('webinar_date', $post);
+            @endphp
             @component('components/content-excerpt', [
               'image' => get_the_post_thumbnail_url($post, 'large'),
               'terms' => App::TermsWithLinks($post),
               'link'  => get_permalink(),
               'title' => get_the_title(),
-              'webinar_date' => get_the_date( 'M j, Y', $post ),
+              'webinar_date' => $webinar_date ? $webinar_date : $post_date,
               'description' => \Illuminate\Support\Str::words( get_the_excerpt( $post ), 16, ' [..]' ),
               'show_meta' => false,
               'featured' => false,
