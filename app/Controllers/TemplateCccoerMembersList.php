@@ -29,4 +29,8 @@ class TemplateCccoerMembersList extends Controller {
 
         return [$members, $states, $letters];
     }
+
+    public function variant() {
+        return 'basic';
+    }
 }

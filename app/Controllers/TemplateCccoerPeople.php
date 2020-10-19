@@ -33,4 +33,8 @@ class TemplateCccoerPeople extends Controller {
 
         return $data;
     }
+
+    public function variant() {
+        return 'basic';
+    }
 }

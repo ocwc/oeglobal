@@ -60,8 +60,10 @@
     </div>
   @endif
 @elseif($variant === 'basic')
-  <div class="mb-6">
-    <h1 class="text-3xl font-bold">{!! $title !!}</h1>
+  <div class="container w-full">
+    <div class="mb-6">
+      <h1 class="text-3xl font-bold h1">{!! $title !!}</h1>
+    </div>
   </div>
 @else
   <div class="contentheader-strip text-light

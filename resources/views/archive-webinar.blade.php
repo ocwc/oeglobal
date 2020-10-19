@@ -4,15 +4,16 @@
   <main class="main">
     @include('partials.breadcrumbs')
 
-    @component('components.content-header', [
-      'title' => 'Webinars',
-      'excerpt' => $excerpt_simple,
-      'variant' => $variant,
-      'attribution' => $featured_image_attribution,
-      'is_search' => false,
-    ])
-    @endcomponent
-
+    <div class="container">
+      @component('components.content-header', [
+        'title' => 'Webinars',
+        'excerpt' => $excerpt_simple,
+        'variant' => 'basic',
+        'attribution' => $featured_image_attribution,
+        'is_search' => false,
+      ])
+      @endcomponent
+    </div>
 
     <div class="container flex">
       <div class="w-full lg:w-1/4">
