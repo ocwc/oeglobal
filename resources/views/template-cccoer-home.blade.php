@@ -10,7 +10,7 @@
   <div class="bg-turq-800 h-32 flex items-center">
     <div class="container flex items-center">
       <span class="text-turq-300 font-bold text-2xl">Community of Practice for Open Education</span>
-      <a class="btn oeg md:ml-8" href="#">Get Involved</a>
+      <a class="btn oeg md:ml-8" href="/become-a-member/">Get Involved</a>
     </div>
   </div>
 

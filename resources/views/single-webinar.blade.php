@@ -1,6 +1,7 @@
 @extends('layouts.app')
 
 @section('container')
+  @php $webinar_date = $webinar_date ?? false @endphp
   <main class="main">
     @while(have_posts()) @php the_post() @endphp
     @include('partials.breadcrumbs')
@@ -28,11 +29,15 @@
             </div>
 
             <h1 class="h1">{!! get_the_title() !!}</h1>
+            <div class="bg-gray-900 p-4 flex items-center leading-none text-black-300 mb-8">
+              @svg('icons/calendar', 'h-8 inline-block mr-4')
+              @if($webinar_date){!! $webinar_date !!}@else{{ get_the_date() }}@endif
+            </div>
           </article>
 
           @component('components/content-single', [
             'post' => $post,
-            'show_meta' => true,
+            'show_meta' => false,
             'show_slideshare' => true,
           ])@endcomponent
 
