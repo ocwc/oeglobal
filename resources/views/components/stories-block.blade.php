@@ -15,7 +15,9 @@
         <a
           class="flex w-full"
           href="{!! $item['url'] !!}">
+            @if($item['image'])
             <span class="w-1/3 bg-cover bg-center" style="background-image: url('{!! $item['image'] !!}');"></span>
+            @endif
             <span class="w-2/3 px-3 pt-2 pb-6 bg-gray-900 flex-auto">{!! $item['title'] !!}</span>
         </a>
       </li>
