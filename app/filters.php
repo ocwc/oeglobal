@@ -188,6 +188,8 @@ add_filter( 'oembed_dataparse', function( $return, $data, $url ) {
         }
 
         return '<div class="embed-container ' . $mod . '">' . $return . '</div>';
+    } elseif ( $data->type == 'rich' ) {
+        return '<div class="embed-container ' . $mod . '">' . $return . '</div>';
     }
 
     return $return;
