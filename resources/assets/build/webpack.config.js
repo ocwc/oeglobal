@@ -26,7 +26,7 @@ let webpackConfig = {
   output: {
     path: config.paths.dist,
     publicPath: config.publicPath,
-    filename: `scripts/${assetsFilenames}.js`
+    filename: `scripts/${assetsFilenames}.js`,
   },
   stats: {
     hash: false,
@@ -40,7 +40,7 @@ let webpackConfig = {
     modules: false,
     reasons: false,
     source: false,
-    publicPath: false
+    publicPath: false,
   },
   module: {
     rules: [
@@ -48,21 +48,21 @@ let webpackConfig = {
         enforce: "pre",
         test: /\.js$/,
         include: config.paths.assets,
-        use: "eslint"
+        use: "eslint",
       },
       {
         enforce: "pre",
         test: /\.(js|s?[ca]ss)$/,
         include: config.paths.assets,
-        loader: "import-glob"
+        loader: "import-glob",
       },
       {
         test: /\.js$/,
         exclude: [/node_modules(?![/|\\](bootstrap|foundation-sites))/],
         use: [
           { loader: "cache" },
-          { loader: "buble", options: { objectAssign: "Object.assign" } }
-        ]
+          { loader: "buble", options: { objectAssign: "Object.assign" } },
+        ],
       },
       {
         test: /\.css$/,
@@ -73,17 +73,17 @@ let webpackConfig = {
             { loader: "cache" },
             {
               loader: "css",
-              options: { sourceMap: config.enabled.sourceMaps }
+              options: { sourceMap: config.enabled.sourceMaps },
             },
             {
               loader: "postcss",
               options: {
                 config: { path: __dirname, ctx: config },
-                sourceMap: config.enabled.sourceMaps
-              }
-            }
-          ]
-        })
+                sourceMap: config.enabled.sourceMaps,
+              },
+            },
+          ],
+        }),
       },
       {
         test: /\.scss$/,
@@ -94,28 +94,28 @@ let webpackConfig = {
             { loader: "cache" },
             {
               loader: "css",
-              options: { sourceMap: config.enabled.sourceMaps }
+              options: { sourceMap: config.enabled.sourceMaps },
             },
             {
               loader: "postcss",
               options: {
                 config: { path: __dirname, ctx: config },
-                sourceMap: config.enabled.sourceMaps
-              }
+                sourceMap: config.enabled.sourceMaps,
+              },
             },
             {
               loader: "resolve-url",
-              options: { sourceMap: config.enabled.sourceMaps }
+              options: { sourceMap: config.enabled.sourceMaps },
             },
             {
               loader: "sass",
               options: {
                 sourceMap: config.enabled.sourceMaps,
-                sourceComments: true
-              }
-            }
-          ]
-        })
+                sourceComments: true,
+              },
+            },
+          ],
+        }),
       },
       {
         test: /\.(ttf|otf|eot|woff2?|png|jpe?g|gif|svg|ico)$/,
@@ -123,8 +123,8 @@ let webpackConfig = {
         loader: "url",
         options: {
           limit: 4096,
-          name: `[path]${assetsFilenames}.[ext]`
-        }
+          name: `[path]${assetsFilenames}.[ext]`,
+        },
       },
       {
         test: /\.(ttf|otf|eot|woff2?|png|jpe?g|gif|svg|ico)$/,
@@ -133,25 +133,25 @@ let webpackConfig = {
         options: {
           limit: 4096,
           outputPath: "vendor/",
-          name: `${config.cacheBusting}.[ext]`
-        }
-      }
-    ]
+          name: `${config.cacheBusting}.[ext]`,
+        },
+      },
+    ],
   },
   resolve: {
     modules: [config.paths.assets, "node_modules"],
-    enforceExtension: false
+    enforceExtension: false,
   },
   resolveLoader: {
-    moduleExtensions: ["-loader"]
+    moduleExtensions: ["-loader"],
   },
   externals: {
-    jquery: "jQuery"
+    jquery: "jQuery",
   },
   plugins: [
     new CleanPlugin([config.paths.dist], {
       root: config.paths.root,
-      verbose: false
+      verbose: false,
     }),
     /**
      * It would be nice to switch to copy-webpack-plugin, but
@@ -161,43 +161,43 @@ let webpackConfig = {
     new CopyGlobsPlugin({
       pattern: config.copy,
       output: `[path]${assetsFilenames}.[ext]`,
-      manifest: config.manifest
+      manifest: config.manifest,
     }),
     new ExtractTextPlugin({
       filename: `styles/${assetsFilenames}.css`,
       allChunks: true,
-      disable: config.enabled.watcher
+      disable: config.enabled.watcher,
     }),
     new webpack.ProvidePlugin({
       $: "jquery",
       jQuery: "jquery",
       "window.jQuery": "jquery",
-      Popper: "popper.js/dist/umd/popper.js"
+      Popper: "popper.js/dist/umd/popper.js",
     }),
     new webpack.LoaderOptionsPlugin({
       minimize: config.enabled.optimize,
       debug: config.enabled.watcher,
-      stats: { colors: true }
+      stats: { colors: true },
     }),
     new webpack.LoaderOptionsPlugin({
       test: /\.s?css$/,
       options: {
         output: { path: config.paths.dist },
-        context: config.paths.assets
-      }
+        context: config.paths.assets,
+      },
     }),
     new webpack.LoaderOptionsPlugin({
       test: /\.js$/,
       options: {
-        eslint: { failOnWarning: false, failOnError: true }
-      }
+        eslint: { failOnWarning: false, failOnError: true },
+      },
     }),
     new StyleLintPlugin({
       failOnError: !config.enabled.watcher,
-      syntax: "scss"
+      syntax: "scss",
     }),
-    new FriendlyErrorsWebpackPlugin()
-  ]
+    new FriendlyErrorsWebpackPlugin(),
+  ],
 }; /** Let's only load dependencies as needed */
 
 /* eslint-disable global-require */ if (config.enabled.optimize) {
@@ -217,7 +217,7 @@ if (config.enabled.cacheBusting) {
       space: 2,
       writeToDisk: false,
       assets: config.manifest,
-      replacer: require("./util/assetManifestsFormatter")
+      replacer: require("./util/assetManifestsFormatter"),
     })
   );
 }
@@ -237,5 +237,5 @@ if (config.enabled.watcher) {
  * ability to change certain options.
  */
 module.exports = merge.smartStrategy({
-  "module.loaders": "replace"
+  "module.loaders": "replace",
 })(webpackConfig, desire(`${__dirname}/webpack.config.preset`));

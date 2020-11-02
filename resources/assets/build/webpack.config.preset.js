@@ -7,14 +7,14 @@ const config = require("./config");
 /** Default PostCSS plugins */
 let postcssPlugins = [
   require("tailwindcss")(`${config.paths.assets}/styles/tailwind.config.js`),
-  require("autoprefixer")()
+  require("autoprefixer")(),
 ];
 
 /** Add cssnano when optimizing */
 config.enabled.optimize
   ? postcssPlugins.push(
       require("cssnano")({
-        preset: ["default", { discardComments: { removeAll: true } }]
+        preset: ["default", { discardComments: { removeAll: true } }],
       })
     )
   : false;
@@ -37,20 +37,20 @@ module.exports = {
                   ? "postcss-safe-parser"
                   : undefined,
                 plugins: postcssPlugins,
-                sourceMap: false
-              }
+                sourceMap: false,
+              },
             },
             {
               loader: "resolve-url",
-              options: { silent: true, sourceMap: false }
+              options: { silent: true, sourceMap: false },
             },
             {
               loader: "sass",
-              options: { sourceComments: true, sourceMap: false }
-            }
-          ]
-        })
-      }
-    ]
-  }
+              options: { sourceComments: true, sourceMap: false },
+            },
+          ],
+        }),
+      },
+    ],
+  },
 };

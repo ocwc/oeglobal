@@ -64,7 +64,7 @@
     "node-sass": "~4.13.1",
     "postcss-loader": "~2.1.0",
     "postcss-safe-parser": "~3.0",
-    "prettier": "1.18.2",
+    "prettier": "^2.1.2",
     "prettier-eslint": "9.0.0",
     "prettier-eslint-cli": "^5.0.0",
     "prettier-stylelint": "^0.4.2",
@@ -99,7 +99,7 @@
   },
   "volta": {
     "node": "10.16.3",
-    "yarn": "1.19.0"
+    "yarn": "1.22.5"
   },
   "prettier": {
     "trailingComma": "es5"

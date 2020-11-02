@@ -1,8 +1,8 @@
-const path = require('path');
-const { argv } = require('yargs');
-const merge = require('webpack-merge');
+const path = require("path");
+const { argv } = require("yargs");
+const merge = require("webpack-merge");
 
-const desire = require('./util/desire');
+const desire = require("./util/desire");
 
 const userConfig = merge(
   desire(`${__dirname}/../config`),
@@ -18,13 +18,13 @@ const rootPath =
 const config = merge(
   {
     open: true,
-    copy: 'images/**/*',
-    proxyUrl: 'http://localhost:3000',
-    cacheBusting: '[name]_[hash]',
+    copy: "images/**/*",
+    proxyUrl: "http://localhost:3000",
+    cacheBusting: "[name]_[hash]",
     paths: {
       root: rootPath,
-      assets: path.join(rootPath, 'resources/assets'),
-      dist: path.join(rootPath, 'dist'),
+      assets: path.join(rootPath, "resources/assets"),
+      dist: path.join(rootPath, "dist"),
     },
     enabled: {
       sourceMaps: !isProduction,
@@ -47,7 +47,7 @@ module.exports = merge(config, {
 });
 
 if (process.env.NODE_ENV === undefined) {
-  process.env.NODE_ENV = isProduction ? 'production' : 'development';
+  process.env.NODE_ENV = isProduction ? "production" : "development";
 }
 
 /**
