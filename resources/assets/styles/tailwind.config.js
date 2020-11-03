@@ -60,7 +60,7 @@ module.exports = {
         'yellow-600': '#fce95a',
         'yellow-700': '#fcec83',
         'yellow-800': '#fcf1a1',
-        'yellow-900': '#fdf5ce'
+        'yellow-900': '#fdf5ce',
         latam: {
           orange: "#FF922D",
           "orange-cream": "#FFC794",

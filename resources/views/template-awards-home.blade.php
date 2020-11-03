@@ -25,7 +25,7 @@
   </div>
 
   <div class="awards-home__content">
-    <div class="awards__navigation bg-blue-200 pt-3 border-b-2 border-blue-750">
+    <div class="awards__navigation bg-blue-200 pt-3 border-b-2 border-blue-700">
       <div class="container flex justify-between -mb-2px">
         <div class="flex gap-0 md:gap-4 flex-row w-full lg:w-auto justify-between">
           <button class="awards__navigation__button js-awards-button-individual inline-flex">

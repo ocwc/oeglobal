@@ -23,7 +23,8 @@ body.home.awards {
 }
 
 .bg-awards-bottom {
-  background: url("../images/backgrounds/awards-bottom-bg.svg") repeat-x center bottom, linear-gradient(180deg, rgba(28, 43, 90, 0) 0%, #0d1530 100%);
+  background: url("../images/backgrounds/awards-bottom-bg.svg") repeat-x center bottom,
+    linear-gradient(180deg, rgba(28, 43, 90, 0) 0%, #0d1530 100%);
   background-size: contain;
   margin-bottom: -80px;
 }
@@ -45,7 +46,7 @@ body.home.awards {
 }
 
 .awards__navigation__button {
-  @apply rounded-t text-white bg-blue-200 border-b-2 border-blue-750 font-semibold items-center text-sm px-2 py-2;
+  @apply rounded-t text-white bg-blue-200 border-b-2 border-blue-700 font-semibold items-center text-sm px-2 py-2;
 
   @screen md {
     @apply px-5 text-base;
