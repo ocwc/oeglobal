@@ -28,7 +28,7 @@
   </div>
 </div>
 
-<div class="oeg-spotlight relative overflow-hidden lg:overflow-visible pt-8 md:pt-20 lg:pt-20">
+<div class="oeg-spotlight relative overflow-hidden lg:overflow-visible pt-8 md:pt-20">
   <div class="container">
     <div class="oeg-spotlight__container relative">
       <div class="flex w-full border-b bg-blue-400 border-gray-900 pb-2 mb-6 justify-between items-end">
@@ -40,11 +40,12 @@
       </div>
       <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
         @foreach ($spotlight_items as $item)
-        <a class="oeg-spotlight__item" href="{!! $item['url'] !!}">
+        <a class="oeg-spotlight__item block bg-white text-black-300 rounded overflow-hidden shadow-md" 
+          href="{!! $item['url'] !!}">
           <span class="oeg-spotlight__image block"
                 style="background-image: url('{!! $item['image']['sizes']['medium'] !!}');"></span>
 
-          <span class="block px-4 py-6">
+          <span class="block p-6">
             <h2 class="h2 mb-4">{!! $item['title'] !!}</h2>
             <span class="block mb-6">@svg('icons/check', 'h-auto inline-block')<span class="ml-2">{!! $item['member'] !!}</span></span>
             <span class="block font-serif">{!! $item['description'] !!}</span>

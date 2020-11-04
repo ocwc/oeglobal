@@ -1,5 +1,18 @@
 .post-item {
-  background: theme("colors.white");
-  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5), 1px 2px 19px -7px rgba(0, 0, 0, 0.41);
-  border-radius: 2px;
+  &:hover {
+    @apply shadow-lg;
+
+    h2 {
+      @apply text-blue-600;
+    }
+  }
+
+  &:active {
+    @apply bg-blue-500 text-white;
+
+    h2,
+    p.byline {
+      @apply text-white;
+    }
+  }
 }
