@@ -15,7 +15,9 @@
   }
 
   &:active {
-    @apply bg-blue-500 text-blue-900;
+    .oeg-featured__title {
+      @apply bg-blue-500 text-blue-900;
+    }
   }
 }
 
