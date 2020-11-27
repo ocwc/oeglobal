@@ -1,11 +1,27 @@
 .oeg-featured {
   background-size: cover;
   min-height: 240px;
+
+  @screen md {
+    @apply rounded shadow-md;
+  }
+
+  &:hover {
+    @apply shadow-lg;
+
+    .oeg-featured__title {
+      @apply rounded-r border-t-2 border-r-2 border-b-2 border-blue-600 shadow-xl;
+    }
+  }
+
+  &:active {
+    @apply bg-blue-500 text-blue-900;
+  }
 }
 
 .oeg-featured__title {
-  @apply inline-block px-4 py-2 bg-white mb-6 text-xl leading-tight font-bold;
-
+  @apply inline-block px-4 py-2 bg-white text-blue-200 mb-6 text-xl leading-tight rounded-r-sm shadow-md font-bold;
+  @apply border-t-2 border-r-2 border-b-2 border-blue-900;
   max-width: 90%;
 }
 
