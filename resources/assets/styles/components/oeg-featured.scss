@@ -4,7 +4,7 @@
 }
 
 .oeg-featured__title {
-  @apply inline-block mb-2 p-1 pr-4 bg-white font-bold;
+  @apply inline-block px-4 py-2 bg-white mb-6 text-xl leading-tight font-bold;
 
   max-width: 90%;
 }
@@ -12,11 +12,6 @@
 .oeg-featured-1 {
   @screen md {
     min-height: 400px;
-
-    .oeg-featured__title {
-      @apply mb-4;
-      font-size: 22px;
-    }
   }
 }
 
