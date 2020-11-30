@@ -1,22 +1,35 @@
 .oeg-featured {
   background-size: cover;
   min-height: 240px;
+
+  @screen md {
+    @apply rounded shadow-md;
+  }
+
+  &:hover {
+    @apply shadow-lg;
+
+    .oeg-featured__title {
+      @apply rounded-r border-t-2 border-r-2 border-b-2 border-blue-600 shadow-xl;
+    }
+  }
+
+  &:active {
+    .oeg-featured__title {
+      @apply bg-blue-500 text-blue-900;
+    }
+  }
 }
 
 .oeg-featured__title {
-  @apply inline-block mb-2 p-1 pr-4 bg-white font-bold;
-
+  @apply inline-block px-4 py-2 bg-white text-blue-200 mb-6 text-xl leading-tight rounded-r-sm shadow-md font-bold;
+  @apply border-t-2 border-r-2 border-b-2 border-blue-900;
   max-width: 90%;
 }
 
 .oeg-featured-1 {
   @screen md {
     min-height: 400px;
-
-    .oeg-featured__title {
-      @apply mb-4;
-      font-size: 22px;
-    }
   }
 }
 

@@ -3,7 +3,7 @@
 
   <div class="grid grid-rows-auto grid-cols-auto
         @if (count($featured_items) >= 3)
-        md:grid-rows-2 md:grid-cols-3 gap-2 md:gap-4
+        md:grid-rows-2 md:grid-cols-3 gap-0 md:gap-4
         @else
           md:grid-rows-1 md:grid-cols-2 gap-2 md:gap-4
         @endif
