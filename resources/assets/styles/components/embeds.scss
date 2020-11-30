@@ -15,3 +15,7 @@
     height: 100% !important;
   }
 }
+
+.wp-embed-responsive .wp-has-aspect-ratio .wp-block-embed__wrapper::before {
+  padding-top: 1rem !important;
+}
