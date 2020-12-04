@@ -16,7 +16,7 @@
 
         <div class="flex justify-between gap-4 my-6">
           @foreach($people_list as $value => $role)
-            <a href="#{!! $value !!}" class="btn simple rounded text-sm">{!! $role['label'] !!}</a>
+            <a href="#{!! $value !!}" class="button text-sm">{!! $role['label'] !!}</a>
           @endforeach
         </div>
 
