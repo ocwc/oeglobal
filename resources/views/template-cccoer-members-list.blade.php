@@ -36,7 +36,7 @@
         @foreach ( range( 'A', 'Z' ) as $letter )
           @php( $disabled  = in_array( $letter, $letters ) ? false : true  )
           <a
-            class="btn @if($disabled) oeg-inverted @else simple @endif text-sm rounded"
+            class="btn @if($disabled) oeg-inverted @else button @endif text-sm rounded"
             @if($disabled) disabled @else href="#{!! $letter !!}" @endif>{!! $letter; !!}</a>
         @endforeach
       </div>
