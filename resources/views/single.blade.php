@@ -8,7 +8,9 @@
     <div class="container mb-8">
       <div class="flex flex-wrap -mx-2">
         <div class="my-2 px-2 w-full lg:w-2/3">
-          @include('partials.post-header')
+          @if (OEG_SITE !== 'CCCOER')
+            @include('partials.post-header')
+          @endif
 
           <article @php(post_class('px-4 md:px-8'))>
             <div class="mb-4">
