@@ -11,7 +11,7 @@
 
     <div @php(post_class('container'))>
       <div class="flex flex-wrap">
-        <article class="content lg:mb-6 lg:pb-6 w-full lg:w-2/3">
+        <article class="content lg:mb-6 lg:pb-6 w-full lg:w-2/3 order-2 lg:order-1">
           @component('components.content-header', [ 'title' => $member->name, 'variant' => 'basic'])@endcomponent
 
           @php(the_content())
@@ -19,17 +19,6 @@
           <div class="flex flex-wrap">
             <div class="w-full lg:w-2/3 order-2 lg:order-1">
               {!! nl2br($member->description) !!}
-            </div>
-            <div class="w-full lg:w-1/3 order-1 lg:order-2 pl-4 mb-6">
-              @if ( $member->logo_small || $member->logo_large)
-                @if($member->logo_large)
-                  <img src="{!! $member->logo_large; !!}" class="w-1/2 md:w-full h-auto"
-                       alt="Logo of {!! $member->name !!}"/>
-                @else
-                  <img src="{!! $member->logo_small; !!}" class="w-1/2 md:w-full h-auto"
-                       alt="Logo of {!! $member->name !!}"/>
-                @endif
-              @endif
             </div>
 
             <div class="w-full lg:w-2/3 order-3 pt-4">
@@ -52,20 +41,27 @@
                 {!! $initiative->description !!}
                 @if ($initiative->url)
                   <div class="mt-4">
-                    <a class="btn simple" href="{!! $initiative->url; !!}">View Initiative</a>
+                    <a class="btn simple button" href="{!! $initiative->url; !!}">View Initiative</a>
                   </div>
                 @endif
               @endforeach
             </div>
           </div>
         </article>
-        <div class="my-2 px-2 w-full lg:w-1/3">
-          @component('components.content-share', [
-              'title' => get_the_title(),
-              'site' => get_bloginfo('name'),
-              'url' => get_the_permalink()
-          ])@endcomponent
+        <div class="w-auto lg:w-1/3 order-1 lg:order-2 lg:pl-4 mb-6">
+          @if ( $member->logo_small || $member->logo_large)
+            <div class="member-logo flex justify-center">
+              @if($member->logo_large)
+                <img src="{!! $member->logo_large; !!}" class="h-64 w-auto lg:h-auto lg:w-full"
+                     alt="Logo of {!! $member->name !!}"/>
+              @else
+                <img src="{!! $member->logo_small; !!}" class="h-32 w-auto lg:h-auto lg:w-full"
+                     alt="Logo of {!! $member->name !!}"/>
+              @endif
+            </div>
+          @endif
         </div>
+
       </div>
     </div>
     @endwhile
