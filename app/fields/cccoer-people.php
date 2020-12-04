@@ -26,11 +26,12 @@ if ( OEG_SITE === 'CCCOER' ) {
             'layout' => 'vertical'
         ] )
         ->addChoices( [
+            "staff"        => "Staff",
             "board"        => "Advisory Board",
-            "emiritus"     => "Advisory Emeritus",
             "council"      => "Executive Council",
             "professional" => "Professional Development Committee",
-            "special"      => "Special Projects Committee"
+            "special"      => "Special Projects Committee",
+            "emiritus"     => "Advisory Emeritus",
         ] )
         ->setLocation( 'page_template', '==', 'views/template-cccoer-people.blade.php' );
 
