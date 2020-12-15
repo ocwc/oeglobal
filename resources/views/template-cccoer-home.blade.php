@@ -29,22 +29,6 @@
       </div>
     </div>
 
-    @component('components/section-header', ['title' => 'Webinars', 'url' => '/webinar/'])@endcomponent
-    <div class="container grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-      @foreach($webinars as $webinar)
-        @component('components/content-excerpt', [
-            'title' => $webinar['title'],
-            'description' => $webinar['excerpt'],
-            'webinar_date' => $webinar['date'],
-            'link' => $webinar['url'],
-            'image' => $webinar['image'],
-            'term_label' => 'Webinar',
-            'show_meta' => false,
-            'is_tall' => true,
-            ])@endcomponent
-      @endforeach
-    </div>
-
     @component('components/section-header', ['title' => 'Updates', 'url' => '/news/'])@endcomponent
     <div class="container grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
       @foreach($news as $item)
@@ -58,6 +42,22 @@
             'meta_string' => $item['date'],
             'is_tall' => true,
             'post' => $post
+            ])@endcomponent
+      @endforeach
+    </div>
+
+    @component('components/section-header', ['title' => 'Webinars', 'url' => '/webinar/'])@endcomponent
+    <div class="container grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+      @foreach($webinars as $webinar)
+        @component('components/content-excerpt', [
+            'title' => $webinar['title'],
+            'description' => $webinar['excerpt'],
+            'webinar_date' => $webinar['date'],
+            'link' => $webinar['url'],
+            'image' => $webinar['image'],
+            'term_label' => 'Webinar',
+            'show_meta' => false,
+            'is_tall' => true,
             ])@endcomponent
       @endforeach
     </div>
