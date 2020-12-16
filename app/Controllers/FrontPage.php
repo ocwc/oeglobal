@@ -63,7 +63,10 @@ if ( OEG_SITE === 'OEG' ) {
 
             return array_map( function( $post ) {
                 $post_date    = get_the_date( 'M j, Y', $post );
-                $webinar_date = get_field('webinar_date', $post);
+                $webinar_date = get_field('webinar_date', $post->ID);
+                if ($webinar_date) {
+                    $webinar_date = date('M j, Y', strtotime($webinar_date));
+                }
                 return [
                     'title'   => $post->post_title,
                     'excerpt' => \Illuminate\Support\Str::words( get_the_excerpt( $post ), 16, ' [..]' ),
