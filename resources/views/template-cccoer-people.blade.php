@@ -14,7 +14,7 @@
       <div class="content lg:mb-6 lg:py-6 w-full">
         @php(the_content())
 
-        <div class="flex justify-between gap-4 my-6">
+        <div class="flex gap-4 my-6 justify-center">
           @foreach($people_list as $value => $role)
             <a href="#{!! $value !!}" class="button text-sm">{!! $role['label'] !!}</a>
           @endforeach
