@@ -3,7 +3,7 @@
 if ( OEG_SITE === 'CCCOER' ) {
     add_action( 'init', function() {
         register_extended_post_type( 'webinar', [
-            'taxonomies'      => array( 'post_tag' ),
+            'taxonomies'      => array( 'post_tag', 'webinar_category' ),
             'capability_type' => 'page',
             'menu_icon'       => 'dashicons-format-video',
             'show_in_rest'    => true,
@@ -13,11 +13,11 @@ if ( OEG_SITE === 'CCCOER' ) {
                     'taxonomy' => 'webinar_category'
                 ],
                 'author',
-                'status' => [
-                    'title' => 'Status',
+                'status'           => [
+                    'title'    => 'Status',
                     'meta_key' => 'webinar_status'
                 ],
-                'date' => [
+                'date'             => [
                     'default' => 'DESC'
                 ]
             )
@@ -27,9 +27,12 @@ if ( OEG_SITE === 'CCCOER' ) {
 
         register_extended_taxonomy( 'webinar_category', 'webinar', [
             'show_admin_column' => true,
+            'show_in_rest'      => true,
+            'show_ui'           => true,
         ], [
-            'plural'   => 'Webinar Categories',
-            'singular' => 'Webinar Category'
+            'plural'       => 'Webinar Categories',
+            'singular'     => 'Webinar Category',
+            'hierarchical' => true,
         ] );
 
         register_extended_post_type( 'casestudy', [
@@ -69,13 +72,13 @@ if ( OEG_SITE === 'CCCOER' ) {
             'slug'     => 'edi'
         ] );
 
-        register_extended_post_type('retrospective', [
+        register_extended_post_type( 'retrospective', [
             'capability_type' => 'page',
-            'menu_icon' => 'dashicons-format-quote',
+            'menu_icon'       => 'dashicons-format-quote',
             'show_in_rest'    => true,
         ], [
-            'slug'     => 'retrospective'
-        ]);
+            'slug' => 'retrospective'
+        ] );
     } );
 
     add_filter( 'coauthors_supported_post_types', function( $post_types ) {
