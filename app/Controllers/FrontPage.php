@@ -101,7 +101,8 @@ if ( OEG_SITE === 'OEG' ) {
         public function caseStudies() {
             $custom_query = get_posts( [
                 'post_type'      => 'casestudy',
-                'posts_per_page' => '3'
+                'posts_per_page' => '3',
+                'orderby'        => 'rand'
             ] );
 
             return array_map( function( $post ) {
