@@ -20,7 +20,7 @@ if (OEG_SITE === 'CCCOER') {
         ->addRepeater( 'options-featured', [
             'label' => 'Featured',
             'min'    => 0,
-            'max'    => 1,
+            'max'    => 2,
             'layout' => 'block',
         ] )
         ->addText( 'title' )

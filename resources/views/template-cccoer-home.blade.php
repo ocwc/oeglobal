@@ -15,18 +15,22 @@
   </div>
 
   <div class="bg-gray-900">
-    <div class="container flex justify-center">
-      <div class="w-5/6 lg:w-3/4 mt-8 mb-12">
-        @component('components/content-excerpt', [
-            'link' => $get_featured['link'],
-            'image' =>  $get_featured['image']['sizes']['large'],
-            'title' => $get_featured['title'],
-            'description' => $get_featured['description'],
-            'featured' => true,
-            'term_label' => null,
-            'show_meta' => false,
-          ])@endcomponent
-      </div>
+    <div class="pt-8 pb-12">
+      @foreach($get_featured as $featured)
+        <div class="container flex justify-center">
+          <div class="w-5/6 lg:w-3/4">
+            @component('components/content-excerpt', [
+                'link' => $featured['link'],
+                'image' =>  $featured['image']['sizes']['large'],
+                'title' => $featured['title'],
+                'description' => $featured['description'],
+                'featured' => true,
+                'term_label' => null,
+                'show_meta' => false,
+              ])@endcomponent
+          </div>
+        </div>
+      @endforeach
     </div>
 
     @component('components/section-header', ['title' => 'Updates', 'url' => '/news/'])@endcomponent
@@ -107,25 +111,25 @@
   </div>
 
   <div class="bg-white pt-20">
-{{--    <div class="container">--}}
-      <div class="swiper-container w-full h-full testimonial">
-        <div class="swiper-wrapper">
-          @foreach($testimonials as $testimonial)
-            <div class="swiper-slide">
-              @component('components/testimonial', [
-                  'text' => $testimonial['text'],
-                  'name' => $testimonial['name'],
-                  'title' => $testimonial['title'],
-                  'index' => $loop->index % 3,
-              ])
-              @endcomponent
-            </div>
-          @endforeach
-        </div>
-        <!-- Add Pagination -->
-        <div class="swiper-pagination mt-6"></div>
+    {{--    <div class="container">--}}
+    <div class="swiper-container w-full h-full testimonial">
+      <div class="swiper-wrapper">
+        @foreach($testimonials as $testimonial)
+          <div class="swiper-slide">
+            @component('components/testimonial', [
+                'text' => $testimonial['text'],
+                'name' => $testimonial['name'],
+                'title' => $testimonial['title'],
+                'index' => $loop->index % 3,
+            ])
+            @endcomponent
+          </div>
+        @endforeach
       </div>
-{{--    </div>--}}
+      <!-- Add Pagination -->
+      <div class="swiper-pagination mt-6"></div>
+    </div>
+    {{--    </div>--}}
   </div>
 
   @php(do_action('get_footer'))

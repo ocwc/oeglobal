@@ -47,6 +47,16 @@ if ( OEG_SITE === 'CCCOER' ) {
             'slug'     => 'case-studies',
         ] );
 
+        register_extended_taxonomy( 'casestudy_category', 'casestudy', [
+            'show_admin_column' => true,
+            'show_in_rest'      => true,
+            'show_ui'           => true,
+        ], [
+            'plural'       => 'Case Study Categories',
+            'singular'     => 'Case Study Category',
+            'hierarchical' => true,
+        ] );
+
         register_extended_post_type( 'studentstory', [
             'taxonomies'      => array( 'post_tag' ),
             'capability_type' => 'page',
