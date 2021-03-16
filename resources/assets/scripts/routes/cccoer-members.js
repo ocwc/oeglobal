@@ -15,7 +15,7 @@ export default {
       let map = new mapboxgl.Map({
         container: "members-map",
         style: "mapbox://styles/mapbox/light-v9",
-        center: [-96, 37.8],
+        center: [-96, 41],
         zoom: 3,
         maxZoom: 5,
         minZoom: 3,
@@ -30,13 +30,13 @@ export default {
         minZoom: 1,
       });
 
-      map.on("load", function() {
+      map.on("load", function () {
         $.ajax({
           dataType: "jsonp",
           url:
             "https://members.oeglobal.org/api/v1/address/list/geo/consortium/CCCOER/",
           data: { format: "jsonp" },
-          success: function(geoJsonData) {
+          success: function (geoJsonData) {
             let layerOptions = {
               id: "members",
               type: "circle",
@@ -47,7 +47,10 @@ export default {
               paint: {
                 "circle-radius": {
                   base: 2,
-                  stops: [[3, 4], [5, 8]],
+                  stops: [
+                    [3, 4],
+                    [5, 8],
+                  ],
                 },
                 "circle-color": "#1F3EB9",
                 "circle-opacity": 0.5,
@@ -64,10 +67,8 @@ export default {
     }
 
     if ($(".members-toc").length) {
-      $(".members-toc a").on("click", function() {
-        let anch = $(this)
-          .attr("href")
-          .substr(1);
+      $(".members-toc a").on("click", function () {
+        let anch = $(this).attr("href").substr(1);
         let targetAnchor = $(`a[name="${anch}"]`);
         $("html,body").animate(
           { scrollTop: targetAnchor.offset().top - 50 },
