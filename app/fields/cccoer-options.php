@@ -26,7 +26,7 @@ if (OEG_SITE === 'CCCOER') {
         ->addText( 'title' )
         ->addUrl( 'link' )
         ->addImage( 'image' )
-        ->addText( 'description' )
+        ->addWysiwyg( 'description' )
     ->setLocation( 'options_page', '==', 'theme-home-settings' );
 
     $options
