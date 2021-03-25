@@ -218,6 +218,24 @@ add_action( 'pre_get_posts', function( $query ) {
             $query->set( 's', $webinar_text );
         }
 
+    } elseif ( $query->is_archive() && $query->is_main_query() && is_post_type_archive('casestudy')) {
+        $query->set('posts_per_page', 16);
+
+        $casestudy_category = get_query_var('casestudy_category');
+        if ($casestudy_category) {
+            $query->set('tax_query', array(
+                array(
+                    'taxonomy' => 'casestudy_category',
+                    'field' => 'slug',
+                    'terms' => $casestudy_category,
+                )
+            ));
+        }
+
+        $casestudy_text = get_query_var('casestudy_q');
+        if ($casestudy_text) {
+            $query->set('s', $casestudy_text);
+        }
     } elseif ( is_tax( 'webinar_category' ) ) {
         $query->set( 'posts_per_page', 16 );
     } elseif ( $query->is_archive() && $query->is_main_query() && is_post_type_archive( 'retrospective' ) ) {
