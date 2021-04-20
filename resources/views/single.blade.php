@@ -12,7 +12,7 @@
             @include('partials.post-header')
           @endif
 
-          <article @php(post_class('px-4 md:px-8'))>
+          <article @php(post_class())>
             <div class="mb-4">
               <?php if (get_post_type() === 'webinar') {
                   $cats = wp_get_post_terms($post->ID, 'webinar_category');
