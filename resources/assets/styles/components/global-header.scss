@@ -1,5 +1,6 @@
 .global-header__item {
-  @apply inline-flex text-blue-900 flex-initial px-2 h-6 tracking-wide leading-none pt-2;
+  @apply inline-flex text-blue-900 flex-initial px-2 h-6 tracking-wide leading-none;
+  padding-top: 0.5em;
 
   &:hover,
   &:active {
